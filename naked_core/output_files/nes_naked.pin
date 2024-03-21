@@ -1,0 +1,556 @@
+ -- Copyright (C) 2020  Intel Corporation. All rights reserved.
+ -- Your use of Intel Corporation's design tools, logic functions 
+ -- and other software and tools, and any partner logic 
+ -- functions, and any output files from any of the foregoing 
+ -- (including device programming or simulation files), and any 
+ -- associated documentation or information are expressly subject 
+ -- to the terms and conditions of the Intel Program License 
+ -- Subscription Agreement, the Intel Quartus Prime License Agreement,
+ -- the Intel FPGA IP License Agreement, or other applicable license
+ -- agreement, including, without limitation, that your use is for
+ -- the sole purpose of programming logic devices manufactured by
+ -- Intel and sold by Intel or its authorized distributors.  Please
+ -- refer to the applicable agreement for further details, at
+ -- https://fpgasoftware.intel.com/eula.
+ -- 
+ -- This is a Quartus Prime output file. It is for reporting purposes only, and is
+ -- not intended for use as a Quartus Prime input file. This file cannot be used
+ -- to make Quartus Prime pin assignments - for instructions on how to make pin
+ -- assignments, please see Quartus Prime help.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- NC            : No Connect. This pin has no internal connection to the device.
+ -- DNU           : Do Not Use. This pin MUST NOT be connected.
+ -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.2V).
+ -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
+ --                 of its bank.
+ --                  Bank 1A:       2.5V
+ --                  Bank 1B:       2.5V
+ --                  Bank 2:       2.5V
+ --                  Bank 3:       2.5V
+ --                  Bank 4:       2.5V
+ --                  Bank 5:       2.5V
+ --                  Bank 6:       2.5V
+ --                  Bank 7:       2.5V
+ --                  Bank 8:       2.5V
+ -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
+ --                  It can also be used to report unused dedicated pins. The connection
+ --                  on the board for unused dedicated pins depends on whether this will
+ --                  be used in a future design. One example is device migration. When
+ --                  using device migration, refer to the device pin-tables. If it is a
+ --                  GND pin in the pin table or if it will not be used in a future design
+ --                  for another purpose the it MUST be connected to GND. If it is an unused
+ --                  dedicated pin, then it can be connected to a valid signal on the board
+ --                  (low, high, or toggling) if that signal is required for a different
+ --                  revision of the design.
+ -- GND+          : Unused input pin. It can also be used to report unused dual-purpose pins.
+ --                  This pin should be connected to GND. It may also be connected  to a
+ --                  valid signal  on the board  (low, high, or toggling)  if that signal
+ --                  is required for a different revision of the design.
+ -- GND*          : Unused  I/O  pin. Connect each pin marked GND* directly to GND
+ --                  or leave it unconnected.
+ -- RESERVED      : Unused I/O pin, which MUST be left unconnected.
+ -- RESERVED_INPUT    : Pin is tri-stated and should be connected to the board.
+ -- RESERVED_INPUT_WITH_WEAK_PULLUP    : Pin is tri-stated with internal weak pull-up resistor.
+ -- RESERVED_INPUT_WITH_BUS_HOLD       : Pin is tri-stated with bus-hold circuitry.
+ -- RESERVED_OUTPUT_DRIVEN_HIGH        : Pin is output driven high.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- Pin directions (input, output or bidir) are based on device operating in user mode.
+ ---------------------------------------------------------------------------------
+
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+CHIP  "nes_naked"  ASSIGNED TO AN: 10M50DAF484C6GES
+
+Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
+-------------------------------------------------------------------------------------------------------------
+GND                          : A1        : gnd    :                   :         :           :                
+core_audio_sample[11]        : A2        : output : 2.5 V             :         : 8         : N              
+core_cpu_ppuinterface_ppumemdout[3] : A3        : output : 2.5 V             :         : 8         : N              
+core_video_extrasprites      : A4        : input  : 2.5 V             :         : 8         : N              
+core_audio_sample[2]         : A5        : output : 2.5 V             :         : 8         : N              
+core_audio_sample[12]        : A6        : output : 2.5 V             :         : 8         : N              
+core_audio_sample[15]        : A7        : output : 2.5 V             :         : 7         : N              
+core_audio_sample[7]         : A8        : output : 2.5 V             :         : 7         : N              
+core_audio_sample[10]        : A9        : output : 2.5 V             :         : 7         : N              
+core_cpu_sdraminterface_chrmask[0] : A10       : input  : 2.5 V             :         : 7         : N              
+core_cpu_sdraminterface_chrmask[19] : A11       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A12       :        :                   :         : 7         :                
+core_cpu_sdraminterface_chrmask[9] : A13       : input  : 2.5 V             :         : 7         : N              
+core_cpu_sdraminterface_chrmask[7] : A14       : input  : 2.5 V             :         : 7         : N              
+core_cpu_ppuinterface_ppumemaddr[17] : A15       : output : 2.5 V             :         : 7         : N              
+core_cpu_ppuinterface_ppumemaddr[1] : A16       : output : 2.5 V             :         : 7         : N              
+core_cpu_sdraminterface_chrmask[11] : A17       : input  : 2.5 V             :         : 7         : N              
+core_cpu_sdraminterface_chrmask[1] : A18       : input  : 2.5 V             :         : 7         : N              
+core_cpu_sdraminterface_chrmask[12] : A19       : input  : 2.5 V             :         : 7         : N              
+core_cpu_sdraminterface_chrmask[15] : A20       : input  : 2.5 V             :         : 7         : N              
+core_cpu_sdraminterface_memaddr[15] : A21       : output : 2.5 V             :         : 6         : N              
+GND                          : A22       : gnd    :                   :         :           :                
+core_cpu_ppuinterface_ppumemdout[5] : AA1       : output : 2.5 V             :         : 3         : N              
+core_audio_audiochannels[4]  : AA2       : input  : 2.5 V             :         : 3         : N              
+core_cpu_cycle[6]            : AA3       : output : 2.5 V             :         : 3         : N              
+GND                          : AA4       : gnd    :                   :         :           :                
+core_cpu_emphasis[2]         : AA5       : output : 2.5 V             :         : 3         : N              
+core_cpu_emphasis[1]         : AA6       : output : 2.5 V             :         : 3         : N              
+core_cpu_cycle[7]            : AA7       : output : 2.5 V             :         : 3         : N              
+core_video_color[1]          : AA8       : output : 2.5 V             :         : 3         : N              
+core_controllers_joypad1_data[1] : AA9       : input  : 2.5 V             :         : 3         : N              
+core_cpu_ppuinterface_ppumemdin[2] : AA10      : input  : 2.5 V             :         : 3         : N              
+core_cpu_div[1]              : AA11      : output : 2.5 V             :         : 4         : N              
+core_controllers_joypad_clock[0] : AA12      : output : 2.5 V             :         : 4         : N              
+core_controllers_joypad_out[2] : AA13      : output : 2.5 V             :         : 4         : N              
+core_cpu_mapper_flags[18]    : AA14      : input  : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA15      :        :                   :         : 4         :                
+core_fds_disk_diskside[1]    : AA16      : input  : 2.5 V             :         : 4         : N              
+core_cpu_mapper_flags[56]    : AA17      : input  : 2.5 V             :         : 4         : N              
+GND                          : AA18      : gnd    :                   :         :           :                
+core_cpu_ppuinterface_ppumemdout[2] : AA19      : output : 2.5 V             :         : 4         : N              
+core_cpu_sdraminterface_memaddr[20] : AA20      : output : 2.5 V             :         : 4         : N              
+core_cpu_braminterface_din[5] : AA21      : input  : 2.5 V             :         : 5         : N              
+core_cpu_braminterface_addr[3] : AA22      : output : 2.5 V             :         : 5         : N              
+GND                          : AB1       : gnd    :                   :         :           :                
+core_video_color[4]          : AB2       : output : 2.5 V             :         : 3         : N              
+core_video_scanline[5]       : AB3       : output : 2.5 V             :         : 3         : N              
+core_cpu_cycle[2]            : AB4       : output : 2.5 V             :         : 3         : N              
+core_cpu_emphasis[0]         : AB5       : output : 2.5 V             :         : 3         : N              
+core_cpu_cycle[0]            : AB6       : output : 2.5 V             :         : 3         : N              
+core_cpu_cycle[3]            : AB7       : output : 2.5 V             :         : 3         : N              
+core_video_color[0]          : AB8       : output : 2.5 V             :         : 3         : N              
+core_video_mask[1]           : AB9       : input  : 2.5 V             :         : 3         : N              
+core_controllers_joypad2_data[2] : AB10      : input  : 2.5 V             :         : 4         : N              
+core_controllers_joypad2_data[3] : AB11      : input  : 2.5 V             :         : 4         : N              
+core_controllers_joypad1_data[3] : AB12      : input  : 2.5 V             :         : 4         : N              
+core_cpu_div[0]              : AB13      : output : 2.5 V             :         : 4         : N              
+core_controllers_joypad_out[1] : AB14      : output : 2.5 V             :         : 4         : N              
+core_cpu_mapper_flags[61]    : AB15      : input  : 2.5 V             :         : 4         : N              
+core_cpu_sdraminterface_memread : AB16      : output : 2.5 V             :         : 4         : N              
+core_cpu_braminterface_write : AB17      : output : 2.5 V             :         : 4         : N              
+core_cpu_mapper_flags[31]    : AB18      : input  : 2.5 V             :         : 4         : N              
+core_fds_disk_eject          : AB19      : input  : 2.5 V             :         : 4         : N              
+core_fds_disk_busy           : AB20      : input  : 2.5 V             :         : 4         : N              
+core_cpu_sdraminterface_memdin[7] : AB21      : input  : 2.5 V             :         : 4         : N              
+GND                          : AB22      : gnd    :                   :         :           :                
+core_cpu_ppuinterface_ppumemaddr[0] : B1        : output : 2.5 V             :         : 8         : N              
+core_audio_sample[0]         : B2        : output : 2.5 V             :         : 8         : N              
+core_audio_sample[6]         : B3        : output : 2.5 V             :         : 8         : N              
+core_cpu_sdraminterface_chrmask[6] : B4        : input  : 2.5 V             :         : 8         : N              
+core_cpu_ppuinterface_ppumemaddr[6] : B5        : output : 2.5 V             :         : 8         : N              
+GND                          : B6        : gnd    :                   :         :           :                
+core_audio_sample[8]         : B7        : output : 2.5 V             :         : 8         : N              
+core_audio_internalaudio     : B8        : input  : 2.5 V             :         : 7         : N              
+GND                          : B9        : gnd    :                   :         :           :                
+core_cpu_sdraminterface_memaddr[24] : B10       : output : 2.5 V             :         : 7         : N              
+core_cpu_mapper_flags[60]    : B11       : input  : 2.5 V             :         : 7         : N              
+core_audio_externalaudio     : B12       : input  : 2.5 V             :         : 7         : N              
+GND                          : B13       : gnd    :                   :         :           :                
+core_cpu_ppuinterface_ppumemaddr[3] : B14       : output : 2.5 V             :         : 7         : N              
+core_cpu_ppuinterface_ppumemaddr[18] : B15       : output : 2.5 V             :         : 7         : N              
+core_cpu_ppuinterface_ppumemaddr[7] : B16       : output : 2.5 V             :         : 7         : N              
+core_cpu_sdraminterface_chrmask[17] : B17       : input  : 2.5 V             :         : 7         : N              
+GND                          : B18       : gnd    :                   :         :           :                
+core_cpu_savewritten         : B19       : output : 2.5 V             :         : 7         : N              
+core_cpu_sdraminterface_memaddr[6] : B20       : output : 2.5 V             :         : 6         : N              
+core_cpu_sdraminterface_chrmask[14] : B21       : input  : 2.5 V             :         : 6         : N              
+core_cpu_sdraminterface_prgmask[5] : B22       : input  : 2.5 V             :         : 6         : N              
+core_cpu_mapper_flags[2]     : C1        : input  : 2.5 V             :         : 1B        : N              
+core_cpu_sdraminterface_chrmask[5] : C2        : input  : 2.5 V             :         : 8         : N              
+core_audio_sample[3]         : C3        : output : 2.5 V             :         : 8         : N              
+core_video_scanline[0]       : C4        : output : 2.5 V             :         : 8         : N              
+core_video_scanline[4]       : C5        : output : 2.5 V             :         : 8         : N              
+core_cpu_ppuinterface_ppumemdin[0] : C6        : input  : 2.5 V             :         : 8         : N              
+core_cpu_ppuinterface_ppumemdin[1] : C7        : input  : 2.5 V             :         : 8         : N              
+core_cpu_mapper_flags[6]     : C8        : input  : 2.5 V             :         : 8         : N              
+core_audio_sample[9]         : C9        : output : 2.5 V             :         : 7         : N              
+core_cpu_ppuinterface_ppumemaddr[19] : C10       : output : 2.5 V             :         : 7         : N              
+core_cpu_ppuinterface_ppumemaddr[5] : C11       : output : 2.5 V             :         : 7         : N              
+core_cpu_mapper_flags[15]    : C12       : input  : 2.5 V             :         : 7         : N              
+core_cpu_sdraminterface_chrmask[16] : C13       : input  : 2.5 V             :         : 7         : N              
+core_cpu_ppuinterface_ppumemaddr[16] : C14       : output : 2.5 V             :         : 7         : N              
+core_cpu_ppuinterface_ppumemaddr[14] : C15       : output : 2.5 V             :         : 7         : N              
+core_cpu_sdraminterface_chrmask[3] : C16       : input  : 2.5 V             :         : 7         : N              
+core_cpu_mapper_flags[44]    : C17       : input  : 2.5 V             :         : 7         : N              
+core_cpu_sdraminterface_chrmask[18] : C18       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C19       :        :                   :         : 7         :                
+core_cpu_sdraminterface_prgmask[9] : C20       : input  : 2.5 V             :         : 6         : N              
+core_cpu_sdraminterface_prgmask[17] : C21       : input  : 2.5 V             :         : 6         : N              
+core_cpu_sdraminterface_memaddr[9] : C22       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D1        :        :                   :         : 1B        :                
+core_cpu_mapper_flags[40]    : D2        : input  : 2.5 V             :         : 1B        : N              
+core_cpu_ppuinterface_ppumemdout[6] : D3        : output : 2.5 V             :         : 1B        : N              
+GND                          : D4        : gnd    :                   :         :           :                
+core_video_scanline[1]       : D5        : output : 2.5 V             :         : 8         : N              
+core_cpu_ppuinterface_ppumemaddr[21] : D6        : output : 2.5 V             :         : 8         : N              
+core_cpu_ppuinterface_ppumemdin[6] : D7        : input  : 2.5 V             :         : 8         : N              
+core_audio_sample[5]         : D8        : output : 2.5 V             :         : 8         : N              
+core_cpu_ppuinterface_ppumemdin[3] : D9        : input  : 2.5 V             :         : 8         : N              
+core_cpu_ppuinterface_ppumemdin[4] : D10       : input  : 2.5 V             :         : 8         : N              
+GND                          : D11       : gnd    :                   :         :           :                
+core_cpu_braminterface_addr[9] : D12       : output : 2.5 V             :         : 7         : N              
+core_cpu_mapper_flags[36]    : D13       : input  : 2.5 V             :         : 7         : N              
+core_cpu_sdraminterface_refresh : D14       : output : 2.5 V             :         : 7         : N              
+core_cpu_ppuinterface_ppumemaddr[13] : D15       : output : 2.5 V             :         : 7         : N              
+GND                          : D16       : gnd    :                   :         :           :                
+core_cpu_sdraminterface_memaddr[23] : D17       : output : 2.5 V             :         : 7         : N              
+core_cpu_ppuinterface_ppumemaddr[15] : D18       : output : 2.5 V             :         : 6         : N              
+core_cpu_sdraminterface_prgmask[13] : D19       : input  : 2.5 V             :         : 6         : N              
+GND                          : D20       : gnd    :                   :         :           :                
+core_cpu_sdraminterface_memdout[2] : D21       : output : 2.5 V             :         : 6         : N              
+core_cpu_sdraminterface_memaddr[0] : D22       : output : 2.5 V             :         : 6         : N              
+core_cpu_mapper_flags[52]    : E1        : input  : 2.5 V             :         : 1B        : N              
+GND                          : E2        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E3        :        :                   :         : 1A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E4        :        :                   :         : 1A        :                
+NC                           : E5        :        :                   :         :           :                
+core_audio_sample[13]        : E6        : output : 2.5 V             :         : 8         : N              
+GND                          : E7        : gnd    :                   :         :           :                
+core_audio_sample[4]         : E8        : output : 2.5 V             :         : 8         : N              
+core_cpu_ppuinterface_ppumemdin[5] : E9        : input  : 2.5 V             :         : 8         : N              
+core_cpu_sdraminterface_memdin[0] : E10       : input  : 2.5 V             :         : 8         : N              
+core_cpu_mapper_flags[0]     : E11       : input  : 2.5 V             :         : 8         : N              
+core_cpu_sdraminterface_chrmask[4] : E12       : input  : 2.5 V             :         : 7         : N              
+core_cpu_ppuinterface_ppumemaddr[4] : E13       : output : 2.5 V             :         : 7         : N              
+core_cpu_sdraminterface_memaddr[7] : E14       : output : 2.5 V             :         : 7         : N              
+core_cpu_mapper_flags[39]    : E15       : input  : 2.5 V             :         : 7         : N              
+core_cpu_braminterface_addr[14] : E16       : output : 2.5 V             :         : 7         : N              
+core_cpu_sdraminterface_chrmask[10] : E17       : input  : 2.5 V             :         : 6         : N              
+core_cpu_mapper_flags[28]    : E18       : input  : 2.5 V             :         : 6         : N              
+core_cpu_sdraminterface_prgmask[16] : E19       : input  : 2.5 V             :         : 6         : N              
+core_cpu_sdraminterface_memaddr[2] : E20       : output : 2.5 V             :         : 6         : N              
+core_cpu_sdraminterface_prgmask[10] : E21       : input  : 2.5 V             :         : 6         : N              
+core_cpu_sdraminterface_memaddr[8] : E22       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F1        :        :                   :         : 1B        :                
+core_cpu_mapper_flags[1]     : F2        : input  : 2.5 V             :         : 1B        : N              
+core_cpu_sdraminterface_memaddr[22] : F3        : output : 2.5 V             :         : 1A        : N              
+core_paused                  : F4        : output : 2.5 V             :         : 1A        : N              
+core_cpu_mapper_flags[43]    : F5        : input  : 2.5 V             :         : 1A        : N              
+NC                           : F6        :        :                   :         :           :                
+core_audio_sample[1]         : F7        : output : 2.5 V             :         : 8         : N              
+~ALTERA_CONF_DONE~ / RESERVED_INPUT : F8        : input  : 2.5 V Schmitt Trigger :         : 8         : N              
+VCCIO8                       : F9        : power  :                   : 2.5V    : 8         :                
+GND                          : F10       : gnd    :                   :         :           :                
+VCCIO8                       : F11       : power  :                   : 2.5V    : 8         :                
+VCCIO7                       : F12       : power  :                   : 2.5V    : 7         :                
+GND                          : F13       : gnd    :                   :         :           :                
+VCCIO7                       : F14       : power  :                   : 2.5V    : 7         :                
+core_cpu_sdraminterface_prgmask[4] : F15       : input  : 2.5 V             :         : 7         : N              
+core_cpu_mapper_flags[55]    : F16       : input  : 2.5 V             :         : 7         : N              
+core_cpu_sdraminterface_prgmask[0] : F17       : input  : 2.5 V             :         : 6         : N              
+core_cpu_sdraminterface_prgmask[6] : F18       : input  : 2.5 V             :         : 6         : N              
+core_cpu_sdraminterface_prgmask[12] : F19       : input  : 2.5 V             :         : 6         : N              
+core_cpu_sdraminterface_prgmask[3] : F20       : input  : 2.5 V             :         : 6         : N              
+core_cpu_sdraminterface_prgmask[1] : F21       : input  : 2.5 V             :         : 6         : N              
+core_cpu_mapper_flags[29]    : F22       : input  : 2.5 V             :         : 6         : N              
+core_cpu_mapper_flags[53]    : G1        : input  : 2.5 V             :         : 1B        : N              
+~ALTERA_TCK~ / RESERVED_INPUT : G2        : input  : 2.5 V Schmitt Trigger :         : 1B        : N              
+core_audio_audiochannels[3]  : G3        : input  : 2.5 V             :         : 1A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G4        :        :                   :         : 1A        :                
+ANAIN1                       : G5        :        :                   :         :           :                
+GND                          : G6        : gnd    :                   :         :           :                
+VCCD_PLL3                    : G7        : power  :                   : 1.2V    :           :                
+GND                          : G8        : gnd    :                   :         :           :                
+~ALTERA_nSTATUS~ / RESERVED_INPUT : G9        : input  : 2.5 V Schmitt Trigger :         : 8         : N              
+VCCIO8                       : G10       : power  :                   : 2.5V    : 8         :                
+VCCIO8                       : G11       : power  :                   : 2.5V    : 8         :                
+VCCIO7                       : G12       : power  :                   : 2.5V    : 7         :                
+VCCIO7                       : G13       : power  :                   : 2.5V    : 7         :                
+VCCIO7                       : G14       : power  :                   : 2.5V    : 7         :                
+GND                          : G15       : gnd    :                   :         :           :                
+VCCD_PLL2                    : G16       : power  :                   : 1.2V    :           :                
+core_cpu_braminterface_addr[11] : G17       : output : 2.5 V             :         : 6         : N              
+GND                          : G18       : gnd    :                   :         :           :                
+core_cpu_mapper_flags[3]     : G19       : input  : 2.5 V             :         : 6         : N              
+core_cpu_sdraminterface_memdin[1] : G20       : input  : 2.5 V             :         : 6         : N              
+GND                          : G21       : gnd    :                   :         :           :                
+core_cpu_mapper_flags[27]    : G22       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H1        :        :                   :         : 1B        :                
+~ALTERA_TMS~ / RESERVED_INPUT_WITH_WEAK_PULLUP : H2        : input  : 2.5 V Schmitt Trigger :         : 1B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H3        :        :                   :         : 1A        :                
+core_cpu_ppuinterface_ppumemaddr[8] : H4        : output : 2.5 V             :         : 1A        : N              
+REFGND                       : H5        :        :                   :         :           :                
+ADC_VREF                     : H6        :        :                   :         :           :                
+VCCA_ADC                     : H7        : power  :                   : 2.5V    :           :                
+VCCA3                        : H8        : power  :                   : 2.5V    :           :                
+~ALTERA_nCONFIG~ / RESERVED_INPUT : H9        : input  : 2.5 V Schmitt Trigger :         : 8         : N              
+~ALTERA_CONFIG_SEL~ / RESERVED_INPUT : H10       : input  : 2.5 V             :         : 8         : N              
+core_audio_sample[14]        : H11       : output : 2.5 V             :         : 8         : N              
+core_cpu_ppuinterface_ppumemaddr[20] : H12       : output : 2.5 V             :         : 7         : N              
+core_cpu_ppuinterface_ppumemaddr[9] : H13       : output : 2.5 V             :         : 7         : N              
+core_cpu_sdraminterface_chrmask[13] : H14       : input  : 2.5 V             :         : 7         : N              
+VCCA2                        : H15       : power  :                   : 2.5V    :           :                
+VCCIO6                       : H16       : power  :                   : 2.5V    : 6         :                
+core_cpu_mapper_flags[25]    : H17       : input  : 2.5 V             :         : 6         : N              
+core_cpu_sdraminterface_memaddr[11] : H18       : output : 2.5 V             :         : 6         : N              
+core_cpu_sdraminterface_memaddr[17] : H19       : output : 2.5 V             :         : 6         : N              
+core_cpu_mapper_flags[26]    : H20       : input  : 2.5 V             :         : 6         : N              
+core_cpu_sdraminterface_memaddr[13] : H21       : output : 2.5 V             :         : 6         : N              
+core_cpu_sdraminterface_memdin[2] : H22       : input  : 2.5 V             :         : 6         : N              
+core_cpu_mapper_flags[51]    : J1        : input  : 2.5 V             :         : 1B        : N              
+GND                          : J2        : gnd    :                   :         :           :                
+core_cpu_mapper_flags[20]    : J3        : input  : 2.5 V             :         : 1A        : N              
+core_cpu_ppuinterface_ppumemdout[1] : J4        : output : 2.5 V             :         : 1A        : N              
+ANAIN2                       : J5        :        :                   :         :           :                
+GND                          : J6        : gnd    :                   :         :           :                
+VCCINT                       : J7        : power  :                   : 1.2V    :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J8        :        :                   :         : 1A        :                
+core_cpu_mapper_flags[59]    : J9        : input  : 2.5 V             :         : 1A        : N              
+core_cpu_sdraminterface_memdout[6] : J10       : output : 2.5 V             :         : 8         : N              
+core_cpu_ppuinterface_ppumemaddr[2] : J11       : output : 2.5 V             :         : 7         : N              
+core_cpu_sdraminterface_chrmask[8] : J12       : input  : 2.5 V             :         : 7         : N              
+core_cpu_ppuinterface_ppumemaddr[10] : J13       : output : 2.5 V             :         : 7         : N              
+core_cpu_sdraminterface_prgmask[14] : J14       : input  : 2.5 V             :         : 6         : N              
+core_cpu_sdraminterface_memaddr[12] : J15       : output : 2.5 V             :         : 6         : N              
+GND                          : J16       : gnd    :                   :         :           :                
+VCCIO6                       : J17       : power  :                   : 2.5V    : 6         :                
+core_cpu_ppuinterface_ppumemaddr[11] : J18       : output : 2.5 V             :         : 6         : N              
+GND                          : J19       : gnd    :                   :         :           :                
+core_cpu_sdraminterface_memaddr[16] : J20       : output : 2.5 V             :         : 6         : N              
+core_cpu_mapper_flags[17]    : J21       : input  : 2.5 V             :         : 6         : N              
+core_cpu_mapper_flags[12]    : J22       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : K1        :        :                   :         : 1B        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K2        :        :                   :         : 1B        :                
+GND                          : K3        : gnd    :                   :         :           :                
+core_cpu_sdraminterface_chrmask[2] : K4        : input  : 2.5 V             :         : 1A        : N              
+core_cpu_braminterface_addr[13] : K5        : output : 2.5 V             :         : 1A        : N              
+core_cpu_mapper_flags[57]    : K6        : input  : 2.5 V             :         : 1A        : N              
+VCCIO1A                      : K7        : power  :                   : 2.5V    : 1A        :                
+core_audio_audiochannels[2]  : K8        : input  : 2.5 V             :         : 1B        : N              
+core_cpu_mapper_flags[37]    : K9        : input  : 2.5 V             :         : 1B        : N              
+GND                          : K10       : gnd    :                   :         :           :                
+VCC                          : K11       : power  :                   : 1.2V    :           :                
+GND                          : K12       : gnd    :                   :         :           :                
+VCC                          : K13       : power  :                   : 1.2V    :           :                
+core_cpu_sdraminterface_prgmask[7] : K14       : input  : 2.5 V             :         : 6         : N              
+core_cpu_sdraminterface_memaddr[3] : K15       : output : 2.5 V             :         : 6         : N              
+VCCIO6                       : K16       : power  :                   : 2.5V    : 6         :                
+VCCIO6                       : K17       : power  :                   : 2.5V    : 6         :                
+core_cpu_ppuinterface_ppumemwrite : K18       : output : 2.5 V             :         : 6         : N              
+core_cpu_sdraminterface_memaddr[5] : K19       : output : 2.5 V             :         : 6         : N              
+core_cpu_ppuinterface_ppumemaddr[12] : K20       : output : 2.5 V             :         : 6         : N              
+core_cpu_mapper_flags[11]    : K21       : input  : 2.5 V             :         : 6         : N              
+core_cpu_mapper_flags[13]    : K22       : input  : 2.5 V             :         : 6         : N              
+core_cpu_mapper_flags[48]    : L1        : input  : 2.5 V             :         : 1B        : N              
+core_cpu_ppuinterface_ppumemdin[7] : L2        : input  : 2.5 V             :         : 1B        : N              
+DNU                          : L3        :        :                   :         :           :                
+~ALTERA_TDI~ / RESERVED_INPUT_WITH_WEAK_PULLUP : L4        : input  : 2.5 V Schmitt Trigger :         : 1B        : N              
+GND                          : L5        : gnd    :                   :         :           :                
+VCCIO1A                      : L6        : power  :                   : 2.5V    : 1A        :                
+VCCIO1B                      : L7        : power  :                   : 2.5V    : 1B        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : L8        :        :                   :         : 1B        :                
+core_cpu_mapper_flags[54]    : L9        : input  : 2.5 V             :         : 1B        : N              
+VCC                          : L10       : power  :                   : 1.2V    :           :                
+VCC                          : L11       : power  :                   : 1.2V    :           :                
+VCC                          : L12       : power  :                   : 1.2V    :           :                
+GND                          : L13       : gnd    :                   :         :           :                
+core_cpu_sdraminterface_prgmask[2] : L14       : input  : 2.5 V             :         : 6         : N              
+core_cpu_sdraminterface_prgmask[15] : L15       : input  : 2.5 V             :         : 6         : N              
+VCCIO6                       : L16       : power  :                   : 2.5V    : 6         :                
+GND                          : L17       : gnd    :                   :         :           :                
+core_cpu_sdraminterface_memaddr[14] : L18       : output : 2.5 V             :         : 6         : N              
+core_cpu_sdraminterface_memaddr[4] : L19       : output : 2.5 V             :         : 6         : N              
+core_cpu_sdraminterface_prgmask[11] : L20       : input  : 2.5 V             :         : 6         : N              
+GND                          : L21       : gnd    :                   :         :           :                
+core_cpu_mapper_flags[14]    : L22       : input  : 2.5 V             :         : 5         : N              
+core_cpu_mapper_flags[19]    : M1        : input  : 2.5 V             :         : 2         : N              
+core_cpu_braminterface_addr[8] : M2        : output : 2.5 V             :         : 2         : N              
+core_cpu_mapper_flags[47]    : M3        : input  : 2.5 V             :         : 1B        : N              
+core_audio_audiochannels[1]  : M4        : input  : 2.5 V             :         : 1B        : N              
+~ALTERA_TDO~                 : M5        : output : 2.5 V             :         : 1B        : N              
+VCCIO1B                      : M6        : power  :                   : 2.5V    : 1B        :                
+GND                          : M7        : gnd    :                   :         :           :                
+core_cpu_clk                 : M8        : input  : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M9        :        :                   :         : 2         :                
+GND                          : M10       : gnd    :                   :         :           :                
+VCC                          : M11       : power  :                   : 1.2V    :           :                
+VCC                          : M12       : power  :                   : 1.2V    :           :                
+VCC                          : M13       : power  :                   : 1.2V    :           :                
+core_cpu_sdraminterface_memaddr[10] : M14       : output : 2.5 V             :         : 6         : N              
+core_cpu_sdraminterface_prgmask[8] : M15       : input  : 2.5 V             :         : 6         : N              
+GND                          : M16       : gnd    :                   :         :           :                
+VCCIO6                       : M17       : power  :                   : 2.5V    : 6         :                
+core_cpu_sdraminterface_memaddr[1] : M18       : output : 2.5 V             :         : 6         : N              
+GND                          : M19       : gnd    :                   :         :           :                
+core_cpu_sdraminterface_memdin[4] : M20       : input  : 2.5 V             :         : 6         : N              
+core_cpu_mapper_flags[23]    : M21       : input  : 2.5 V             :         : 5         : N              
+core_cpu_sdraminterface_memdout[0] : M22       : output : 2.5 V             :         : 5         : N              
+core_cpu_braminterface_addr[17] : N1        : output : 2.5 V             :         : 2         : N              
+core_cpu_mapper_flags[38]    : N2        : input  : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N3        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N4        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N5        :        :                   :         : 2         :                
+VCCIO2                       : N6        : power  :                   : 2.5V    : 2         :                
+VCCIO2                       : N7        : power  :                   : 2.5V    : 2         :                
+core_cpu_mapper_flags[10]    : N8        : input  : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N9        :        :                   :         : 2         :                
+VCC                          : N10       : power  :                   : 1.2V    :           :                
+GND                          : N11       : gnd    :                   :         :           :                
+VCC                          : N12       : power  :                   : 1.2V    :           :                
+GND                          : N13       : gnd    :                   :         :           :                
+core_cpu_mapper_flags[4]     : N14       : input  : 2.5 V             :         : 6         : N              
+core_cpu_mapper_flags[5]     : N15       : input  : 2.5 V             :         : 6         : N              
+VCCIO5                       : N16       : power  :                   : 2.5V    : 5         :                
+VCCIO6                       : N17       : power  :                   : 2.5V    : 6         :                
+core_cpu_sdraminterface_memdin[5] : N18       : input  : 2.5 V             :         : 6         : N              
+core_cpu_sdraminterface_memdin[3] : N19       : input  : 2.5 V             :         : 6         : N              
+core_cpu_mapper_flags[16]    : N20       : input  : 2.5 V             :         : 6         : N              
+core_cpu_mapper_flags[22]    : N21       : input  : 2.5 V             :         : 5         : N              
+core_cpu_sdraminterface_memaddr[21] : N22       : output : 2.5 V             :         : 5         : N              
+core_cpu_mapper_flags[41]    : P1        : input  : 2.5 V             :         : 2         : N              
+GND                          : P2        : gnd    :                   :         :           :                
+core_cpu_cycle[4]            : P3        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : P4        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P5        :        :                   :         : 2         :                
+GND                          : P6        : gnd    :                   :         :           :                
+VCCIO2                       : P7        : power  :                   : 2.5V    : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P8        :        :                   :         : 2         :                
+core_video_color[5]          : P9        : output : 2.5 V             :         : 3         : N              
+core_cpu_cycle[8]            : P10       : output : 2.5 V             :         : 3         : N              
+core_video_mask[0]           : P11       : input  : 2.5 V             :         : 3         : N              
+core_controllers_joypad1_data[4] : P12       : input  : 2.5 V             :         : 4         : N              
+core_cpu_sdraminterface_memdin[6] : P13       : input  : 2.5 V             :         : 4         : N              
+core_cpu_sdraminterface_prgmask[18] : P14       : input  : 2.5 V             :         : 5         : N              
+core_cpu_sdraminterface_memaddr[18] : P15       : output : 2.5 V             :         : 5         : N              
+VCCIO5                       : P16       : power  :                   : 2.5V    : 5         :                
+GND                          : P17       : gnd    :                   :         :           :                
+core_cpu_mapper_flags[33]    : P18       : input  : 2.5 V             :         : 5         : N              
+core_cpu_mapper_flags[7]     : P19       : input  : 2.5 V             :         : 5         : N              
+core_cpu_sdraminterface_memdout[1] : P20       : output : 2.5 V             :         : 5         : N              
+core_cpu_mapper_flags[34]    : P21       : input  : 2.5 V             :         : 5         : N              
+core_cpu_braminterface_override : P22       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R1        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R2        :        :                   :         : 2         :                
+core_cpu_braminterface_addr[16] : R3        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R4        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R5        :        :                   :         : 2         :                
+VCCIO2                       : R6        : power  :                   : 2.5V    : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R7        :        :                   :         : 2         :                
+VCCA1                        : R8        : power  :                   : 2.5V    :           :                
+core_cpu_cycle[5]            : R9        : output : 2.5 V             :         : 3         : N              
+core_cpu_cycle[1]            : R10       : output : 2.5 V             :         : 3         : N              
+core_sys_type[0]             : R11       : input  : 2.5 V             :         : 3         : N              
+core_controllers_joypad1_data[2] : R12       : input  : 2.5 V             :         : 4         : N              
+core_cpu_reset               : R13       : input  : 2.5 V             :         : 4         : N              
+core_cpu_braminterface_dout[0] : R14       : output : 2.5 V             :         : 5         : N              
+core_cpu_braminterface_dout[4] : R15       : output : 2.5 V             :         : 5         : N              
+VCCIO5                       : R16       : power  :                   : 2.5V    : 5         :                
+VCCIO5                       : R17       : power  :                   : 2.5V    : 5         :                
+core_cpu_mapper_flags[24]    : R18       : input  : 2.5 V             :         : 5         : N              
+GND                          : R19       : gnd    :                   :         :           :                
+core_cpu_braminterface_dout[7] : R20       : output : 2.5 V             :         : 5         : N              
+GND                          : R21       : gnd    :                   :         :           :                
+core_cpu_braminterface_addr[7] : R22       : output : 2.5 V             :         : 5         : N              
+core_cpu_mapper_flags[50]    : T1        : input  : 2.5 V             :         : 2         : N              
+core_cpu_mapper_flags[62]    : T2        : input  : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T3        :        :                   :         : 2         :                
+GND                          : T4        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T5        :        :                   :         : 2         :                
+core_pause                   : T6        : input  : 2.5 V             :         : 2         : N              
+VCCD_PLL1                    : T7        : power  :                   : 1.2V    :           :                
+GND                          : T8        : gnd    :                   :         :           :                
+VCCIO3                       : T9        : power  :                   : 2.5V    : 3         :                
+VCCIO3                       : T10       : power  :                   : 2.5V    : 3         :                
+VCCIO3                       : T11       : power  :                   : 2.5V    : 3         :                
+VCCIO4                       : T12       : power  :                   : 2.5V    : 4         :                
+VCCIO4                       : T13       : power  :                   : 2.5V    : 4         :                
+GND                          : T14       : gnd    :                   :         :           :                
+VCCA4                        : T15       : power  :                   : 2.5V    :           :                
+GND                          : T16       : gnd    :                   :         :           :                
+VCCIO5                       : T17       : power  :                   : 2.5V    : 5         :                
+core_cpu_sdraminterface_memdout[5] : T18       : output : 2.5 V             :         : 5         : N              
+core_cpu_sdraminterface_memdout[4] : T19       : output : 2.5 V             :         : 5         : N              
+core_cpu_sdraminterface_memdout[3] : T20       : output : 2.5 V             :         : 5         : N              
+core_cpu_braminterface_dout[1] : T21       : output : 2.5 V             :         : 5         : N              
+core_cpu_braminterface_dout[6] : T22       : output : 2.5 V             :         : 5         : N              
+core_cpu_mapper_flags[42]    : U1        : input  : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U2        :        :                   :         : 2         :                
+core_cpu_mapper_flags[45]    : U3        : input  : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U4        :        :                   :         : 2         :                
+core_cpu_mapper_flags[35]    : U5        : input  : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U6        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U7        :        :                   :         : 3         :                
+VCCIO3                       : U8        : power  :                   : 2.5V    : 3         :                
+VCCIO3                       : U9        : power  :                   : 2.5V    : 3         :                
+GND                          : U10       : gnd    :                   :         :           :                
+VCCIO4                       : U11       : power  :                   : 2.5V    : 4         :                
+VCCIO4                       : U12       : power  :                   : 2.5V    : 4         :                
+GND                          : U13       : gnd    :                   :         :           :                
+VCCIO4                       : U14       : power  :                   : 2.5V    : 4         :                
+core_fds_disk_diskside[0]    : U15       : input  : 2.5 V             :         : 4         : N              
+VCCD_PLL4                    : U16       : power  :                   : 1.2V    :           :                
+core_cpu_braminterface_addr[5] : U17       : output : 2.5 V             :         : 5         : N              
+core_cpu_braminterface_din[2] : U18       : input  : 2.5 V             :         : 5         : N              
+core_cpu_braminterface_din[3] : U19       : input  : 2.5 V             :         : 5         : N              
+core_cpu_braminterface_addr[0] : U20       : output : 2.5 V             :         : 5         : N              
+core_cpu_braminterface_dout[5] : U21       : output : 2.5 V             :         : 5         : N              
+core_cpu_sdraminterface_memdout[7] : U22       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : V1        :        :                   :         : 2         :                
+GND                          : V2        : gnd    :                   :         :           :                
+core_cpu_braminterface_addr[10] : V3        : output : 2.5 V             :         : 2         : N              
+core_audio_audiochannels[0]  : V4        : input  : 2.5 V             :         : 3         : N              
+core_cpu_mapper_flags[9]     : V5        : input  : 2.5 V             :         : 3         : N              
+GND                          : V6        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V7        :        :                   :         : 3         :                
+core_cpu_braminterface_addr[12] : V8        : output : 2.5 V             :         : 3         : N              
+core_video_scanline[8]       : V9        : output : 2.5 V             :         : 3         : N              
+core_video_color[3]          : V10       : output : 2.5 V             :         : 3         : N              
+core_controllers_joypad1_data[0] : V11       : input  : 2.5 V             :         : 4         : N              
+core_controllers_joypad2_data[0] : V12       : input  : 2.5 V             :         : 4         : N              
+core_controllers_joypad_clock[1] : V13       : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : V14       :        :                   :         : 4         :                
+core_cpu_ppuinterface_ppumemdout[4] : V15       : output : 2.5 V             :         : 4         : N              
+core_fds_disk_autoeject      : V16       : input  : 2.5 V             :         : 4         : N              
+core_cpu_mapper_flags[32]    : V17       : input  : 2.5 V             :         : 4         : N              
+core_cpu_braminterface_din[1] : V18       : input  : 2.5 V             :         : 5         : N              
+GND                          : V19       : gnd    :                   :         :           :                
+core_cpu_braminterface_addr[1] : V20       : output : 2.5 V             :         : 5         : N              
+core_cpu_braminterface_din[6] : V21       : input  : 2.5 V             :         : 5         : N              
+core_cpu_braminterface_addr[2] : V22       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W1        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W2        :        :                   :         : 2         :                
+core_cpu_mapper_flags[63]    : W3        : input  : 2.5 V             :         : 3         : N              
+core_cpu_ppuinterface_ppumemdout[7] : W4        : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W5        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W6        :        :                   :         : 3         :                
+core_video_color[2]          : W7        : output : 2.5 V             :         : 3         : N              
+core_video_scanline[7]       : W8        : output : 2.5 V             :         : 3         : N              
+core_cpu_mapper_flags[49]    : W9        : input  : 2.5 V             :         : 3         : N              
+core_video_scanline[2]       : W10       : output : 2.5 V             :         : 3         : N              
+core_cpu_reset_cold          : W11       : input  : 2.5 V             :         : 4         : N              
+core_controllers_joypad2_data[1] : W12       : input  : 2.5 V             :         : 4         : N              
+core_controllers_joypad2_data[4] : W13       : input  : 2.5 V             :         : 4         : N              
+core_audio_apuce             : W14       : output : 2.5 V             :         : 4         : N              
+core_cpu_sdraminterface_memwrite : W15       : output : 2.5 V             :         : 4         : N              
+core_cpu_sdraminterface_prgmask[20] : W16       : input  : 2.5 V             :         : 4         : N              
+core_cpu_braminterface_din[4] : W17       : input  : 2.5 V             :         : 4         : N              
+core_cpu_sdraminterface_memaddr[19] : W18       : output : 2.5 V             :         : 4         : N              
+core_cpu_braminterface_dout[2] : W19       : output : 2.5 V             :         : 5         : N              
+core_cpu_braminterface_addr[4] : W20       : output : 2.5 V             :         : 5         : N              
+GND                          : W21       : gnd    :                   :         :           :                
+core_cpu_braminterface_din[7] : W22       : input  : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y1        :        :                   :         : 3         :                
+core_cpu_braminterface_addr[15] : Y2        : output : 2.5 V             :         : 3         : N              
+core_video_scanline[3]       : Y3        : output : 2.5 V             :         : 3         : N              
+core_video_scanline[6]       : Y4        : output : 2.5 V             :         : 3         : N              
+core_cpu_ppuinterface_ppumemdout[0] : Y5        : output : 2.5 V             :         : 3         : N              
+core_cpu_mapper_flags[30]    : Y6        : input  : 2.5 V             :         : 3         : N              
+core_cpu_mapper_flags[8]     : Y7        : input  : 2.5 V             :         : 3         : N              
+core_cpu_mapper_flags[58]    : Y8        : input  : 2.5 V             :         : 3         : N              
+GND                          : Y9        : gnd    :                   :         :           :                
+core_sys_type[1]             : Y10       : input  : 2.5 V             :         : 3         : N              
+core_controllers_joypad_out[0] : Y11       : output : 2.5 V             :         : 4         : N              
+GND                          : Y12       : gnd    :                   :         :           :                
+core_fds_disk_diskside_req[0] : Y13       : output : 2.5 V             :         : 4         : N              
+core_fds_disk_diskside_req[1] : Y14       : output : 2.5 V             :         : 4         : N              
+GND                          : Y15       : gnd    :                   :         :           :                
+core_cpu_ppuinterface_ppumemread : Y16       : output : 2.5 V             :         : 4         : N              
+core_cpu_mapper_flags[46]    : Y17       : input  : 2.5 V             :         : 4         : N              
+core_cpu_mapper_flags[21]    : Y18       : input  : 2.5 V             :         : 4         : N              
+core_cpu_sdraminterface_prgmask[19] : Y19       : input  : 2.5 V             :         : 4         : N              
+core_cpu_braminterface_dout[3] : Y20       : output : 2.5 V             :         : 5         : N              
+core_cpu_braminterface_addr[6] : Y21       : output : 2.5 V             :         : 5         : N              
+core_cpu_braminterface_din[0] : Y22       : input  : 2.5 V             :         : 5         : N              

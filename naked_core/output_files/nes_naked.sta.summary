@@ -1,0 +1,65 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'core_cpu_clk'
+Slack : -24.878
+TNS   : -98210.418
+
+Type  : Slow 1200mV 85C Model Hold 'core_cpu_clk'
+Slack : 0.223
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'core_cpu_clk'
+Slack : -2.742
+TNS   : -931.911
+
+Type  : Slow 1200mV 85C Model Removal 'core_cpu_clk'
+Slack : 2.197
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'core_cpu_clk'
+Slack : -3.000
+TNS   : -12175.191
+
+Type  : Slow 1200mV 0C Model Setup 'core_cpu_clk'
+Slack : -22.473
+TNS   : -88268.977
+
+Type  : Slow 1200mV 0C Model Hold 'core_cpu_clk'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'core_cpu_clk'
+Slack : -2.420
+TNS   : -807.262
+
+Type  : Slow 1200mV 0C Model Removal 'core_cpu_clk'
+Slack : 2.013
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'core_cpu_clk'
+Slack : -3.000
+TNS   : -12167.565
+
+Type  : Fast 1200mV 0C Model Setup 'core_cpu_clk'
+Slack : -11.238
+TNS   : -44316.854
+
+Type  : Fast 1200mV 0C Model Hold 'core_cpu_clk'
+Slack : 0.094
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'core_cpu_clk'
+Slack : -0.927
+TNS   : -294.770
+
+Type  : Fast 1200mV 0C Model Removal 'core_cpu_clk'
+Slack : 1.008
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'core_cpu_clk'
+Slack : -3.000
+TNS   : -10141.393
+
+------------------------------------------------------------

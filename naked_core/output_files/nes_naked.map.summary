@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Wed Mar 20 14:02:00 2024
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : nes_naked
+Top-level Entity Name : top_level
+Family : MAX 10
+Total logic elements : 26,403
+    Total combinational functions : 20,576
+    Dedicated logic registers : 9,780
+Total registers : 9780
+Total pins : 311
+Total virtual pins : 0
+Total memory bits : 13,148
+Embedded Multiplier 9-bit elements : 27
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0
