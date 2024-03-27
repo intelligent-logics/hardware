@@ -1,0 +1,80 @@
+#============================================================
+# Build by Terasic System Builder
+#============================================================
+
+set_global_assignment -name FAMILY "MAX 10"
+set_global_assignment -name DEVICE 10M50DAF484C6GES
+set_global_assignment -name TOP_LEVEL_ENTITY "fpganes_clone"
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 15.1.0
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:35:54 MARCH 14,2017"
+set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 896
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 6
+
+#============================================================
+# CLOCK
+#============================================================
+
+#============================================================
+# SEG7
+#============================================================
+
+#============================================================
+# KEY
+#============================================================
+
+#============================================================
+# LED
+#============================================================
+
+#============================================================
+# SW
+#============================================================
+
+#============================================================
+# VGA
+#============================================================
+
+#============================================================
+# GPIO_0, GPIO_0 connect to GPIO Default
+#============================================================
+
+#============================================================
+# End of pin assignments by Terasic System Builder
+#============================================================
+
+
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name ADVANCED_PHYSICAL_OPTIMIZATION OFF
+set_global_assignment -name VERILOG_CONSTANT_LOOP_LIMIT 100000
+set_global_assignment -name BOARD "MAX 10 DE10 - Lite"
+set_global_assignment -name VERILOG_FILE fpganes_clone.v
+set_global_assignment -name VERILOG_FILE src/vga.v
+set_global_assignment -name VERILOG_FILE src/ppu.v
+set_global_assignment -name VERILOG_FILE src/nes.v
+set_global_assignment -name VERILOG_FILE src/mmu.v
+set_global_assignment -name VERILOG_FILE src/MicroCode.v
+set_global_assignment -name VERILOG_FILE src/hw_uart.v
+set_global_assignment -name VERILOG_FILE src/hw_sound.v
+set_global_assignment -name VERILOG_FILE src/hw_led.v
+set_global_assignment -name VERILOG_FILE src/hq2x.v
+set_global_assignment -name VERILOG_FILE src/dsp.v
+set_global_assignment -name VERILOG_FILE src/cpu.v
+set_global_assignment -name VERILOG_FILE src/compat.v
+set_global_assignment -name VERILOG_FILE src/apu.v
+set_global_assignment -name VERILOG_FILE ram.v
+set_global_assignment -name SDC_FILE fpganes_clone.SDC
+set_global_assignment -name QIP_FILE alterapll.qip
+set_global_assignment -name QIP_FILE ram_programmemory.qip
+set_global_assignment -name FLOW_ENABLE_RTL_VIEWER ON
+set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

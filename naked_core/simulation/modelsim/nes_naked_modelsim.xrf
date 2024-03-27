@@ -58,6 +58,7 @@ source_file = 1, C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/ha
 source_file = 1, C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/naked_core/verilog_files/nes cpu/cheatcodes.sv
 source_file = 1, C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/naked_core/verilog_files/nes cpu/cart.sv
 source_file = 1, C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/naked_core/verilog_files/nes cpu/apu.sv
+source_file = 1, output_files/stp1.stp
 source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/timing_b.vhd

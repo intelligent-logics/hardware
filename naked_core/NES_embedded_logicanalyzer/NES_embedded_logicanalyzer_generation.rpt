@@ -1,0 +1,28 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Users\steve\git_repos\school\cen3907\NES_fpga_development\hardware_development\naked_core\NES_embedded_logicanalyzer.qsys --block-symbol-file --output-directory=C:\Users\steve\git_repos\school\cen3907\NES_fpga_development\hardware_development\naked_core\NES_embedded_logicanalyzer --family="MAX 10" --part=10M50DAF484C6GES
+Progress: Loading naked_core/NES_embedded_logicanalyzer.qsys
+Progress: Reading input file
+Progress: Adding signaltap_ii_logic_analyzer_0 [altera_signaltap_ii_logic_analyzer 20.1]
+Progress: Parameterizing module signaltap_ii_logic_analyzer_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\steve\git_repos\school\cen3907\NES_fpga_development\hardware_development\naked_core\NES_embedded_logicanalyzer.qsys --synthesis=VERILOG --output-directory=C:\Users\steve\git_repos\school\cen3907\NES_fpga_development\hardware_development\naked_core\NES_embedded_logicanalyzer\synthesis --family="MAX 10" --part=10M50DAF484C6GES
+Progress: Loading naked_core/NES_embedded_logicanalyzer.qsys
+Progress: Reading input file
+Progress: Adding signaltap_ii_logic_analyzer_0 [altera_signaltap_ii_logic_analyzer 20.1]
+Progress: Parameterizing module signaltap_ii_logic_analyzer_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: NES_embedded_logicanalyzer: Generating NES_embedded_logicanalyzer "NES_embedded_logicanalyzer" for QUARTUS_SYNTH
+Info: signaltap_ii_logic_analyzer_0: "NES_embedded_logicanalyzer" instantiated altera_signaltap_ii_logic_analyzer "signaltap_ii_logic_analyzer_0"
+Info: NES_embedded_logicanalyzer: Done "NES_embedded_logicanalyzer" with 2 modules, 1 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
