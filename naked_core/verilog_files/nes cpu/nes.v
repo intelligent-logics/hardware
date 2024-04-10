@@ -42,7 +42,7 @@ reg [1:0] spr_state;
 reg [7:0] sprite_dma_lastval;
 reg [15:0] sprite_dma_addr;     // sprite dma source addr
 wire [8:0] new_sprite_dma_addr = sprite_dma_addr[7:0] + 8'h01;
-
+/*
 always @(posedge clk) if (reset) begin
 	dmc_state <= 0;
 	spr_state <= 0;
@@ -59,7 +59,7 @@ end else if (ce) begin
 	if (spr_state[1] && odd_cycle && new_sprite_dma_addr[8]) spr_state <= 0;
 	if (spr_state[1]) sprite_dma_lastval <= data_from_ram;
 end
-
+*/
 assign pause_cpu = (spr_state[0] || dmc_trigger);
 assign dmc_ack   = (dmc_state == 1 && !odd_cycle);
 assign aout_enable = dmc_ack || spr_state[1];
@@ -118,13 +118,13 @@ module NES(
 	input         int_audio,
 	input         ext_audio,
 	output        apu_ce,
-	input         gg,
-	input [128:0] gg_code,
-	output        gg_avail,
-	input         gg_reset,
-	output  [2:0] emphasis,
-	output        save_written,
-	output		  core_paused
+	//input         gg,
+	//input [128:0] gg_code,
+	//output        gg_avail,
+	//input         gg_reset,
+	output  [2:0] emphasis
+	//output      save_written,
+	//output		  core_paused
 );
 
 
@@ -154,13 +154,13 @@ module NES(
 // a minimum of one free PPU cycle in which to fit the CPU read. This does however create the issue that
 // we always need perfect alignment.
 //
-// Therefore, we can dervive the following order of operations:
+// Therefore, we can derive the following order of operations:
 // - CPU pre-fetch should happen during first free PPU tick in a CPU cycle.
 // - Cart CE should happen on the second PPU tick in a CPU cycle always
 // - PPU read/write should happen on the last PPU tick in a CPU cycle (usually third)
 
 assign nes_div = div_sys;
-assign apu_ce = cpu_ce;
+//assign apu_ce = cpu_ce;
 
 wire [7:0] from_data_bus;
 wire [7:0] cpu_dout;
@@ -184,26 +184,27 @@ wire ppu_ce  = (div_ppu == div_ppu_n);
 wire cart_ce = (cart_pre & ppu_ce); // First PPU cycle where cpu data is visible.
 
 // Signals
+reg [1:0] ppu_tick = 0;
+reg [2:0] cpu_tick_count;
+reg freeze_clocks = 0;
+reg [4:0] faux_pixel_cnt;
+wire use_fake_h = freeze_clocks && faux_pixel_cnt < 6;
 wire cart_pre  = (ppu_tick == (cpu_tick_count[2] ? 1 : 0));
 wire ppu_read  = (ppu_tick == (cpu_tick_count[2] ? 2 : 1));
 wire ppu_write = (ppu_tick == (cpu_tick_count[2] ? 1 : 0));
 
-wire phi2 = (div_cpu > 4 && div_cpu < div_cpu_n);
+wire phi2 = 'h0;//(div_cpu > 4 && div_cpu < div_cpu_n);
 
 // The infamous NES jitter is important for accuracy, but wreks havok on modern devices and scalers,
 // so what I do here is pause the whole system for one PPU clock and insert a "fake" ppu clock to
 // replace the missing pixel. Thus the system runs accurately (ableit a few nanoseconds per frame slower)
 // but all video devices stay happy.
-
+/*
 wire skip_pixel;
-reg freeze_clocks = 0;
-reg [4:0] faux_pixel_cnt;
 
-wire use_fake_h = freeze_clocks && faux_pixel_cnt < 6;
-reg [1:0] ppu_tick = 0;
+
 
 reg [1:0] last_sys_type;
-reg [2:0] cpu_tick_count;
 
 wire skip_ppu_cycle = (cpu_tick_count == 4) && (ppu_tick == 0);
 
@@ -266,7 +267,7 @@ always @(posedge clk) begin
 	end
 end
 
-
+*/
 /**********************************************************/
 /*************              CPU             ***************/
 /**********************************************************/
@@ -296,7 +297,7 @@ T65 cpu(
 	.R_W_n  (cpu_rnw),
 
 	.A      (cpu_addr),
-	.DI     (cpu_rnw ? from_data_bus : cpu_dout),
+	.DI     (cpu_dout), //temporary
 	.DO     (cpu_dout)
 );
 
@@ -308,17 +309,18 @@ wire apu_dma_request, apu_dma_ack;
 wire [15:0] apu_dma_addr;
 
 // Determine the values on the bus outgoing from the CPU chip (after DMA / APU)
-wire [15:0] addr = dma_aout_enable ? dma_aout  : cpu_addr;
-wire [7:0]  dbus = dma_aout_enable ? dma_data_to_ram : cpu_dout;
+wire [15:0] addr = cpu_addr[15:0]; //temporary
+//wire [15:0] addr = dma_aout_enable ? dma_aout  : cpu_addr;
+wire [7:0]  dbus = cpu_dout;//dma_aout_enable ? dma_data_to_ram : cpu_dout; //temporary
 wire mr_int      = dma_aout_enable ? dma_read  : cpu_rnw;
-wire mw_int      = dma_aout_enable ? !dma_read : !cpu_rnw;
+wire mw_int      =  'h1;//dma_aout_enable ? !dma_read : !cpu_rnw; //temporary
 
 DmaController dma(
 	.clk            (clk),
 	.ce             (cpu_ce),
 	.reset          (reset),
 	.odd_cycle      (odd_or_even),                // Even or odd cycle
-	.sprite_trigger ((addr == 'h4014 && mw_int)), // Sprite trigger
+	.sprite_trigger ('h1), // Sprite trigger
 	.dmc_trigger    (apu_dma_request),            // DMC Trigger
 	.cpu_read       (cpu_rnw),                    // CPU in a read cycle?
 	.data_from_cpu  (cpu_dout),                   // Data from cpu
@@ -337,7 +339,7 @@ DmaController dma(
 /*************             APU              ***************/
 /**********************************************************/
 
-wire apu_cs = addr >= 'h4000 && addr < 'h4018;
+wire apu_cs = 'h0;//addr >= 'h4000 && addr < 'h4018; //temporary
 wire [7:0] apu_dout;
 wire [15:0] sample_apu;
 
@@ -347,7 +349,7 @@ APU apu(
 	.PHI2           (phi2),
 	.CS             (apu_cs),
 	.PAL            (sys_type[0]),
-	.ce             (apu_ce),
+	.ce             ('h0),
 	.reset          (reset),
 	.cold_reset     (cold_reset),
 	.ADDR           (addr[4:0]),
@@ -366,7 +368,7 @@ APU apu(
 
 assign sample = sample_a;
 reg [15:0] sample_a;
-
+/*
 always @* begin
 	case (audio_en)
 		0: sample_a = 16'd0;
@@ -375,7 +377,7 @@ always @* begin
 		3: sample_a = sample_ext;
 	endcase
 end
-
+*/
 wire [15:0] sample_inverted = 16'hFFFF - sample_apu;
 wire [1:0] audio_en = {int_audio, ext_audio};
 wire [15:0] audio_mappers = (audio_en == 2'd1) ? 16'd0 : sample_inverted;
@@ -385,15 +387,17 @@ wire [15:0] audio_mappers = (audio_en == 2'd1) ? 16'd0 : sample_inverted;
 wire joypad1_cs = (addr == 'h4016);
 wire joypad2_cs = (addr == 'h4017);
 
-reg [2:0] joy_out;
+//reg [2:0] joy_out;
+/*
 always @(posedge clk) begin
 	if (joypad1_cs && mw_int)
 		joy_out <= cpu_dout[2:0];
 end
 
+
 assign joypad_out = joy_out;
 assign joypad_clock = {joypad2_cs && mr_int, joypad1_cs && mr_int};
-
+*/
 
 /**********************************************************/
 /*************             PPU              ***************/
@@ -405,7 +409,7 @@ assign joypad_clock = {joypad2_cs && mr_int, joypad1_cs && mr_int};
 // with our alignment, this should occur at PPU cycle 2 (the *third* cycle).
 wire mr_ppu     = mr_int && ppu_read; // Read *from* the PPU.
 wire mw_ppu     = mw_int && ppu_write; // Write *to* the PPU.
-wire ppu_cs = addr >= 'h2000 && addr < 'h4000;
+wire ppu_cs = 'h0;//addr >= 'h2000 && addr < 'h4000;
 wire [7:0] ppu_dout;            // Data from PPU to CPU
 wire chr_read, chr_write, chr_read_ex;       // If PPU reads/writes from VRAM
 wire [13:0] chr_addr, chr_addr_ex;           // Address PPU accesses in VRAM
@@ -444,10 +448,11 @@ PPU ppu(
 );
 
 
+wire [15:0] sample_ext;
 /**********************************************************/
 /*************             Cart             ***************/
 /**********************************************************/
-
+/*
 wire [15:0] prg_addr = addr;
 wire [7:0] prg_din = dbus & (prg_conflict ? cpumem_din : 8'hFF);
 
@@ -459,7 +464,7 @@ wire [24:0] prg_linaddr;
 wire [21:0] chr_linaddr;
 wire [7:0] prg_dout_mapper, chr_from_ppu_mapper;
 wire has_chr_from_ppu_mapper;
-wire [15:0] sample_ext;
+
 
 assign save_written = (mapper_flags[7:0] == 8'h14) ? (prg_linaddr[21:18] == 4'b1111 && prg_write) : (prg_addr[15:13] == 3'b011 && prg_write) | bram_write;
 
@@ -529,12 +534,12 @@ CODES codes (
 	.genie_ovr  (genie_ovr),
 	.genie_data (genie_data)
 );
-
+*/
 
 /**********************************************************/
 /*************       Bus Arbitration        ***************/
 /**********************************************************/
-
+/*
 assign chr_to_ppu = has_chr_from_ppu_mapper ? chr_from_ppu_mapper : ppumem_din;
 
 assign cpumem_addr  = prg_linaddr;
@@ -576,5 +581,5 @@ always @* begin
 		raw_data_bus = open_bus_data;
 	end
 end
-
+*/
 endmodule

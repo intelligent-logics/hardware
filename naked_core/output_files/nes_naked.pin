@@ -71,166 +71,166 @@ CHIP  "nes_naked"  ASSIGNED TO AN: 10M50DAF484C6GES
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
 GND                          : A1        : gnd    :                   :         :           :                
-core_audio_sample[11]        : A2        : output : 2.5 V             :         : 8         : N              
-core_cpu_ppuinterface_ppumemdout[3] : A3        : output : 2.5 V             :         : 8         : N              
-core_video_extrasprites      : A4        : input  : 2.5 V             :         : 8         : N              
-core_audio_sample[2]         : A5        : output : 2.5 V             :         : 8         : N              
-core_audio_sample[12]        : A6        : output : 2.5 V             :         : 8         : N              
-core_audio_sample[15]        : A7        : output : 2.5 V             :         : 7         : N              
-core_audio_sample[7]         : A8        : output : 2.5 V             :         : 7         : N              
-core_audio_sample[10]        : A9        : output : 2.5 V             :         : 7         : N              
-core_cpu_sdraminterface_chrmask[0] : A10       : input  : 2.5 V             :         : 7         : N              
-core_cpu_sdraminterface_chrmask[19] : A11       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A2        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A3        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A4        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A5        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A6        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A7        :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A8        :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A9        :        :                   :         : 7         :                
+core_cpu_cycle[6]            : A10       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A11       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A12       :        :                   :         : 7         :                
-core_cpu_sdraminterface_chrmask[9] : A13       : input  : 2.5 V             :         : 7         : N              
-core_cpu_sdraminterface_chrmask[7] : A14       : input  : 2.5 V             :         : 7         : N              
-core_cpu_ppuinterface_ppumemaddr[17] : A15       : output : 2.5 V             :         : 7         : N              
-core_cpu_ppuinterface_ppumemaddr[1] : A16       : output : 2.5 V             :         : 7         : N              
-core_cpu_sdraminterface_chrmask[11] : A17       : input  : 2.5 V             :         : 7         : N              
-core_cpu_sdraminterface_chrmask[1] : A18       : input  : 2.5 V             :         : 7         : N              
-core_cpu_sdraminterface_chrmask[12] : A19       : input  : 2.5 V             :         : 7         : N              
-core_cpu_sdraminterface_chrmask[15] : A20       : input  : 2.5 V             :         : 7         : N              
-core_cpu_sdraminterface_memaddr[15] : A21       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A13       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A14       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A15       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A16       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A17       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A18       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A19       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A20       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A21       :        :                   :         : 6         :                
 GND                          : A22       : gnd    :                   :         :           :                
-core_cpu_ppuinterface_ppumemdout[5] : AA1       : output : 2.5 V             :         : 3         : N              
-core_audio_audiochannels[4]  : AA2       : input  : 2.5 V             :         : 3         : N              
-core_cpu_cycle[6]            : AA3       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA1       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA2       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA3       :        :                   :         : 3         :                
 GND                          : AA4       : gnd    :                   :         :           :                
-core_cpu_emphasis[2]         : AA5       : output : 2.5 V             :         : 3         : N              
-core_cpu_emphasis[1]         : AA6       : output : 2.5 V             :         : 3         : N              
-core_cpu_cycle[7]            : AA7       : output : 2.5 V             :         : 3         : N              
-core_video_color[1]          : AA8       : output : 2.5 V             :         : 3         : N              
-core_controllers_joypad1_data[1] : AA9       : input  : 2.5 V             :         : 3         : N              
-core_cpu_ppuinterface_ppumemdin[2] : AA10      : input  : 2.5 V             :         : 3         : N              
-core_cpu_div[1]              : AA11      : output : 2.5 V             :         : 4         : N              
-core_controllers_joypad_clock[0] : AA12      : output : 2.5 V             :         : 4         : N              
-core_controllers_joypad_out[2] : AA13      : output : 2.5 V             :         : 4         : N              
-core_cpu_mapper_flags[18]    : AA14      : input  : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA15      :        :                   :         : 4         :                
-core_fds_disk_diskside[1]    : AA16      : input  : 2.5 V             :         : 4         : N              
-core_cpu_mapper_flags[56]    : AA17      : input  : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA5       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA6       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA7       :        :                   :         : 3         :                
+core_video_scanline[2]       : AA8       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA9       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA10      :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA11      :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA12      :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA13      :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA14      :        :                   :         : 4         :                
+core_cpu_cycle[4]            : AA15      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA16      :        :                   :         : 4         :                
+core_cpu_clk                 : AA17      : input  : 2.5 V             :         : 4         : N              
 GND                          : AA18      : gnd    :                   :         :           :                
-core_cpu_ppuinterface_ppumemdout[2] : AA19      : output : 2.5 V             :         : 4         : N              
-core_cpu_sdraminterface_memaddr[20] : AA20      : output : 2.5 V             :         : 4         : N              
-core_cpu_braminterface_din[5] : AA21      : input  : 2.5 V             :         : 5         : N              
-core_cpu_braminterface_addr[3] : AA22      : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA19      :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA20      :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA21      :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA22      :        :                   :         : 5         :                
 GND                          : AB1       : gnd    :                   :         :           :                
-core_video_color[4]          : AB2       : output : 2.5 V             :         : 3         : N              
-core_video_scanline[5]       : AB3       : output : 2.5 V             :         : 3         : N              
-core_cpu_cycle[2]            : AB4       : output : 2.5 V             :         : 3         : N              
-core_cpu_emphasis[0]         : AB5       : output : 2.5 V             :         : 3         : N              
-core_cpu_cycle[0]            : AB6       : output : 2.5 V             :         : 3         : N              
-core_cpu_cycle[3]            : AB7       : output : 2.5 V             :         : 3         : N              
-core_video_color[0]          : AB8       : output : 2.5 V             :         : 3         : N              
-core_video_mask[1]           : AB9       : input  : 2.5 V             :         : 3         : N              
-core_controllers_joypad2_data[2] : AB10      : input  : 2.5 V             :         : 4         : N              
-core_controllers_joypad2_data[3] : AB11      : input  : 2.5 V             :         : 4         : N              
-core_controllers_joypad1_data[3] : AB12      : input  : 2.5 V             :         : 4         : N              
-core_cpu_div[0]              : AB13      : output : 2.5 V             :         : 4         : N              
-core_controllers_joypad_out[1] : AB14      : output : 2.5 V             :         : 4         : N              
-core_cpu_mapper_flags[61]    : AB15      : input  : 2.5 V             :         : 4         : N              
-core_cpu_sdraminterface_memread : AB16      : output : 2.5 V             :         : 4         : N              
-core_cpu_braminterface_write : AB17      : output : 2.5 V             :         : 4         : N              
-core_cpu_mapper_flags[31]    : AB18      : input  : 2.5 V             :         : 4         : N              
-core_fds_disk_eject          : AB19      : input  : 2.5 V             :         : 4         : N              
-core_fds_disk_busy           : AB20      : input  : 2.5 V             :         : 4         : N              
-core_cpu_sdraminterface_memdin[7] : AB21      : input  : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB2       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB3       :        :                   :         : 3         :                
+core_cpu_emphasis[0]         : AB4       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB5       :        :                   :         : 3         :                
+core_video_color[5]          : AB6       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB7       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB8       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB9       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB10      :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB11      :        :                   :         : 4         :                
+core_cpu_cycle[5]            : AB12      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB13      :        :                   :         : 4         :                
+core_cpu_cycle[7]            : AB14      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB15      :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB16      :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB17      :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB18      :        :                   :         : 4         :                
+core_cpu_cycle[8]            : AB19      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB20      :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB21      :        :                   :         : 4         :                
 GND                          : AB22      : gnd    :                   :         :           :                
-core_cpu_ppuinterface_ppumemaddr[0] : B1        : output : 2.5 V             :         : 8         : N              
-core_audio_sample[0]         : B2        : output : 2.5 V             :         : 8         : N              
-core_audio_sample[6]         : B3        : output : 2.5 V             :         : 8         : N              
-core_cpu_sdraminterface_chrmask[6] : B4        : input  : 2.5 V             :         : 8         : N              
-core_cpu_ppuinterface_ppumemaddr[6] : B5        : output : 2.5 V             :         : 8         : N              
+core_video_color[1]          : B1        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B2        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B3        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B4        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B5        :        :                   :         : 8         :                
 GND                          : B6        : gnd    :                   :         :           :                
-core_audio_sample[8]         : B7        : output : 2.5 V             :         : 8         : N              
-core_audio_internalaudio     : B8        : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B7        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B8        :        :                   :         : 7         :                
 GND                          : B9        : gnd    :                   :         :           :                
-core_cpu_sdraminterface_memaddr[24] : B10       : output : 2.5 V             :         : 7         : N              
-core_cpu_mapper_flags[60]    : B11       : input  : 2.5 V             :         : 7         : N              
-core_audio_externalaudio     : B12       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B10       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B11       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B12       :        :                   :         : 7         :                
 GND                          : B13       : gnd    :                   :         :           :                
-core_cpu_ppuinterface_ppumemaddr[3] : B14       : output : 2.5 V             :         : 7         : N              
-core_cpu_ppuinterface_ppumemaddr[18] : B15       : output : 2.5 V             :         : 7         : N              
-core_cpu_ppuinterface_ppumemaddr[7] : B16       : output : 2.5 V             :         : 7         : N              
-core_cpu_sdraminterface_chrmask[17] : B17       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B14       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B15       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B16       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B17       :        :                   :         : 7         :                
 GND                          : B18       : gnd    :                   :         :           :                
-core_cpu_savewritten         : B19       : output : 2.5 V             :         : 7         : N              
-core_cpu_sdraminterface_memaddr[6] : B20       : output : 2.5 V             :         : 6         : N              
-core_cpu_sdraminterface_chrmask[14] : B21       : input  : 2.5 V             :         : 6         : N              
-core_cpu_sdraminterface_prgmask[5] : B22       : input  : 2.5 V             :         : 6         : N              
-core_cpu_mapper_flags[2]     : C1        : input  : 2.5 V             :         : 1B        : N              
-core_cpu_sdraminterface_chrmask[5] : C2        : input  : 2.5 V             :         : 8         : N              
-core_audio_sample[3]         : C3        : output : 2.5 V             :         : 8         : N              
-core_video_scanline[0]       : C4        : output : 2.5 V             :         : 8         : N              
-core_video_scanline[4]       : C5        : output : 2.5 V             :         : 8         : N              
-core_cpu_ppuinterface_ppumemdin[0] : C6        : input  : 2.5 V             :         : 8         : N              
-core_cpu_ppuinterface_ppumemdin[1] : C7        : input  : 2.5 V             :         : 8         : N              
-core_cpu_mapper_flags[6]     : C8        : input  : 2.5 V             :         : 8         : N              
-core_audio_sample[9]         : C9        : output : 2.5 V             :         : 7         : N              
-core_cpu_ppuinterface_ppumemaddr[19] : C10       : output : 2.5 V             :         : 7         : N              
-core_cpu_ppuinterface_ppumemaddr[5] : C11       : output : 2.5 V             :         : 7         : N              
-core_cpu_mapper_flags[15]    : C12       : input  : 2.5 V             :         : 7         : N              
-core_cpu_sdraminterface_chrmask[16] : C13       : input  : 2.5 V             :         : 7         : N              
-core_cpu_ppuinterface_ppumemaddr[16] : C14       : output : 2.5 V             :         : 7         : N              
-core_cpu_ppuinterface_ppumemaddr[14] : C15       : output : 2.5 V             :         : 7         : N              
-core_cpu_sdraminterface_chrmask[3] : C16       : input  : 2.5 V             :         : 7         : N              
-core_cpu_mapper_flags[44]    : C17       : input  : 2.5 V             :         : 7         : N              
-core_cpu_sdraminterface_chrmask[18] : C18       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B19       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B20       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B21       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B22       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C1        :        :                   :         : 1B        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C2        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C3        :        :                   :         : 8         :                
+core_video_mask[0]           : C4        : input  : 2.5 V             :         : 8         : N              
+core_video_color[2]          : C5        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C6        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C7        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C8        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C9        :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C10       :        :                   :         : 7         :                
+core_video_scanline[7]       : C11       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C12       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C13       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C14       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C15       :        :                   :         : 7         :                
+core_audio_audiochannels[3]  : C16       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C17       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C18       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C19       :        :                   :         : 7         :                
-core_cpu_sdraminterface_prgmask[9] : C20       : input  : 2.5 V             :         : 6         : N              
-core_cpu_sdraminterface_prgmask[17] : C21       : input  : 2.5 V             :         : 6         : N              
-core_cpu_sdraminterface_memaddr[9] : C22       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C20       :        :                   :         : 6         :                
+core_audio_audiochannels[1]  : C21       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C22       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D1        :        :                   :         : 1B        :                
-core_cpu_mapper_flags[40]    : D2        : input  : 2.5 V             :         : 1B        : N              
-core_cpu_ppuinterface_ppumemdout[6] : D3        : output : 2.5 V             :         : 1B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D2        :        :                   :         : 1B        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D3        :        :                   :         : 1B        :                
 GND                          : D4        : gnd    :                   :         :           :                
-core_video_scanline[1]       : D5        : output : 2.5 V             :         : 8         : N              
-core_cpu_ppuinterface_ppumemaddr[21] : D6        : output : 2.5 V             :         : 8         : N              
-core_cpu_ppuinterface_ppumemdin[6] : D7        : input  : 2.5 V             :         : 8         : N              
-core_audio_sample[5]         : D8        : output : 2.5 V             :         : 8         : N              
-core_cpu_ppuinterface_ppumemdin[3] : D9        : input  : 2.5 V             :         : 8         : N              
-core_cpu_ppuinterface_ppumemdin[4] : D10       : input  : 2.5 V             :         : 8         : N              
+core_video_mask[1]           : D5        : input  : 2.5 V             :         : 8         : N              
+core_video_color[3]          : D6        : output : 2.5 V             :         : 8         : N              
+core_cpu_cycle[3]            : D7        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D8        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D9        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D10       :        :                   :         : 8         :                
 GND                          : D11       : gnd    :                   :         :           :                
-core_cpu_braminterface_addr[9] : D12       : output : 2.5 V             :         : 7         : N              
-core_cpu_mapper_flags[36]    : D13       : input  : 2.5 V             :         : 7         : N              
-core_cpu_sdraminterface_refresh : D14       : output : 2.5 V             :         : 7         : N              
-core_cpu_ppuinterface_ppumemaddr[13] : D15       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D12       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D13       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D14       :        :                   :         : 7         :                
+core_audio_audiochannels[2]  : D15       : input  : 2.5 V             :         : 7         : N              
 GND                          : D16       : gnd    :                   :         :           :                
-core_cpu_sdraminterface_memaddr[23] : D17       : output : 2.5 V             :         : 7         : N              
-core_cpu_ppuinterface_ppumemaddr[15] : D18       : output : 2.5 V             :         : 6         : N              
-core_cpu_sdraminterface_prgmask[13] : D19       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D17       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D18       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D19       :        :                   :         : 6         :                
 GND                          : D20       : gnd    :                   :         :           :                
-core_cpu_sdraminterface_memdout[2] : D21       : output : 2.5 V             :         : 6         : N              
-core_cpu_sdraminterface_memaddr[0] : D22       : output : 2.5 V             :         : 6         : N              
-core_cpu_mapper_flags[52]    : E1        : input  : 2.5 V             :         : 1B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D21       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D22       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E1        :        :                   :         : 1B        :                
 GND                          : E2        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E3        :        :                   :         : 1A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E4        :        :                   :         : 1A        :                
 NC                           : E5        :        :                   :         :           :                
-core_audio_sample[13]        : E6        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E6        :        :                   :         : 8         :                
 GND                          : E7        : gnd    :                   :         :           :                
-core_audio_sample[4]         : E8        : output : 2.5 V             :         : 8         : N              
-core_cpu_ppuinterface_ppumemdin[5] : E9        : input  : 2.5 V             :         : 8         : N              
-core_cpu_sdraminterface_memdin[0] : E10       : input  : 2.5 V             :         : 8         : N              
-core_cpu_mapper_flags[0]     : E11       : input  : 2.5 V             :         : 8         : N              
-core_cpu_sdraminterface_chrmask[4] : E12       : input  : 2.5 V             :         : 7         : N              
-core_cpu_ppuinterface_ppumemaddr[4] : E13       : output : 2.5 V             :         : 7         : N              
-core_cpu_sdraminterface_memaddr[7] : E14       : output : 2.5 V             :         : 7         : N              
-core_cpu_mapper_flags[39]    : E15       : input  : 2.5 V             :         : 7         : N              
-core_cpu_braminterface_addr[14] : E16       : output : 2.5 V             :         : 7         : N              
-core_cpu_sdraminterface_chrmask[10] : E17       : input  : 2.5 V             :         : 6         : N              
-core_cpu_mapper_flags[28]    : E18       : input  : 2.5 V             :         : 6         : N              
-core_cpu_sdraminterface_prgmask[16] : E19       : input  : 2.5 V             :         : 6         : N              
-core_cpu_sdraminterface_memaddr[2] : E20       : output : 2.5 V             :         : 6         : N              
-core_cpu_sdraminterface_prgmask[10] : E21       : input  : 2.5 V             :         : 6         : N              
-core_cpu_sdraminterface_memaddr[8] : E22       : output : 2.5 V             :         : 6         : N              
+core_sys_type[1]             : E8        : input  : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E9        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E10       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E11       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E12       :        :                   :         : 7         :                
+core_video_scanline[5]       : E13       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E14       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E15       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E16       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E17       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E18       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E19       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E20       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E21       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E22       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F1        :        :                   :         : 1B        :                
-core_cpu_mapper_flags[1]     : F2        : input  : 2.5 V             :         : 1B        : N              
-core_cpu_sdraminterface_memaddr[22] : F3        : output : 2.5 V             :         : 1A        : N              
-core_paused                  : F4        : output : 2.5 V             :         : 1A        : N              
-core_cpu_mapper_flags[43]    : F5        : input  : 2.5 V             :         : 1A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F2        :        :                   :         : 1B        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F3        :        :                   :         : 1A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F4        :        :                   :         : 1A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F5        :        :                   :         : 1A        :                
 NC                           : F6        :        :                   :         :           :                
-core_audio_sample[1]         : F7        : output : 2.5 V             :         : 8         : N              
+core_sys_type[0]             : F7        : input  : 2.5 V             :         : 8         : N              
 ~ALTERA_CONF_DONE~ / RESERVED_INPUT : F8        : input  : 2.5 V Schmitt Trigger :         : 8         : N              
 VCCIO8                       : F9        : power  :                   : 2.5V    : 8         :                
 GND                          : F10       : gnd    :                   :         :           :                
@@ -238,17 +238,17 @@ VCCIO8                       : F11       : power  :                   : 2.5V    
 VCCIO7                       : F12       : power  :                   : 2.5V    : 7         :                
 GND                          : F13       : gnd    :                   :         :           :                
 VCCIO7                       : F14       : power  :                   : 2.5V    : 7         :                
-core_cpu_sdraminterface_prgmask[4] : F15       : input  : 2.5 V             :         : 7         : N              
-core_cpu_mapper_flags[55]    : F16       : input  : 2.5 V             :         : 7         : N              
-core_cpu_sdraminterface_prgmask[0] : F17       : input  : 2.5 V             :         : 6         : N              
-core_cpu_sdraminterface_prgmask[6] : F18       : input  : 2.5 V             :         : 6         : N              
-core_cpu_sdraminterface_prgmask[12] : F19       : input  : 2.5 V             :         : 6         : N              
-core_cpu_sdraminterface_prgmask[3] : F20       : input  : 2.5 V             :         : 6         : N              
-core_cpu_sdraminterface_prgmask[1] : F21       : input  : 2.5 V             :         : 6         : N              
-core_cpu_mapper_flags[29]    : F22       : input  : 2.5 V             :         : 6         : N              
-core_cpu_mapper_flags[53]    : G1        : input  : 2.5 V             :         : 1B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F15       :        :                   :         : 7         :                
+core_cpu_emphasis[2]         : F16       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F17       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F18       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F19       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F20       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F21       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F22       :        :                   :         : 6         :                
+core_video_extrasprites      : G1        : input  : 2.5 V             :         : 1B        : N              
 ~ALTERA_TCK~ / RESERVED_INPUT : G2        : input  : 2.5 V Schmitt Trigger :         : 1B        : N              
-core_audio_audiochannels[3]  : G3        : input  : 2.5 V             :         : 1A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G3        :        :                   :         : 1A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G4        :        :                   :         : 1A        :                
 ANAIN1                       : G5        :        :                   :         :           :                
 GND                          : G6        : gnd    :                   :         :           :                
@@ -262,194 +262,194 @@ VCCIO7                       : G13       : power  :                   : 2.5V    
 VCCIO7                       : G14       : power  :                   : 2.5V    : 7         :                
 GND                          : G15       : gnd    :                   :         :           :                
 VCCD_PLL2                    : G16       : power  :                   : 1.2V    :           :                
-core_cpu_braminterface_addr[11] : G17       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G17       :        :                   :         : 6         :                
 GND                          : G18       : gnd    :                   :         :           :                
-core_cpu_mapper_flags[3]     : G19       : input  : 2.5 V             :         : 6         : N              
-core_cpu_sdraminterface_memdin[1] : G20       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G19       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G20       :        :                   :         : 6         :                
 GND                          : G21       : gnd    :                   :         :           :                
-core_cpu_mapper_flags[27]    : G22       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G22       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H1        :        :                   :         : 1B        :                
 ~ALTERA_TMS~ / RESERVED_INPUT_WITH_WEAK_PULLUP : H2        : input  : 2.5 V Schmitt Trigger :         : 1B        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : H3        :        :                   :         : 1A        :                
-core_cpu_ppuinterface_ppumemaddr[8] : H4        : output : 2.5 V             :         : 1A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H4        :        :                   :         : 1A        :                
 REFGND                       : H5        :        :                   :         :           :                
 ADC_VREF                     : H6        :        :                   :         :           :                
 VCCA_ADC                     : H7        : power  :                   : 2.5V    :           :                
 VCCA3                        : H8        : power  :                   : 2.5V    :           :                
 ~ALTERA_nCONFIG~ / RESERVED_INPUT : H9        : input  : 2.5 V Schmitt Trigger :         : 8         : N              
 ~ALTERA_CONFIG_SEL~ / RESERVED_INPUT : H10       : input  : 2.5 V             :         : 8         : N              
-core_audio_sample[14]        : H11       : output : 2.5 V             :         : 8         : N              
-core_cpu_ppuinterface_ppumemaddr[20] : H12       : output : 2.5 V             :         : 7         : N              
-core_cpu_ppuinterface_ppumemaddr[9] : H13       : output : 2.5 V             :         : 7         : N              
-core_cpu_sdraminterface_chrmask[13] : H14       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H11       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H12       :        :                   :         : 7         :                
+core_video_color[4]          : H13       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H14       :        :                   :         : 7         :                
 VCCA2                        : H15       : power  :                   : 2.5V    :           :                
 VCCIO6                       : H16       : power  :                   : 2.5V    : 6         :                
-core_cpu_mapper_flags[25]    : H17       : input  : 2.5 V             :         : 6         : N              
-core_cpu_sdraminterface_memaddr[11] : H18       : output : 2.5 V             :         : 6         : N              
-core_cpu_sdraminterface_memaddr[17] : H19       : output : 2.5 V             :         : 6         : N              
-core_cpu_mapper_flags[26]    : H20       : input  : 2.5 V             :         : 6         : N              
-core_cpu_sdraminterface_memaddr[13] : H21       : output : 2.5 V             :         : 6         : N              
-core_cpu_sdraminterface_memdin[2] : H22       : input  : 2.5 V             :         : 6         : N              
-core_cpu_mapper_flags[51]    : J1        : input  : 2.5 V             :         : 1B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H17       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H18       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H19       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H20       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H21       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H22       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J1        :        :                   :         : 1B        :                
 GND                          : J2        : gnd    :                   :         :           :                
-core_cpu_mapper_flags[20]    : J3        : input  : 2.5 V             :         : 1A        : N              
-core_cpu_ppuinterface_ppumemdout[1] : J4        : output : 2.5 V             :         : 1A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : J3        :        :                   :         : 1A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J4        :        :                   :         : 1A        :                
 ANAIN2                       : J5        :        :                   :         :           :                
 GND                          : J6        : gnd    :                   :         :           :                
 VCCINT                       : J7        : power  :                   : 1.2V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J8        :        :                   :         : 1A        :                
-core_cpu_mapper_flags[59]    : J9        : input  : 2.5 V             :         : 1A        : N              
-core_cpu_sdraminterface_memdout[6] : J10       : output : 2.5 V             :         : 8         : N              
-core_cpu_ppuinterface_ppumemaddr[2] : J11       : output : 2.5 V             :         : 7         : N              
-core_cpu_sdraminterface_chrmask[8] : J12       : input  : 2.5 V             :         : 7         : N              
-core_cpu_ppuinterface_ppumemaddr[10] : J13       : output : 2.5 V             :         : 7         : N              
-core_cpu_sdraminterface_prgmask[14] : J14       : input  : 2.5 V             :         : 6         : N              
-core_cpu_sdraminterface_memaddr[12] : J15       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : J9        :        :                   :         : 1A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J10       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J11       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J12       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J13       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J14       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J15       :        :                   :         : 6         :                
 GND                          : J16       : gnd    :                   :         :           :                
 VCCIO6                       : J17       : power  :                   : 2.5V    : 6         :                
-core_cpu_ppuinterface_ppumemaddr[11] : J18       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : J18       :        :                   :         : 6         :                
 GND                          : J19       : gnd    :                   :         :           :                
-core_cpu_sdraminterface_memaddr[16] : J20       : output : 2.5 V             :         : 6         : N              
-core_cpu_mapper_flags[17]    : J21       : input  : 2.5 V             :         : 6         : N              
-core_cpu_mapper_flags[12]    : J22       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : J20       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J21       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J22       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K1        :        :                   :         : 1B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K2        :        :                   :         : 1B        :                
 GND                          : K3        : gnd    :                   :         :           :                
-core_cpu_sdraminterface_chrmask[2] : K4        : input  : 2.5 V             :         : 1A        : N              
-core_cpu_braminterface_addr[13] : K5        : output : 2.5 V             :         : 1A        : N              
-core_cpu_mapper_flags[57]    : K6        : input  : 2.5 V             :         : 1A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : K4        :        :                   :         : 1A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K5        :        :                   :         : 1A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K6        :        :                   :         : 1A        :                
 VCCIO1A                      : K7        : power  :                   : 2.5V    : 1A        :                
-core_audio_audiochannels[2]  : K8        : input  : 2.5 V             :         : 1B        : N              
-core_cpu_mapper_flags[37]    : K9        : input  : 2.5 V             :         : 1B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : K8        :        :                   :         : 1B        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K9        :        :                   :         : 1B        :                
 GND                          : K10       : gnd    :                   :         :           :                
 VCC                          : K11       : power  :                   : 1.2V    :           :                
 GND                          : K12       : gnd    :                   :         :           :                
 VCC                          : K13       : power  :                   : 1.2V    :           :                
-core_cpu_sdraminterface_prgmask[7] : K14       : input  : 2.5 V             :         : 6         : N              
-core_cpu_sdraminterface_memaddr[3] : K15       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : K14       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K15       :        :                   :         : 6         :                
 VCCIO6                       : K16       : power  :                   : 2.5V    : 6         :                
 VCCIO6                       : K17       : power  :                   : 2.5V    : 6         :                
-core_cpu_ppuinterface_ppumemwrite : K18       : output : 2.5 V             :         : 6         : N              
-core_cpu_sdraminterface_memaddr[5] : K19       : output : 2.5 V             :         : 6         : N              
-core_cpu_ppuinterface_ppumemaddr[12] : K20       : output : 2.5 V             :         : 6         : N              
-core_cpu_mapper_flags[11]    : K21       : input  : 2.5 V             :         : 6         : N              
-core_cpu_mapper_flags[13]    : K22       : input  : 2.5 V             :         : 6         : N              
-core_cpu_mapper_flags[48]    : L1        : input  : 2.5 V             :         : 1B        : N              
-core_cpu_ppuinterface_ppumemdin[7] : L2        : input  : 2.5 V             :         : 1B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : K18       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K19       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K20       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K21       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K22       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : L1        :        :                   :         : 1B        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : L2        :        :                   :         : 1B        :                
 DNU                          : L3        :        :                   :         :           :                
 ~ALTERA_TDI~ / RESERVED_INPUT_WITH_WEAK_PULLUP : L4        : input  : 2.5 V Schmitt Trigger :         : 1B        : N              
 GND                          : L5        : gnd    :                   :         :           :                
 VCCIO1A                      : L6        : power  :                   : 2.5V    : 1A        :                
 VCCIO1B                      : L7        : power  :                   : 2.5V    : 1B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : L8        :        :                   :         : 1B        :                
-core_cpu_mapper_flags[54]    : L9        : input  : 2.5 V             :         : 1B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : L9        :        :                   :         : 1B        :                
 VCC                          : L10       : power  :                   : 1.2V    :           :                
 VCC                          : L11       : power  :                   : 1.2V    :           :                
 VCC                          : L12       : power  :                   : 1.2V    :           :                
 GND                          : L13       : gnd    :                   :         :           :                
-core_cpu_sdraminterface_prgmask[2] : L14       : input  : 2.5 V             :         : 6         : N              
-core_cpu_sdraminterface_prgmask[15] : L15       : input  : 2.5 V             :         : 6         : N              
+core_audio_audiochannels[0]  : L14       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : L15       :        :                   :         : 6         :                
 VCCIO6                       : L16       : power  :                   : 2.5V    : 6         :                
 GND                          : L17       : gnd    :                   :         :           :                
-core_cpu_sdraminterface_memaddr[14] : L18       : output : 2.5 V             :         : 6         : N              
-core_cpu_sdraminterface_memaddr[4] : L19       : output : 2.5 V             :         : 6         : N              
-core_cpu_sdraminterface_prgmask[11] : L20       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : L18       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : L19       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : L20       :        :                   :         : 6         :                
 GND                          : L21       : gnd    :                   :         :           :                
-core_cpu_mapper_flags[14]    : L22       : input  : 2.5 V             :         : 5         : N              
-core_cpu_mapper_flags[19]    : M1        : input  : 2.5 V             :         : 2         : N              
-core_cpu_braminterface_addr[8] : M2        : output : 2.5 V             :         : 2         : N              
-core_cpu_mapper_flags[47]    : M3        : input  : 2.5 V             :         : 1B        : N              
-core_audio_audiochannels[1]  : M4        : input  : 2.5 V             :         : 1B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : L22       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M1        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M2        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M3        :        :                   :         : 1B        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M4        :        :                   :         : 1B        :                
 ~ALTERA_TDO~                 : M5        : output : 2.5 V             :         : 1B        : N              
 VCCIO1B                      : M6        : power  :                   : 2.5V    : 1B        :                
 GND                          : M7        : gnd    :                   :         :           :                
-core_cpu_clk                 : M8        : input  : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M8        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M9        :        :                   :         : 2         :                
 GND                          : M10       : gnd    :                   :         :           :                
 VCC                          : M11       : power  :                   : 1.2V    :           :                
 VCC                          : M12       : power  :                   : 1.2V    :           :                
 VCC                          : M13       : power  :                   : 1.2V    :           :                
-core_cpu_sdraminterface_memaddr[10] : M14       : output : 2.5 V             :         : 6         : N              
-core_cpu_sdraminterface_prgmask[8] : M15       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M14       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M15       :        :                   :         : 6         :                
 GND                          : M16       : gnd    :                   :         :           :                
 VCCIO6                       : M17       : power  :                   : 2.5V    : 6         :                
-core_cpu_sdraminterface_memaddr[1] : M18       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M18       :        :                   :         : 6         :                
 GND                          : M19       : gnd    :                   :         :           :                
-core_cpu_sdraminterface_memdin[4] : M20       : input  : 2.5 V             :         : 6         : N              
-core_cpu_mapper_flags[23]    : M21       : input  : 2.5 V             :         : 5         : N              
-core_cpu_sdraminterface_memdout[0] : M22       : output : 2.5 V             :         : 5         : N              
-core_cpu_braminterface_addr[17] : N1        : output : 2.5 V             :         : 2         : N              
-core_cpu_mapper_flags[38]    : N2        : input  : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M20       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M21       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M22       :        :                   :         : 5         :                
+core_cpu_emphasis[1]         : N1        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N2        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N3        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : N4        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : N5        :        :                   :         : 2         :                
+core_video_color[0]          : N4        : output : 2.5 V             :         : 2         : N              
+core_video_scanline[4]       : N5        : output : 2.5 V             :         : 2         : N              
 VCCIO2                       : N6        : power  :                   : 2.5V    : 2         :                
 VCCIO2                       : N7        : power  :                   : 2.5V    : 2         :                
-core_cpu_mapper_flags[10]    : N8        : input  : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N8        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N9        :        :                   :         : 2         :                
 VCC                          : N10       : power  :                   : 1.2V    :           :                
 GND                          : N11       : gnd    :                   :         :           :                
 VCC                          : N12       : power  :                   : 1.2V    :           :                
 GND                          : N13       : gnd    :                   :         :           :                
-core_cpu_mapper_flags[4]     : N14       : input  : 2.5 V             :         : 6         : N              
-core_cpu_mapper_flags[5]     : N15       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N14       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N15       :        :                   :         : 6         :                
 VCCIO5                       : N16       : power  :                   : 2.5V    : 5         :                
 VCCIO6                       : N17       : power  :                   : 2.5V    : 6         :                
-core_cpu_sdraminterface_memdin[5] : N18       : input  : 2.5 V             :         : 6         : N              
-core_cpu_sdraminterface_memdin[3] : N19       : input  : 2.5 V             :         : 6         : N              
-core_cpu_mapper_flags[16]    : N20       : input  : 2.5 V             :         : 6         : N              
-core_cpu_mapper_flags[22]    : N21       : input  : 2.5 V             :         : 5         : N              
-core_cpu_sdraminterface_memaddr[21] : N22       : output : 2.5 V             :         : 5         : N              
-core_cpu_mapper_flags[41]    : P1        : input  : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N18       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N19       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N20       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N21       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N22       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P1        :        :                   :         : 2         :                
 GND                          : P2        : gnd    :                   :         :           :                
-core_cpu_cycle[4]            : P3        : output : 2.5 V             :         : 2         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : P4        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P3        :        :                   :         : 2         :                
+core_video_scanline[6]       : P4        : output : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : P5        :        :                   :         : 2         :                
 GND                          : P6        : gnd    :                   :         :           :                
 VCCIO2                       : P7        : power  :                   : 2.5V    : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : P8        :        :                   :         : 2         :                
-core_video_color[5]          : P9        : output : 2.5 V             :         : 3         : N              
-core_cpu_cycle[8]            : P10       : output : 2.5 V             :         : 3         : N              
-core_video_mask[0]           : P11       : input  : 2.5 V             :         : 3         : N              
-core_controllers_joypad1_data[4] : P12       : input  : 2.5 V             :         : 4         : N              
-core_cpu_sdraminterface_memdin[6] : P13       : input  : 2.5 V             :         : 4         : N              
-core_cpu_sdraminterface_prgmask[18] : P14       : input  : 2.5 V             :         : 5         : N              
-core_cpu_sdraminterface_memaddr[18] : P15       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : P9        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P10       :        :                   :         : 3         :                
+core_cpu_cycle[1]            : P11       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : P12       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P13       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P14       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P15       :        :                   :         : 5         :                
 VCCIO5                       : P16       : power  :                   : 2.5V    : 5         :                
 GND                          : P17       : gnd    :                   :         :           :                
-core_cpu_mapper_flags[33]    : P18       : input  : 2.5 V             :         : 5         : N              
-core_cpu_mapper_flags[7]     : P19       : input  : 2.5 V             :         : 5         : N              
-core_cpu_sdraminterface_memdout[1] : P20       : output : 2.5 V             :         : 5         : N              
-core_cpu_mapper_flags[34]    : P21       : input  : 2.5 V             :         : 5         : N              
-core_cpu_braminterface_override : P22       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : P18       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P19       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P20       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P21       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P22       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R1        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R2        :        :                   :         : 2         :                
-core_cpu_braminterface_addr[16] : R3        : output : 2.5 V             :         : 2         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : R4        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R3        :        :                   :         : 2         :                
+core_video_scanline[8]       : R4        : output : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : R5        :        :                   :         : 2         :                
 VCCIO2                       : R6        : power  :                   : 2.5V    : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R7        :        :                   :         : 2         :                
 VCCA1                        : R8        : power  :                   : 2.5V    :           :                
-core_cpu_cycle[5]            : R9        : output : 2.5 V             :         : 3         : N              
-core_cpu_cycle[1]            : R10       : output : 2.5 V             :         : 3         : N              
-core_sys_type[0]             : R11       : input  : 2.5 V             :         : 3         : N              
-core_controllers_joypad1_data[2] : R12       : input  : 2.5 V             :         : 4         : N              
-core_cpu_reset               : R13       : input  : 2.5 V             :         : 4         : N              
-core_cpu_braminterface_dout[0] : R14       : output : 2.5 V             :         : 5         : N              
-core_cpu_braminterface_dout[4] : R15       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R9        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R10       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R11       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R12       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R13       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R14       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R15       :        :                   :         : 5         :                
 VCCIO5                       : R16       : power  :                   : 2.5V    : 5         :                
 VCCIO5                       : R17       : power  :                   : 2.5V    : 5         :                
-core_cpu_mapper_flags[24]    : R18       : input  : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R18       :        :                   :         : 5         :                
 GND                          : R19       : gnd    :                   :         :           :                
-core_cpu_braminterface_dout[7] : R20       : output : 2.5 V             :         : 5         : N              
+core_video_scanline[1]       : R20       : output : 2.5 V             :         : 5         : N              
 GND                          : R21       : gnd    :                   :         :           :                
-core_cpu_braminterface_addr[7] : R22       : output : 2.5 V             :         : 5         : N              
-core_cpu_mapper_flags[50]    : T1        : input  : 2.5 V             :         : 2         : N              
-core_cpu_mapper_flags[62]    : T2        : input  : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R22       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T1        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T2        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T3        :        :                   :         : 2         :                
 GND                          : T4        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T5        :        :                   :         : 2         :                
-core_pause                   : T6        : input  : 2.5 V             :         : 2         : N              
+core_cpu_cycle[0]            : T6        : output : 2.5 V             :         : 2         : N              
 VCCD_PLL1                    : T7        : power  :                   : 1.2V    :           :                
 GND                          : T8        : gnd    :                   :         :           :                
 VCCIO3                       : T9        : power  :                   : 2.5V    : 3         :                
@@ -461,16 +461,16 @@ GND                          : T14       : gnd    :                   :         
 VCCA4                        : T15       : power  :                   : 2.5V    :           :                
 GND                          : T16       : gnd    :                   :         :           :                
 VCCIO5                       : T17       : power  :                   : 2.5V    : 5         :                
-core_cpu_sdraminterface_memdout[5] : T18       : output : 2.5 V             :         : 5         : N              
-core_cpu_sdraminterface_memdout[4] : T19       : output : 2.5 V             :         : 5         : N              
-core_cpu_sdraminterface_memdout[3] : T20       : output : 2.5 V             :         : 5         : N              
-core_cpu_braminterface_dout[1] : T21       : output : 2.5 V             :         : 5         : N              
-core_cpu_braminterface_dout[6] : T22       : output : 2.5 V             :         : 5         : N              
-core_cpu_mapper_flags[42]    : U1        : input  : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T18       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T19       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T20       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T21       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T22       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U1        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U2        :        :                   :         : 2         :                
-core_cpu_mapper_flags[45]    : U3        : input  : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U3        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U4        :        :                   :         : 2         :                
-core_cpu_mapper_flags[35]    : U5        : input  : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U5        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U6        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U7        :        :                   :         : 3         :                
 VCCIO3                       : U8        : power  :                   : 2.5V    : 3         :                
@@ -480,77 +480,77 @@ VCCIO4                       : U11       : power  :                   : 2.5V    
 VCCIO4                       : U12       : power  :                   : 2.5V    : 4         :                
 GND                          : U13       : gnd    :                   :         :           :                
 VCCIO4                       : U14       : power  :                   : 2.5V    : 4         :                
-core_fds_disk_diskside[0]    : U15       : input  : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U15       :        :                   :         : 4         :                
 VCCD_PLL4                    : U16       : power  :                   : 1.2V    :           :                
-core_cpu_braminterface_addr[5] : U17       : output : 2.5 V             :         : 5         : N              
-core_cpu_braminterface_din[2] : U18       : input  : 2.5 V             :         : 5         : N              
-core_cpu_braminterface_din[3] : U19       : input  : 2.5 V             :         : 5         : N              
-core_cpu_braminterface_addr[0] : U20       : output : 2.5 V             :         : 5         : N              
-core_cpu_braminterface_dout[5] : U21       : output : 2.5 V             :         : 5         : N              
-core_cpu_sdraminterface_memdout[7] : U22       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U17       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U18       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U19       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U20       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U21       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U22       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V1        :        :                   :         : 2         :                
 GND                          : V2        : gnd    :                   :         :           :                
-core_cpu_braminterface_addr[10] : V3        : output : 2.5 V             :         : 2         : N              
-core_audio_audiochannels[0]  : V4        : input  : 2.5 V             :         : 3         : N              
-core_cpu_mapper_flags[9]     : V5        : input  : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : V3        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V4        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V5        :        :                   :         : 3         :                
 GND                          : V6        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V7        :        :                   :         : 3         :                
-core_cpu_braminterface_addr[12] : V8        : output : 2.5 V             :         : 3         : N              
-core_video_scanline[8]       : V9        : output : 2.5 V             :         : 3         : N              
-core_video_color[3]          : V10       : output : 2.5 V             :         : 3         : N              
-core_controllers_joypad1_data[0] : V11       : input  : 2.5 V             :         : 4         : N              
-core_controllers_joypad2_data[0] : V12       : input  : 2.5 V             :         : 4         : N              
-core_controllers_joypad_clock[1] : V13       : output : 2.5 V             :         : 4         : N              
+core_video_scanline[0]       : V8        : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : V9        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V10       :        :                   :         : 3         :                
+core_cpu_reset_cold          : V11       : input  : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : V12       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V13       :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V14       :        :                   :         : 4         :                
-core_cpu_ppuinterface_ppumemdout[4] : V15       : output : 2.5 V             :         : 4         : N              
-core_fds_disk_autoeject      : V16       : input  : 2.5 V             :         : 4         : N              
-core_cpu_mapper_flags[32]    : V17       : input  : 2.5 V             :         : 4         : N              
-core_cpu_braminterface_din[1] : V18       : input  : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : V15       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V16       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V17       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V18       :        :                   :         : 5         :                
 GND                          : V19       : gnd    :                   :         :           :                
-core_cpu_braminterface_addr[1] : V20       : output : 2.5 V             :         : 5         : N              
-core_cpu_braminterface_din[6] : V21       : input  : 2.5 V             :         : 5         : N              
-core_cpu_braminterface_addr[2] : V22       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : V20       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V21       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V22       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W1        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W2        :        :                   :         : 2         :                
-core_cpu_mapper_flags[63]    : W3        : input  : 2.5 V             :         : 3         : N              
-core_cpu_ppuinterface_ppumemdout[7] : W4        : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W3        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W4        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W5        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : W6        :        :                   :         : 3         :                
-core_video_color[2]          : W7        : output : 2.5 V             :         : 3         : N              
-core_video_scanline[7]       : W8        : output : 2.5 V             :         : 3         : N              
-core_cpu_mapper_flags[49]    : W9        : input  : 2.5 V             :         : 3         : N              
-core_video_scanline[2]       : W10       : output : 2.5 V             :         : 3         : N              
-core_cpu_reset_cold          : W11       : input  : 2.5 V             :         : 4         : N              
-core_controllers_joypad2_data[1] : W12       : input  : 2.5 V             :         : 4         : N              
-core_controllers_joypad2_data[4] : W13       : input  : 2.5 V             :         : 4         : N              
-core_audio_apuce             : W14       : output : 2.5 V             :         : 4         : N              
-core_cpu_sdraminterface_memwrite : W15       : output : 2.5 V             :         : 4         : N              
-core_cpu_sdraminterface_prgmask[20] : W16       : input  : 2.5 V             :         : 4         : N              
-core_cpu_braminterface_din[4] : W17       : input  : 2.5 V             :         : 4         : N              
-core_cpu_sdraminterface_memaddr[19] : W18       : output : 2.5 V             :         : 4         : N              
-core_cpu_braminterface_dout[2] : W19       : output : 2.5 V             :         : 5         : N              
-core_cpu_braminterface_addr[4] : W20       : output : 2.5 V             :         : 5         : N              
+core_audio_audiochannels[4]  : W6        : input  : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W7        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W8        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W9        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W10       :        :                   :         : 3         :                
+core_cpu_cycle[2]            : W11       : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W12       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W13       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W14       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W15       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W16       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W17       :        :                   :         : 4         :                
+core_video_scanline[3]       : W18       : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W19       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W20       :        :                   :         : 5         :                
 GND                          : W21       : gnd    :                   :         :           :                
-core_cpu_braminterface_din[7] : W22       : input  : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W22       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y1        :        :                   :         : 3         :                
-core_cpu_braminterface_addr[15] : Y2        : output : 2.5 V             :         : 3         : N              
-core_video_scanline[3]       : Y3        : output : 2.5 V             :         : 3         : N              
-core_video_scanline[6]       : Y4        : output : 2.5 V             :         : 3         : N              
-core_cpu_ppuinterface_ppumemdout[0] : Y5        : output : 2.5 V             :         : 3         : N              
-core_cpu_mapper_flags[30]    : Y6        : input  : 2.5 V             :         : 3         : N              
-core_cpu_mapper_flags[8]     : Y7        : input  : 2.5 V             :         : 3         : N              
-core_cpu_mapper_flags[58]    : Y8        : input  : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y2        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y3        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y4        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y5        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y6        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y7        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y8        :        :                   :         : 3         :                
 GND                          : Y9        : gnd    :                   :         :           :                
-core_sys_type[1]             : Y10       : input  : 2.5 V             :         : 3         : N              
-core_controllers_joypad_out[0] : Y11       : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y10       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y11       :        :                   :         : 4         :                
 GND                          : Y12       : gnd    :                   :         :           :                
-core_fds_disk_diskside_req[0] : Y13       : output : 2.5 V             :         : 4         : N              
-core_fds_disk_diskside_req[1] : Y14       : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y13       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y14       :        :                   :         : 4         :                
 GND                          : Y15       : gnd    :                   :         :           :                
-core_cpu_ppuinterface_ppumemread : Y16       : output : 2.5 V             :         : 4         : N              
-core_cpu_mapper_flags[46]    : Y17       : input  : 2.5 V             :         : 4         : N              
-core_cpu_mapper_flags[21]    : Y18       : input  : 2.5 V             :         : 4         : N              
-core_cpu_sdraminterface_prgmask[19] : Y19       : input  : 2.5 V             :         : 4         : N              
-core_cpu_braminterface_dout[3] : Y20       : output : 2.5 V             :         : 5         : N              
-core_cpu_braminterface_addr[6] : Y21       : output : 2.5 V             :         : 5         : N              
-core_cpu_braminterface_din[0] : Y22       : input  : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y16       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y17       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y18       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y19       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y20       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y21       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y22       :        :                   :         : 5         :                

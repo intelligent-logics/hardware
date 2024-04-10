@@ -1,24 +1,4 @@
 
-State Machine - |top_level|NES:nes|cart_top:multi_mapper|MapperFDS:mapfds|MAPFDS:fds|Rstate
-Name Rstate.00 Rstate.10 Rstate.01 
-Rstate.00 0 0 0 
-Rstate.01 1 0 1 
-Rstate.10 1 1 0 
-
-State Machine - |top_level|NES:nes|cart_top:multi_mapper|MapperFDS:mapfds|MAPFDS:fds|Wstate
-Name Wstate.00 Wstate.10 Wstate.01 
-Wstate.00 0 0 0 
-Wstate.01 1 0 1 
-Wstate.10 1 1 0 
-
-State Machine - |top_level|NES:nes|cart_top:multi_mapper|Mapper16:map16|EEPROM_24C0x:eeprom|state
-Name state.STATE_WRITE state.STATE_ADDRESS state.STATE_TEST state.STATE_STANDBY state.STATE_READ 
-state.STATE_STANDBY 0 0 0 0 0 
-state.STATE_TEST 0 0 1 1 0 
-state.STATE_ADDRESS 0 1 0 1 0 
-state.STATE_WRITE 1 0 0 1 0 
-state.STATE_READ 0 0 0 1 1 
-
 State Machine - |top_level|NES:nes|T65:cpu|Set_Addr_To_r
 Name Set_Addr_To_r.Set_Addr_To_BA Set_Addr_To_r.Set_Addr_To_ZPG Set_Addr_To_r.Set_Addr_To_SP Set_Addr_To_r.Set_Addr_To_PBR 
 Set_Addr_To_r.Set_Addr_To_PBR 0 0 0 0 
