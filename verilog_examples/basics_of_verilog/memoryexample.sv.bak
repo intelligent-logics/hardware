@@ -1,0 +1,5 @@
+//examples of module declaration along with arrays
+
+//here i will make a very simple block of memory
+
+module eightbyeightmemory (input[7:0]

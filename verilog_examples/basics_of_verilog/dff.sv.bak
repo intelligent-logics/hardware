@@ -1,0 +1,18 @@
+//examples of module declaration
+
+//here i will make a very simple d flip flop
+
+//declaring a new component that will contain some logic
+module dff(input d, input clk, input rstn, output q);
+
+always @ (clk or rstn) begin
+
+	if(!rstn)
+		q <= 0;
+	else if (posedge clk)
+		q <= d;
+	else
+		q <= q;
+end
+
+endmodule

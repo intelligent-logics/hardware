@@ -1,0 +1,53 @@
+//dma_controller.v
+/*
+	Author(s): Steven Miller 
+	Date created: April 10 2024
+	Purpose: replicates dma controller found in ricoh
+	Notes: originally taken from Ludvig Strigeus
+	Log:
+		$April 10 2024, Steven Miller
+        initial creation
+*/
+module dma_controller(
+	input clk,
+	input ce,
+	input reset,
+	input odd_cycle,               // Current cycle even or odd?
+	input sprite_trigger,          // Sprite DMA trigger?
+	input dmc_trigger,             // DMC DMA trigger?
+	input cpu_read,                // CPU is in a read cycle?
+	input [7:0] data_from_cpu,     // Data written by CPU?
+	input [7:0] data_from_ram,     // Data read from RAM?
+	input [15:0] dmc_dma_addr,     // DMC DMA Address
+	output [15:0] aout,            // Address to access
+	output aout_enable,            // DMA controller wants bus control
+	output read,                   // 1 = read, 0 = write
+	output [7:0] data_to_ram,      // Value to write to RAM
+	output dmc_ack,                // ACK the DMC DMA
+	output pause_cpu               // CPU is pausede
+);
+
+reg dmc_state;
+reg [1:0] spr_state;
+reg [7:0] sprite_dma_lastval;
+reg [15:0] sprite_dma_addr;     // sprite dma source addr
+wire [8:0] new_sprite_dma_addr = sprite_dma_addr[7:0] + 8'h01;
+
+always @(posedge clk) if (reset) begin
+	dmc_state <= 0;
+	spr_state <= 0;
+	sprite_dma_lastval <= 0;
+	sprite_dma_addr <= 0;
+end else if (ce) begin
+	if (dmc_state == 0 && dmc_trigger && cpu_read && !odd_cycle) dmc_state <= 1;
+	if (dmc_state == 1 && !odd_cycle) dmc_state <= 0;
+
+	if (sprite_trigger) begin sprite_dma_addr <= {data_from_cpu, 8'h00}; spr_state <= 1; end
+	if (spr_state == 1 && cpu_read && odd_cycle) spr_state <= 3;
+	if (spr_state[1] && !odd_cycle && dmc_state == 1) spr_state <= 1;
+	if (spr_state[1] && odd_cycle) sprite_dma_addr[7:0] <= new_sprite_dma_addr[7:0];
+	if (spr_state[1] && odd_cycle && new_sprite_dma_addr[8]) spr_state <= 0;
+	if (spr_state[1]) sprite_dma_lastval <= data_from_ram;
+end
+
+endmodule
