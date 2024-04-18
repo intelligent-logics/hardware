@@ -8,9 +8,9 @@ The "mister_NES_core_savestates" folder is the most recent mister nes core. http
 
 The "naked_core" folder is the mister core (without savestates) stripped down to the bare naked cpu, apu, ppu, and multi-cart mapper. it contains no io, no sound, no video, nothing.
 
+The "fpganes_UWM" contains a quartus port of an NES core made for a senior project at the university of washington madison
+https://github.com/jtgebert/fpganes_release
+
 Work: As of this repos last commit, we did the following:
 added verilog tutorial files
-
-Bugs:
-none of the cores, in their current states, are functional either on a de-10 lite or on the mister board.
-the "fpganes" core is heavily reliant on m9k memory inside the fpga, and as such, is extremely slow to compile.
+added new nes core: "fpganes_UWM"

@@ -331,12 +331,11 @@ assign loader_write = 0;
 assign loader_done = 1;
 assign loader_fail = 0;
 assign mapper_flags = 32'h00004100;
-/* ROM PRELOADED 
+ //ROM PRELOADED 
 // Load ROMs
-GameLoader loader(clk, loader_reset, loader_input, loader_clk,
-                  loader_addr, loader_write_data, loader_write,
-                  mapper_flags, loader_done, loader_fail); */
-
+/*
+GameLoader loader(clk, loader_reset, loader_input, loader_clk, loader_addr, loader_write_data, loader_write,mapper_flags, loader_done, loader_fail); 
+*/
   // NES is clocked at every 4th cycle.
 always @(posedge clk) begin
 if(~KEY[0]) begin
@@ -386,7 +385,7 @@ assign cs_cpuram=(MemAdr[20:18]== 3'b111);
 assign cs_chrrom=(MemAdr[20:19]== 2'b10);
 assign cs_chrram=(MemAdr[20:19]== 2'b110);
 // this ram block replaces the on board memory used in the nexys4
-/*
+
 ram_programmemory	ram_programmemory_inst (
 	.address ( {MemAdr[9:0]} ),
 	.byteena ( ~ByteMask ),
@@ -395,7 +394,7 @@ ram_programmemory	ram_programmemory_inst (
 	.wren (~MemWR & cs_prgrom),
 	.q ( MemDB_rd_prgrom  )
 	);
-	*/
+
 /*cpuram	ram_inst_cpuram (
 	.address ( {1'b0,MemAdr[14:0]} ),
 	.byteena ( ~ByteMask ),
@@ -431,14 +430,14 @@ always@(posedge clk) begin
   end 
 end
 assign MemDB_rd_cpuram = {cpuram_array0[{1'b0,MemAdr[6:0]}],cpuram_array1[{1'b0,MemAdr[6:0]}]};//flips again before going to CPU
-/*
-ram_programmemory	ram_charactermemory_inst (
-	.address ( ({MemAdr[9:0]} + 10'h4000 ) ),
-	.byteena (~ByteMask ),
-	.clock (  clk ),
-	.data (  MemDB_wr ),
+/*ram	ram_inst_chrrom (
+	.address ( ({5'b0,MemAdr[14:0]} + 20'h4000 )),
+	.byteena ( ~ByteMask ),
+	//.clken ( 1'b1 ),
+	.clock ( clk ),
+	.data ( MemDB_wr ),
 	.wren ( ~MemWR & cs_chrrom),
-	.q ( MemDB_rd_chrrom)
+	.q ( MemDB_rd_chrrom )
 	);
 	*/
 /*
