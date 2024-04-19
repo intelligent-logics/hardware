@@ -1,0 +1,22 @@
+{
+	"system" : {
+		"platform" : "windows64",
+		"os_name" : "Windows 10",
+		"os_version" : "10.0"
+	},
+	"error" : {
+		"executable" : "quartus",
+		"comment" : "not_applicable",
+		"error_message" : "Access Violation at 0X00007FFB713ED51D",
+		"source_file" : "unknown",
+		"line" : "0",
+		"stack_trace" : "\t0x7ffb713ed51c: pgm_pgme + 0x8d51c (?push_enhanced_sfl_read_siid@PGME_SFL_ALGORITHM@@QEAA_NII_N@Z + 0xc2c)\n\t0x7ffb713f2fad: pgm_pgme + 0x92fad (?read_enhanced_sfl_siid@PGME_SFL_ALGORITHM@@QEAA_NI@Z + 0x14d)\n\t0x7ffb713f9885: pgm_pgme + 0x99885 (?read_silicon_id@PGME_SFL_ALGORITHM@@UEAAII@Z + 0x2b5)\n\t0x7ffb713f5a01: pgm_pgme + 0x95a01 (?read_jic_silicon_id@PGME_SFL_ALGORITHM@@QEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@IAEAK0@Z + 0x151)\n\t0x7ffb713b5aa3: pgm_pgme + 0x55aa3 (?get_jic_device_name_from_id@PGME_PROGRAMMER@@QEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$vector@PEAVPGM_CHAIN_ELEMENT@@V?$allocator@PEAVPGM_CHAIN_ELEMENT@@@std@@@3@I@Z + 0xd3)\n\t0x7ffb714c699a: pgm_pgmwq + 0x3699a (?add_child_devices@PGMWQ_FRAME_WND@@IEAAXV?$vector@PEAVPGM_CHAIN_ELEMENT@@V?$allocator@PEAVPGM_CHAIN_ELEMENT@@@std@@@std@@@Z + 0x14a)\n\t0x7ffb714c88ac: pgm_pgmwq + 0x388ac (?add_device_list@PGMWQ_FRAME_WND@@IEAA_NKPEAUAJI_DEVICE@@_NPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@11@Z + 0x15bc)\n\t0x7ffb7151d61c: pgm_pgmwq + 0x8d61c (?standalone_auto_detect@PGMWQ_FRAME_WND@@QEAAX_NPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z + 0xdc)\n\t0x7ffb714fb453: pgm_pgmwq + 0x6b453 (?on_auto_detect_action@PGMWQ_FRAME_WND@@IEAAXXZ + 0x1da3)\n\t0x7ffb714abe4f: pgm_pgmwq + 0x1be4f (?qt_static_metacall@PGMWQ_FRAME_WND@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z + 0x16f)\n\t 0x6642d1f0: QtCore4 + 0x11d1f0 (?activate@QMetaObject@@SAXPEAVQObject@@PEBU1@HPEAPEAX@Z + 0x520)\n\t 0x65a4fdf2: QtGui4 + 0x58fdf2 (?clicked@QAbstractButton@@IEAAX_N@Z + 0x32)\n\t 0x65806b8e: QtGui4 + 0x346b8e (?click@QAbstractButton@@QEAAXXZ + 0x51e)\n\t 0x65806807: QtGui4 + 0x346807 (?click@QAbstractButton@@QEAAXXZ + 0x197)\n\t 0x65807699: QtGui4 + 0x347699 (?mouseReleaseEvent@QAbstractButton@@MEAAXPEAVQMouseEvent@@@Z + 0x59)\n\t 0x65521dc4: QtGui4 + 0x61dc4 (?event@QWidget@@MEAA_NPEAVQEvent@@@Z + 0xd4)\n\t 0x654e2f95: QtGui4 + 0x22f95 (?notify_helper@QApplicationPrivate@@QEAA_NPEAVQObject@@PEAVQEvent@@@Z + 0xf5)\n\t 0x654e1b8e: QtGui4 + 0x21b8e (?notify@QApplication@@UEAA_NPEAVQObject@@PEAVQEvent@@@Z + 0x71e)\n\t 0x6641e67b: QtCore4 + 0x10e67b (?notifyInternal@QCoreApplication@@AEAA_NPEAVQObject@@PEAVQEvent@@@Z + 0x7b)\n\t 0x654e5dee: QtGui4 + 0x25dee (?sendMouseEvent@QApplicationPrivate@@SA_NPEAVQWidget@@PEAVQMouseEvent@@00PEAPEAV2@AEAV?$QPointer@VQWidget@@@@_N@Z + 0x1de)\n\t 0x655469b0: QtGui4 + 0x869b0 (?trUtf8@QScrollBar@@SA?AVQString@@PEBD0H@Z + 0x1440)\n\t 0x6554a361: QtGui4 + 0x8a361 (?winMouseButtonUp@QApplication@@SAXXZ + 0x2761)\n\t0x7ffc336e8960: USER32 + 0x18960 (DispatchMessageW + 0x740)\n\t0x7ffc336e8420: USER32 + 0x18420 (DispatchMessageW + 0x200)\n\t 0x66443982: QtCore4 + 0x133982 (?processEvents@QEventDispatcherWin32@@UEAA_NV?$QFlags@W4ProcessEventsFlag@QEventLoop@@@@@Z + 0x3e2)\n\t 0x65542074: QtGui4 + 0x82074 (?openPopup@QApplicationPrivate@@QEAAXPEAVQWidget@@@Z + 0x204)\n\t 0x6641b5db: QtCore4 + 0x10b5db (?exec@QEventLoop@@QEAAHV?$QFlags@W4ProcessEventsFlag@QEventLoop@@@@@Z + 0x22b)\n\t 0x6641dbbf: QtCore4 + 0x10dbbf (?exec@QCoreApplication@@SAHXZ + 0xdf)\n\t0x7ff7d660198b: quartus + 0x198b (?qgq_main@@YAHHPEAPEBD@Z + 0x8b)\n\t0x7ffbd6953258: CCL_MSG + 0x13258 (?msg_main_thread@@YAPEAXPEAX@Z + 0x18)\n\t0x7ffbd6954a5e: CCL_MSG + 0x14a5e (?msg_thread_wrapper@@YAPEAXP6APEAXPEAX@Z0@Z + 0x6e)\n\t0x7ffbf0af6af0: ccl_mem + 0x16af0 (?mem_thread_wrapper@@YAPEAXP6APEAXPEAX@Z0@Z + 0x70)\n\t0x7ffbd6952af1: CCL_MSG + 0x12af1 (?msg_exe_main@@YAHHPEAPEBDP6AHH0@Z@Z + 0xa1)\n\t0x7ff7d6602777: quartus + 0x2777 (WinMain + 0x127)\n\t0x7ff7d6601f40: quartus + 0x1f40 (__tmainCRTStartup + 0x148)\n\t0x7ffc32c3257c: KERNEL32 + 0x1257c (BaseThreadInitThunk + 0x1c)\n\t0x7ffc33e4aa47: ntdll + 0x5aa47 (RtlUserThreadStart + 0x27)\n",
+		"subsystem" : "unknown"
+	},
+	"quartus" : {
+		"quartus_bits" : "64",
+		"version" : "20.1.1",
+		"build" : "720",
+		"edition" : "Lite Edition"
+	}
+}
