@@ -1588,7 +1588,7 @@ emu emu
 	.AUDIO_MIX(audio_mix),
 	.ADC_BUS({ADC_SCK,ADC_SDO,ADC_SDI,ADC_CONVST}),
 `endif
-
+/*
 `ifdef USE_DDRAM
 	.DDRAM_CLK(ram_clk),
 	.DDRAM_ADDR(ram_address),
@@ -1627,7 +1627,7 @@ emu emu
 	.SDRAM2_CLK(SDRAM2_CLK),
 	.SDRAM2_EN(SW[3]),
 `endif
-
+*/
 `ifndef ARCADE_SYS
 	.BUTTONS(btn),
 	.OSD_STATUS(osd_status),

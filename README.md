@@ -15,3 +15,5 @@ Work: As of this repos last commit, we did the following:
 added verilog tutorial files
 added new nes core: "fpganes_UWM"
 added HDMI transmitter to "fpganes_UWM"
+added VGA support to "fpganes_UWM"
+

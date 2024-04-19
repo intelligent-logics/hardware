@@ -18,7 +18,7 @@ module fpganes(
 	input 		     [3:0]		KEY,
 
 	//////////// LED //////////
-	output		     [9:0]		LEDR,
+	output		     [7:0]		LEDR,
 
 	//////////// SW //////////
 	input 		     [9:0]		SW,
@@ -103,12 +103,12 @@ module fpganes(
 	assign clk_dma = clk_cpu;
 	assign clk_mem = clk_ppu;
 
-	assign HEX5 = 7'b0101011;
-	assign HEX4 = 7'b0000110;
-	assign HEX3 = 7'b0010010;
-	assign HEX2 = 7'b0101011;
-	assign HEX1 = 7'b0000110;
-	assign HEX0 = 7'b0010010;
+	//assign HEX5 = 7'b0101011;
+	//assign HEX4 = 7'b0000110;
+	//assign HEX3 = 7'b0010010;
+	//assign HEX2 = 7'b0101011;
+	//assign HEX1 = 7'b0000110;
+	//assign HEX0 = 7'b0010010;
 
 	//=======================================================
 	//  Structural coding
@@ -265,7 +265,7 @@ module fpganes(
 	
 	ControllersWrapper ctrls(
 		// output
-		.txd1(GPIO[3]), .txd2( GPIO[33] ), .rx_data_peek(LEDR[9:2]), //TODO PUT BACK
+		.txd1(GPIO[3]), .txd2( GPIO[33] ), //.rx_data_peek(LEDR[9:2]), //TODO PUT BACK
 
 		// input
 		.clk( clk_ctrl ), .rst_n( rst_n&locked&~booting_n ), .addr( controller_addr ),
@@ -283,7 +283,7 @@ module fpganes(
 	//=======================================================
 	//  Testing
 	//=======================================================
-/*
+
 	wire [15:0] pc_peek;
 	reg [15:0] pc_peek_r;
 	reg[6:0] nmi_count;
@@ -369,6 +369,7 @@ module fpganes(
 					  (cpuram_rd_addr[3:0] == 4'h2) ? 7'b0100100 :
 					  (cpuram_rd_addr[3:0] == 4'h1) ? 7'b1111001 :
 					  7'b1000000;
+					  
 	always @(posedge nmi, negedge rst_n) begin
 		if (!rst_n) begin
 			nmi_count <= 7'h00;
@@ -387,7 +388,8 @@ module fpganes(
 		end
 	end
 
-	//assign LEDR[6:0] = {rendering, frame_end, !mem_cs_n, !controller_cs_n, !apu_cs_n, !ppu_cs_n, stall};
+	assign LEDR[3:0] = {!controller_cs_n, !apu_cs_n, !ppu_cs_n, stall};
+	assign LEDR[7:4] = game;
 	reg port_wr;
 	reg stall_all;
 	wire [13:0] ram_addr_peek;
@@ -400,8 +402,8 @@ module fpganes(
 		end
 
 		else if( ~KEY[1] ) begin
-			stall_all = 0;
-			port_wr = 0;
+			stall_all = 1;
+			port_wr = 1;
 		end
 
 		//else if ( pc_peek == 16'hfff4 ) begin
@@ -444,7 +446,7 @@ module fpganes(
 	wire cpuram_wr, writing;
 
 	assign cpuram_wr = stall_all ? 1'b0 : (pc_peek != 16'h8058 && pc_peek != 16'h8059 && pc_peek != 16'h805A) ? 1'b1 : 1'b0;
-
+/*
 	test_CPURAM	test_CPURAM_inst (
 		.data ( {pc_peek, a_peek, x_peek, y_peek, mem_cs_n, write_cpu, ram_addr_peek, data } ),
 		.rdaddress ( cpuram_rd_addr ),
@@ -454,6 +456,6 @@ module fpganes(
 		.wrclock ( clk_cpu ),
 		.wren ( cpuram_wr ),
 		.q ( cpuram_q )
-		);*/
-
+		);
+*/
 endmodule

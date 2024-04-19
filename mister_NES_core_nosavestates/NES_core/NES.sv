@@ -882,6 +882,7 @@ always @(posedge clk) begin
 	end
 end
 
+/*
 sdram sdram
 (
 	.*,
@@ -913,7 +914,7 @@ sdram sdram
 	.ch2_dout   ( save_dout ),
 	.ch2_busy   ( save_busy )
 );
-
+*/
 wire  [7:0] save_dout;
 assign sd_buff_din = bram_en ? eeprom_dout : save_dout;
 
