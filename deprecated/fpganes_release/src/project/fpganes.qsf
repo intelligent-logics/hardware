@@ -1,0 +1,183 @@
+#============================================================
+# Build by Terasic System Builder
+#============================================================
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CSEBA6U23I7
+set_global_assignment -name TOP_LEVEL_ENTITY fpganes
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 15.1.0
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:35:53 APRIL 11,2017"
+
+#============================================================
+# CLOCK
+#============================================================
+
+#============================================================
+# SEG7
+#============================================================
+
+#============================================================
+# KEY
+#============================================================
+
+#============================================================
+# LED
+#============================================================
+
+#============================================================
+# SW
+#============================================================
+
+#============================================================
+# VGA
+#============================================================
+
+#============================================================
+# GPIO_0, GPIO_0 connect to GPIO Default
+#============================================================
+
+#============================================================
+# End of pin assignments by Terasic System Builder
+#============================================================
+
+
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP "-40"
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+
+set_global_assignment -name QIP_FILE ../hw/Clocks/VGAClock/VGAClock_0002.qip -library VGAClock
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name ENABLE_SIGNALTAP ON
+set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
+set_location_assignment PIN_V11 -to CLOCK_50
+set_location_assignment PIN_Y24 -to KEY[0]
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name STRATIXV_CONFIGURATION_SCHEME "PASSIVE SERIAL"
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN ON
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name ACTIVE_SERIAL_CLOCK FREQ_100MHZ
+set_location_assignment PIN_AH13 -to gamecounter_input
+set_location_assignment PIN_W24 -to KEY[1]
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_AD17 -to GPIO[5]
+set_global_assignment -name QIP_FILE ../hw/pll/pll_25.qip
+set_global_assignment -name VERILOG_FILE ../hw/pll/pll_25.v
+set_global_assignment -name VERILOG_FILE ../hw/TopModule.v
+set_global_assignment -name VERILOG_FILE ../hw/VGA/i2c.v
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/VGA/hdmi_config.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/Controller/ControllersWrapper.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/APU/APU.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/Memory/PPUMemoryWrapper.sv
+set_global_assignment -name VERILOG_FILE ../hw/Clocks/VGAClock/VGAClock_0002.v -library VGAClock
+set_global_assignment -name VERILOG_FILE ../hw/Clocks/VGAClock.v -library VGAClock
+set_global_assignment -name QIP_FILE ../hw/Clocks/VGAClock.qip
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/Controller/SPART_tx.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/Controller/SPART_rx.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/Controller/spart.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/Controller/driver.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/Controller/Controller.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/Controller/bus_intf.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/Controller/baud_rate_gen.sv
+set_global_assignment -name SDC_FILE fpganes.SDC
+set_global_assignment -name QIP_FILE ../hw/Memory/ProgramRom.qip
+set_global_assignment -name QIP_FILE ../hw/Memory/ProgramRam.qip
+set_global_assignment -name QIP_FILE ../hw/Memory/VGARam.qip
+set_global_assignment -name QIP_FILE ../hw/Clocks/NESClock.qip
+set_global_assignment -name SIP_FILE ../hw/Clocks/NESClock.sip
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/CPU/Registers.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/CPU/Mem.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/CPU/Enums.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/CPU/decoder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/CPU/CPU.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/CPU/control.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/CPU/ALU_Input.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/CPU/ALU.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/Memory/MemoryWrapper.sv
+set_global_assignment -name VERILOG_FILE ../hw/Memory/LoadScreenRom.v
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/Memory/HardwareDecoder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/PPU/PPU_sprite.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/PPU/PPU_palette_mem.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/PPU/PPU_oam.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/PPU/PPU_background.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/PPU/PPU.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/VGA/VGA.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/VGA/TimeGen.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/VGA/RamReader.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/VGA/RAM_wrapper.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/VGA/DisplayPlane.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/DMA/OAM_dma.sv
+set_global_assignment -name QIP_FILE ../hw/Memory/CharacterRom.qip
+set_global_assignment -name QIP_FILE ../hw/Memory/PPUVram.qip
+set_global_assignment -name QIP_FILE test_CPURAM.qip
+set_global_assignment -name QIP_FILE ../hw/Memory/MarioProgramRom.qip
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/Memory/GameSelect.sv
+set_global_assignment -name QIP_FILE ../hw/Memory/DonkeyKongProgramRom.qip
+set_global_assignment -name QIP_FILE ../hw/Memory/MarioCharacterRom.qip
+set_global_assignment -name QIP_FILE ../hw/Memory/DonkeyKongCharacterRom.qip
+set_global_assignment -name QIP_FILE ../hw/Memory/PacManProgramRom.qip
+set_global_assignment -name QIP_FILE ../hw/Memory/PacManCharacterRom.qip
+set_global_assignment -name QIP_FILE ../hw/Memory/GalagaProgramRom.qip
+set_global_assignment -name QIP_FILE ../hw/Memory/GalagaCharacterRom.qip
+set_global_assignment -name SYSTEMVERILOG_FILE ../hw/Memory/Games.sv
+set_global_assignment -name QIP_FILE ../hw/Memory/Defender2ProgramRom.qip
+set_global_assignment -name QIP_FILE ../hw/Memory/Defender2CharacterRom.qip
+set_global_assignment -name QIP_FILE ../hw/Memory/GolfProgramRom.qip
+set_global_assignment -name QIP_FILE ../hw/Memory/GolfCharacterRom.qip
+set_global_assignment -name QIP_FILE ../hw/Memory/TennisProgramRom.qip
+set_global_assignment -name QIP_FILE ../hw/Memory/TennisCharacterRom.qip
+set_global_assignment -name QIP_FILE ../hw/Memory/PinballProgramRom.qip
+set_global_assignment -name QIP_FILE ../hw/Memory/PinballCharacterRom.qip
+set_global_assignment -name QIP_FILE ../hw/Memory/OthelloProgramRom.qip
+set_global_assignment -name QIP_FILE ../hw/Memory/OthelloCharacterRom.qip
+set_global_assignment -name QIP_FILE ../hw/Memory/IceHockeyProgramRom.qip
+set_global_assignment -name QIP_FILE ../hw/Memory/IceHockeyCharacterRom.qip
+set_global_assignment -name QIP_FILE ../hw/Memory/MsPacManProgramRom.qip
+set_global_assignment -name QIP_FILE ../hw/Memory/MsPacManCharacterRom.qip
+set_global_assignment -name QIP_FILE ../hw/Memory/emsCharacterRom.qip
+set_global_assignment -name QIP_FILE ../hw/Memory/emsProgramRom.qip
+set_global_assignment -name VERILOG_FILE ../hw/Controller/usbtouart.v
+set_global_assignment -name VERILOG_FILE fpganes.v
+set_global_assignment -name VERILOG_FILE ../hw/fourbitcounter.v
+set_global_assignment -name VERILOG_FILE ../hw/gamecountercontroller.v
+set_location_assignment PIN_AE8 -to HDMI_TX_RGB[23]
+set_location_assignment PIN_AF9 -to HDMI_TX_RGB[22]
+set_location_assignment PIN_AG6 -to HDMI_TX_RGB[21]
+set_location_assignment PIN_AH6 -to HDMI_TX_RGB[20]
+set_location_assignment PIN_AH5 -to HDMI_TX_RGB[19]
+set_location_assignment PIN_AH4 -to HDMI_TX_RGB[18]
+set_location_assignment PIN_AH2 -to HDMI_TX_RGB[17]
+set_location_assignment PIN_AE4 -to HDMI_TX_RGB[16]
+set_location_assignment PIN_AF5 -to HDMI_TX_RGB[15]
+set_location_assignment PIN_AF8 -to HDMI_TX_RGB[14]
+set_location_assignment PIN_AF6 -to HDMI_TX_RGB[13]
+set_location_assignment PIN_AE7 -to HDMI_TX_RGB[12]
+set_location_assignment PIN_AB4 -to HDMI_TX_RGB[11]
+set_location_assignment PIN_AE9 -to HDMI_TX_RGB[10]
+set_location_assignment PIN_Y4 -to HDMI_TX_RGB[9]
+set_location_assignment PIN_AF10 -to HDMI_TX_RGB[8]
+set_location_assignment PIN_Y5 -to HDMI_TX_RGB[7]
+set_location_assignment PIN_AE11 -to HDMI_TX_RGB[6]
+set_location_assignment PIN_AD10 -to HDMI_TX_RGB[5]
+set_location_assignment PIN_AD11 -to HDMI_TX_RGB[4]
+set_location_assignment PIN_Y8 -to HDMI_TX_RGB[3]
+set_location_assignment PIN_W8 -to HDMI_TX_RGB[2]
+set_location_assignment PIN_AE12 -to HDMI_TX_RGB[1]
+set_location_assignment PIN_AD12 -to HDMI_TX_RGB[0]
+set_location_assignment PIN_V13 -to HDMI_TX_VS
+set_location_assignment PIN_AF11 -to HDMI_TX_INT
+set_location_assignment PIN_T8 -to HDMI_TX_HS
+set_location_assignment PIN_AD19 -to HDMI_TX_DE
+set_location_assignment PIN_AG5 -to HDMI_TX_CLK
+set_location_assignment PIN_AA4 -to HDMI_I2C_SDA
+set_location_assignment PIN_U10 -to HDMI_I2C_SCL
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

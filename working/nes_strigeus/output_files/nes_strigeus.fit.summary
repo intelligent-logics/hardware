@@ -1,0 +1,20 @@
+Fitter Status : Successful - Mon Sep 30 21:20:07 2024
+Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Revision Name : nes_strigeus
+Top-level Entity Name : NES_Nexys4
+Family : Cyclone V
+Device : 5CSEBA6U23I7L
+Timing Models : Final
+Logic utilization (in ALMs) : 7,437 / 41,910 ( 18 % )
+Total registers : 12516
+Total pins : 123 / 314 ( 39 % )
+Total virtual pins : 0
+Total block memory bits : 2,138,112 / 5,662,720 ( 38 % )
+Total RAM Blocks : 261 / 553 ( 47 % )
+Total DSP Blocks : 10 / 112 ( 9 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1 / 6 ( 17 % )
+Total DLLs : 0 / 4 ( 0 % )

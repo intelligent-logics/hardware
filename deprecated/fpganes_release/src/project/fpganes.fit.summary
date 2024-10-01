@@ -1,0 +1,20 @@
+Fitter Status : Successful - Wed Sep 04 13:15:41 2024
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : fpganes
+Top-level Entity Name : fpganes
+Family : Cyclone V
+Device : 5CSEBA6U23I7
+Timing Models : Final
+Logic utilization (in ALMs) : 2,758 / 41,910 ( 7 % )
+Total registers : 3716
+Total pins : 138 / 314 ( 44 % )
+Total virtual pins : 0
+Total block memory bits : 2,891,776 / 5,662,720 ( 51 % )
+Total RAM Blocks : 353 / 553 ( 64 % )
+Total DSP Blocks : 0 / 112 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 2 / 6 ( 33 % )
+Total DLLs : 0 / 4 ( 0 % )

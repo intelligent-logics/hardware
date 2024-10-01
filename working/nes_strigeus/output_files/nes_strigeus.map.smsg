@@ -1,0 +1,8 @@
+Warning (10273): Verilog HDL warning at hq2x.v(79): extended using "x" or "z" File: C:/Users/eribe/CEN3907/hardware-main (1)/hardware-main/working/nes_strigeus/fpganes/src/hq2x.v Line: 79
+Warning (10268): Verilog HDL information at hw_led.v(14): always construct contains both blocking and non-blocking assignments File: C:/Users/eribe/CEN3907/hardware-main (1)/hardware-main/working/nes_strigeus/fpganes/src/hw_led.v Line: 14
+Warning (10273): Verilog HDL warning at NES_Nexys4.v(36): extended using "x" or "z" File: C:/Users/eribe/CEN3907/hardware-main (1)/hardware-main/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 36
+Warning (10273): Verilog HDL warning at cpu.v(268): extended using "x" or "z" File: C:/Users/eribe/CEN3907/hardware-main (1)/hardware-main/working/nes_strigeus/fpganes/src/cpu.v Line: 268
+Info (10281): Verilog HDL Declaration information at cpu.v(187): object "PC" differs only in case from object "pc" in the same scope File: C:/Users/eribe/CEN3907/hardware-main (1)/hardware-main/working/nes_strigeus/fpganes/src/cpu.v Line: 187
+Warning (10268): Verilog HDL information at ppu.v(678): always construct contains both blocking and non-blocking assignments File: C:/Users/eribe/CEN3907/hardware-main (1)/hardware-main/working/nes_strigeus/fpganes/src/ppu.v Line: 678
+Warning (10268): Verilog HDL information at mmu.v(447): always construct contains both blocking and non-blocking assignments File: C:/Users/eribe/CEN3907/hardware-main (1)/hardware-main/working/nes_strigeus/fpganes/src/mmu.v Line: 447
+Warning (10268): Verilog HDL information at mmu.v(753): always construct contains both blocking and non-blocking assignments File: C:/Users/eribe/CEN3907/hardware-main (1)/hardware-main/working/nes_strigeus/fpganes/src/mmu.v Line: 753

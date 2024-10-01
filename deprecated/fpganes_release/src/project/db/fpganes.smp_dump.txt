@@ -1,0 +1,88 @@
+
+State Machine - |fpganes|ControllersWrapper:ctrls|Controller:ctrl2|driver:driver0|state
+Name state.WRITE state.READ state.READY state.START state.WRITING 
+state.START 0 0 0 0 0 
+state.READY 0 0 1 1 0 
+state.READ 0 1 0 1 0 
+state.WRITE 1 0 0 1 0 
+state.WRITING 0 0 0 1 1 
+
+State Machine - |fpganes|ControllersWrapper:ctrls|Controller:ctrl2|spart:spart0|SPART_tx:tx|state
+Name state.IDLE state.SHIFT state.TRANSMITTING 
+state.IDLE 0 0 0 
+state.TRANSMITTING 1 0 1 
+state.SHIFT 1 1 0 
+
+State Machine - |fpganes|ControllersWrapper:ctrls|Controller:ctrl2|spart:spart0|SPART_rx:rx|state
+Name state.IDLE state.SHIFT state.WAIT 
+state.IDLE 0 0 0 
+state.WAIT 1 0 1 
+state.SHIFT 1 1 0 
+
+State Machine - |fpganes|ControllersWrapper:ctrls|Controller:ctrl1|driver:driver0|state
+Name state.WRITE state.READ state.READY state.START state.WRITING 
+state.START 0 0 0 0 0 
+state.READY 0 0 1 1 0 
+state.READ 0 1 0 1 0 
+state.WRITE 1 0 0 1 0 
+state.WRITING 0 0 0 1 1 
+
+State Machine - |fpganes|ControllersWrapper:ctrls|Controller:ctrl1|spart:spart0|SPART_tx:tx|state
+Name state.IDLE state.SHIFT state.TRANSMITTING 
+state.IDLE 0 0 0 
+state.TRANSMITTING 1 0 1 
+state.SHIFT 1 1 0 
+
+State Machine - |fpganes|ControllersWrapper:ctrls|Controller:ctrl1|spart:spart0|SPART_rx:rx|state
+Name state.IDLE state.SHIFT state.WAIT 
+state.IDLE 0 0 0 
+state.WAIT 1 0 1 
+state.SHIFT 1 1 0 
+
+State Machine - |fpganes|PPU:ppu|PPU_sprite:spr|spr_state
+Name spr_state.SPR_PT_HIGH_1 spr_state.SPR_PT_HIGH_0 spr_state.SPR_PT_LOW_1 spr_state.SPR_PT_LOW_0 spr_state.SPR_GET_X spr_state.SPR_GET_ATTR spr_state.SPR_GET_TILE spr_state.SPR_GET_Y spr_state.SPR_EVAL_WRITE_X spr_state.SPR_EVAL_READ_X spr_state.SPR_EVAL_WRITE_ATTR spr_state.SPR_EVAL_READ_ATTR spr_state.SPR_EVAL_WRITE_TILE spr_state.SPR_EVAL_READ_TILE spr_state.SPR_EVAL_WRITE_Y spr_state.SPR_EVAL_READ_Y spr_state.SEC_OAM_CLEAR spr_state.IDLE 
+spr_state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+spr_state.SEC_OAM_CLEAR 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+spr_state.SPR_EVAL_READ_Y 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+spr_state.SPR_EVAL_WRITE_Y 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+spr_state.SPR_EVAL_READ_TILE 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+spr_state.SPR_EVAL_WRITE_TILE 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+spr_state.SPR_EVAL_READ_ATTR 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+spr_state.SPR_EVAL_WRITE_ATTR 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+spr_state.SPR_EVAL_READ_X 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+spr_state.SPR_EVAL_WRITE_X 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+spr_state.SPR_GET_Y 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+spr_state.SPR_GET_TILE 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+spr_state.SPR_GET_ATTR 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+spr_state.SPR_GET_X 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+spr_state.SPR_PT_LOW_0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+spr_state.SPR_PT_LOW_1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+spr_state.SPR_PT_HIGH_0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+spr_state.SPR_PT_HIGH_1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |fpganes|PPU:ppu|PPU_background:bg|bg_state
+Name bg_state.VBLANK bg_state.GET_PT_HIGH_1 bg_state.GET_PT_HIGH_0 bg_state.GET_PT_LOW_1 bg_state.GET_PT_LOW_0 bg_state.GET_ATTR_1 bg_state.GET_ATTR_0 bg_state.GET_NT_1 bg_state.GET_NT_0 bg_state.WAIT bg_state.IDLE 
+bg_state.IDLE 0 0 0 0 0 0 0 0 0 0 0 
+bg_state.WAIT 0 0 0 0 0 0 0 0 0 1 1 
+bg_state.GET_NT_0 0 0 0 0 0 0 0 0 1 0 1 
+bg_state.GET_NT_1 0 0 0 0 0 0 0 1 0 0 1 
+bg_state.GET_ATTR_0 0 0 0 0 0 0 1 0 0 0 1 
+bg_state.GET_ATTR_1 0 0 0 0 0 1 0 0 0 0 1 
+bg_state.GET_PT_LOW_0 0 0 0 0 1 0 0 0 0 0 1 
+bg_state.GET_PT_LOW_1 0 0 0 1 0 0 0 0 0 0 1 
+bg_state.GET_PT_HIGH_0 0 0 1 0 0 0 0 0 0 0 1 
+bg_state.GET_PT_HIGH_1 0 1 0 0 0 0 0 0 0 0 1 
+bg_state.VBLANK 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |fpganes|TopModule:hdmi|I2C_HDMI_Config:I2C_HDMI_Config|mSetup_ST
+Name mSetup_ST.0000 mSetup_ST.0010 mSetup_ST.0001 
+mSetup_ST.0000 0 0 0 
+mSetup_ST.0001 1 0 1 
+mSetup_ST.0010 1 1 0 
+
+State Machine - |fpganes|OAM_dma:dma|dma_state
+Name dma_state.WRITE dma_state.READ dma_state.WAIT dma_state.IDLE 
+dma_state.IDLE 0 0 0 0 
+dma_state.WAIT 0 0 1 1 
+dma_state.READ 0 1 0 1 
+dma_state.WRITE 1 0 0 1 

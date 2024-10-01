@@ -1,0 +1,141 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "LEDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "HDMI_TX_RGB[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HDMI_TX_RGB[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HDMI_TX_RGB[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HDMI_TX_RGB[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HDMI_TX_RGB[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HDMI_TX_RGB[7]",
+					"strict" : false
+				},
+				{
+					"name" : "HDMI_TX_RGB[10]",
+					"strict" : false
+				},
+				{
+					"name" : "HDMI_TX_RGB[11]",
+					"strict" : false
+				},
+				{
+					"name" : "HDMI_TX_RGB[12]",
+					"strict" : false
+				},
+				{
+					"name" : "HDMI_TX_RGB[13]",
+					"strict" : false
+				},
+				{
+					"name" : "HDMI_TX_RGB[14]",
+					"strict" : false
+				},
+				{
+					"name" : "HDMI_TX_RGB[15]",
+					"strict" : false
+				},
+				{
+					"name" : "HDMI_TX_RGB[18]",
+					"strict" : false
+				},
+				{
+					"name" : "HDMI_TX_RGB[19]",
+					"strict" : false
+				},
+				{
+					"name" : "HDMI_TX_RGB[20]",
+					"strict" : false
+				},
+				{
+					"name" : "HDMI_TX_RGB[21]",
+					"strict" : false
+				},
+				{
+					"name" : "HDMI_TX_RGB[22]",
+					"strict" : false
+				},
+				{
+					"name" : "HDMI_TX_RGB[23]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[3]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[5]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[31]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[33]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK_50",
+					"strict" : false
+				},
+				{
+					"name" : "gamecounter_input",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

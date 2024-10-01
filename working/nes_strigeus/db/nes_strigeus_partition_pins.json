@@ -1,0 +1,285 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "LED[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SSEG_CA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SSEG_CA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SSEG_CA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SSEG_CA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SSEG_CA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SSEG_CA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SSEG_CA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SSEG_AN[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SSEG_AN[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SSEG_AN[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SSEG_AN[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SSEG_AN[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SSEG_AN[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SSEG_AN[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SSEG_AN[7]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_v",
+					"strict" : false
+				},
+				{
+					"name" : "vga_h",
+					"strict" : false
+				},
+				{
+					"name" : "vga_r[0]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_r[1]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_r[2]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_r[3]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_g[0]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_g[1]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_g[2]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_g[3]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_b[0]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_b[1]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "MemOE",
+					"strict" : false
+				},
+				{
+					"name" : "MemWR",
+					"strict" : false
+				},
+				{
+					"name" : "RamCS",
+					"strict" : false
+				},
+				{
+					"name" : "RamUB",
+					"strict" : false
+				},
+				{
+					"name" : "RamLB",
+					"strict" : false
+				},
+				{
+					"name" : "MemAdr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MemAdr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MemAdr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "MemAdr[3]",
+					"strict" : false
+				},
+				{
+					"name" : "MemAdr[4]",
+					"strict" : false
+				},
+				{
+					"name" : "MemAdr[5]",
+					"strict" : false
+				},
+				{
+					"name" : "MemAdr[6]",
+					"strict" : false
+				},
+				{
+					"name" : "MemAdr[7]",
+					"strict" : false
+				},
+				{
+					"name" : "MemAdr[8]",
+					"strict" : false
+				},
+				{
+					"name" : "MemAdr[9]",
+					"strict" : false
+				},
+				{
+					"name" : "MemAdr[10]",
+					"strict" : false
+				},
+				{
+					"name" : "MemAdr[11]",
+					"strict" : false
+				},
+				{
+					"name" : "MemAdr[12]",
+					"strict" : false
+				},
+				{
+					"name" : "MemAdr[13]",
+					"strict" : false
+				},
+				{
+					"name" : "MemAdr[14]",
+					"strict" : false
+				},
+				{
+					"name" : "MemAdr[15]",
+					"strict" : false
+				},
+				{
+					"name" : "MemAdr[16]",
+					"strict" : false
+				},
+				{
+					"name" : "MemAdr[17]",
+					"strict" : false
+				},
+				{
+					"name" : "MemAdr[18]",
+					"strict" : false
+				},
+				{
+					"name" : "MemAdr[19]",
+					"strict" : false
+				},
+				{
+					"name" : "MemAdr[20]",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_MCLK",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_LRCK",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_SDIN",
+					"strict" : false
+				},
+				{
+					"name" : "SW[0]",
+					"strict" : false
+				},
+				{
+					"name" : "BTN[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[5]",
+					"strict" : false
+				},
+				{
+					"name" : "UART_RXD",
+					"strict" : false
+				},
+				{
+					"name" : "SW[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

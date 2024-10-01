@@ -1,0 +1,37 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "core_video_color[1]",
+					"strict" : false
+				},
+				{
+					"name" : "core_video_color[2]",
+					"strict" : false
+				},
+				{
+					"name" : "core_video_color[3]",
+					"strict" : false
+				},
+				{
+					"name" : "core_sys_type[0]",
+					"strict" : false
+				},
+				{
+					"name" : "core_sys_type[1]",
+					"strict" : false
+				},
+				{
+					"name" : "core_video_mask[0]",
+					"strict" : false
+				},
+				{
+					"name" : "core_video_mask[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

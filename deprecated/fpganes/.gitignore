@@ -1,0 +1,70 @@
+# Dignore ModelSim generated files and directories (temp files and so on)
+[_@]*
+
+# ignore compilation output of ModelSim
+*.mti
+*.dat
+*.dbs
+*.psm
+*.bak
+*.cmp
+*.jpg
+*.html
+*.bsf
+*work
+*.mpf
+
+# ignore simulation output of ModelSim
+wlf*
+*.wlf
+*.vstf
+*.ucdb
+cov*/
+transcript*
+sc_dpiheader.h
+vsim.dbg
+
+# ignore java compiled files
+*.class
+
+# i dont know what this is
+.DS_Store
+
+# ignore emacs thingy
+*~
+
+# ignore others
+backup/
+*c5*
+*.rpt
+*.cdf
+*.done
+*.smsg
+*.summary
+*.jdi
+*.pin
+*.sof
+*.sta.summary
+greybox_tmp/
+incremental_db/
+*.ppf
+*_inst.v
+*.sip
+*.spd
+*.f
+system_clock_sim
+system_clock_sim.v
+db
+
+!*.sv
+!*.v
+!*.qpf
+!*.qsf
+!*.dc
+!*.vg
+!.gitignore
+!README
+!*.wav
+!*.dsf
+!*.dat
+!.*/

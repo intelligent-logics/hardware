@@ -1,0 +1,20 @@
+Fitter Status : Successful - Tue Sep 03 11:27:51 2024
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : fpga_nes
+Top-level Entity Name : uart
+Family : Cyclone V
+Device : 5CSEBA6U23I7
+Timing Models : Final
+Logic utilization (in ALMs) : 135 / 41,910 ( < 1 % )
+Total registers : 251
+Total pins : 25 / 314 ( 8 % )
+Total virtual pins : 0
+Total block memory bits : 128 / 5,662,720 ( < 1 % )
+Total RAM Blocks : 2 / 553 ( < 1 % )
+Total DSP Blocks : 0 / 112 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0 / 6 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

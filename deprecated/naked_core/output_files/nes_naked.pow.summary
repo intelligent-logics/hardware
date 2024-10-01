@@ -1,0 +1,12 @@
+Power Analyzer Status : Successful - Wed Mar 20 14:26:21 2024
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : nes_naked
+Top-level Entity Name : top_level
+Family : MAX 10
+Device : 10M50DAF484C6GES
+Power Models : Final
+Total Thermal Power Dissipation : 100.51 mW
+Core Dynamic Thermal Power Dissipation : 0.00 mW
+Core Static Thermal Power Dissipation : 90.79 mW
+I/O Thermal Power Dissipation : 9.72 mW
+Power Estimation Confidence : Low: user provided insufficient toggle rate data

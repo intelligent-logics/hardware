@@ -1,0 +1,1 @@
+C:\Users\steve\git_repos\school\cen3907\NES_fpga_development\hardware_development\working\nes_strigeus\fpganes\loader\Debug\nes_loader.exe
