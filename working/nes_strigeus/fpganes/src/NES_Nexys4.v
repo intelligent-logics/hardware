@@ -161,7 +161,7 @@ module NES_Nexys4(input CLK100MHZ,
                  input CPU_RESET,
                  input [4:0] BTN,
                  input [15:0] SW,
-                 output [15:0] LED,
+                 output [3:0] LED,
                  output [7:0] SSEG_CA,
                  output [7:0] SSEG_AN,
                  // UART
@@ -185,11 +185,14 @@ module NES_Nexys4(input CLK100MHZ,
                  output AUD_MCLK,
                  output AUD_LRCK,
                  output AUD_SCK,
-                 output AUD_SDIN
+                 output AUD_SDIN,
+					  output systemclk, //added by steven miller on october 1 2024
+					  output[7:0] debug_cpu_memaddress //added by steven miller on october 1 2024
                  );
 
   wire clock_locked;
   wire clk;
+  assign systemclk = clk; //added by steven miller on october 1 2024
   
   clk_21mhz clock_21mhz(.refclk(CLK100MHZ), .outclk_0(clk),  .rst(1'b0), .locked(clock_locked));
 
@@ -264,7 +267,7 @@ module NES_Nexys4(input CLK100MHZ,
                     loader_addr, loader_write_data, loader_write,
                     mapper_flags, loader_done, loader_fail);
 
-  wire reset_nes = (BTN[3] || !loader_done);
+  wire reset_nes = (BTN[0] || !loader_done);
   wire run_mem = (nes_ce == 0) && !reset_nes;
   wire run_nes = (nes_ce == 3) && !reset_nes;
 
@@ -287,10 +290,12 @@ module NES_Nexys4(input CLK100MHZ,
 
   // This is the memory controller to access the board's PSRAM
   wire ram_busy;
+  assign debug_cpu_memaddress[7:0] = memory_addr[7:0]; //added by steven miller on october 1 2024
+  //assign debug_cpu_memaddress = debug_cpu_mem_address;
   MemoryController memory(clk,
-                          memory_read_cpu && run_mem, 
-                          memory_read_ppu && run_mem,
-                          memory_write && run_mem || loader_write,
+                          memory_read_cpu, //&& run_mem, changed by steven miller
+                          memory_read_ppu,// && run_mem, changed by steven miller
+                          memory_write || loader_write,//&& run_mem// || loader_write, changed by steven miller
                           loader_write ? {2'b00, loader_addr} : {2'b00, memory_addr},
                           loader_write ? loader_write_data : memory_dout,
                           memory_din_cpu,
@@ -340,7 +345,8 @@ module NES_Nexys4(input CLK100MHZ,
       sound_load,
       AUD_MCLK, AUD_LRCK, AUD_SCK, AUD_SDIN);
  
-  assign LED = {12'b0, uart_error, ramfail, loader_fail, loader_done};
+  assign LED = {uart_error, ramfail, loader_fail, loader_done};
+  //					led3			led2		led1			led0
   
   //added by beto perez and steven miller on september 30 2024
   game_ram	game_ram_inst (

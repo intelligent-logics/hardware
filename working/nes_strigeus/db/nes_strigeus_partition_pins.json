@@ -248,11 +248,43 @@
 					"strict" : false
 				},
 				{
+					"name" : "debug_cpu_memaddress[0]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_cpu_memaddress[1]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_cpu_memaddress[2]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_cpu_memaddress[3]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_cpu_memaddress[4]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_cpu_memaddress[5]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_cpu_memaddress[6]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_cpu_memaddress[7]",
+					"strict" : false
+				},
+				{
 					"name" : "SW[0]",
 					"strict" : false
 				},
 				{
-					"name" : "BTN[3]",
+					"name" : "BTN[0]",
 					"strict" : false
 				},
 				{

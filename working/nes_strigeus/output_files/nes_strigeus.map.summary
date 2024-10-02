@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Mon Sep 30 21:17:18 2024
-Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Analysis & Synthesis Status : Successful - Tue Oct 01 22:33:35 2024
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : nes_strigeus
 Top-level Entity Name : NES_Nexys4
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 12453
-Total pins : 123
+Total pins : 120
 Total virtual pins : 0
 Total block memory bits : 2,138,112
 Total DSP Blocks : 10

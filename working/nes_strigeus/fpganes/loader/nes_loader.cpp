@@ -110,7 +110,7 @@ int main(int argc, char * argv[]) {
     return 0;
   }
 
-  FILE *f = fopen(argv[1], "rb");
+  FILE *f = fopen("C:\\Users\\steve\\git_repos\\school\\cen3907\\NES_fpga_development\\hardware_development\\working\\nes_strigeus\\fpganes\\loader\\Debug\\ems.nes", "rb");
   if (!f) { printf("File open fail\n"); return 1; }
 
   { char v = 1; WritePacket(h, 0x35, &v, 1); }

@@ -1,6 +1,6 @@
 Assembler report for nes_strigeus
-Mon Sep 30 21:20:28 2024
-Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Tue Oct 01 22:42:57 2024
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -10,7 +10,7 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/eribe/CEN3907/hardware-main (1)/hardware-main/working/nes_strigeus/output_files/nes_strigeus.sof
+  5. Assembler Device Options: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/output_files/nes_strigeus.sof
   6. Assembler Messages
 
 
@@ -18,7 +18,7 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2022  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Sep 30 21:20:28 2024 ;
+; Assembler Status      ; Successful - Tue Oct 01 22:42:57 2024 ;
 ; Revision Name         ; nes_strigeus                          ;
 ; Top-level Entity Name ; NES_Nexys4                            ;
 ; Family                ; Cyclone V                             ;
@@ -53,23 +53,23 @@ https://fpgasoftware.intel.com/eula.
 +--------+---------+---------------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                                 ;
-+-----------------------------------------------------------------------------------------------------------+
-; File Name                                                                                                 ;
-+-----------------------------------------------------------------------------------------------------------+
-; C:/Users/eribe/CEN3907/hardware-main (1)/hardware-main/working/nes_strigeus/output_files/nes_strigeus.sof ;
-+-----------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                                                            ;
++--------------------------------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                                            ;
++--------------------------------------------------------------------------------------------------------------------------------------+
+; C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/output_files/nes_strigeus.sof ;
++--------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/eribe/CEN3907/hardware-main (1)/hardware-main/working/nes_strigeus/output_files/nes_strigeus.sof ;
-+----------------+--------------------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                                            ;
-+----------------+--------------------------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x06F4297E                                                                                                         ;
-; Checksum       ; 0x06F4297E                                                                                                         ;
-+----------------+--------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/output_files/nes_strigeus.sof ;
++----------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                                                       ;
++----------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x06F2EA1C                                                                                                                                    ;
+; Checksum       ; 0x06F2EA1C                                                                                                                                    ;
++----------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -77,15 +77,15 @@ https://fpgasoftware.intel.com/eula.
 +--------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
-    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Mon Sep 30 21:20:12 2024
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue Oct 01 22:42:13 2024
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off nes_strigeus -c nes_strigeus
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 5017 megabytes
-    Info: Processing ended: Mon Sep 30 21:20:29 2024
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Peak virtual memory: 4999 megabytes
+    Info: Processing ended: Tue Oct 01 22:42:58 2024
+    Info: Elapsed time: 00:00:45
+    Info: Total CPU time (on all processors): 00:00:14
 
 
