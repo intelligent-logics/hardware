@@ -1,13 +1,13 @@
-Fitter Status : Successful - Tue Oct 01 22:41:38 2024
+Fitter Status : Successful - Thu Oct 03 16:23:14 2024
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : nes_strigeus
 Top-level Entity Name : NES_Nexys4
 Family : Cyclone V
 Device : 5CSEBA6U23I7L
 Timing Models : Final
-Logic utilization (in ALMs) : 7,424 / 41,910 ( 18 % )
-Total registers : 12497
-Total pins : 120 / 314 ( 38 % )
+Logic utilization (in ALMs) : 7,451 / 41,910 ( 18 % )
+Total registers : 12500
+Total pins : 128 / 314 ( 41 % )
 Total virtual pins : 0
 Total block memory bits : 2,138,112 / 5,662,720 ( 38 % )
 Total RAM Blocks : 261 / 553 ( 47 % )

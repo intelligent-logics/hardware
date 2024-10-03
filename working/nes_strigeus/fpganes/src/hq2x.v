@@ -244,7 +244,7 @@ always @(posedge clk) begin
   end
   i <= i + 2'b1;
   writestep <= (i == 2);
-  if (reset_line) begin
+  if (reset_line == 1) begin
     offs <= -2;
     first_pixel <= 1;
     i <= 0;
@@ -258,7 +258,7 @@ always @(posedge clk) begin
     
     
   end
-  if (reset_frame) begin
+  if (reset_frame == 1) begin
     y <= 0;
     yshort <= 0;
     last_line <= 0;

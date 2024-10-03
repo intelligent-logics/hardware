@@ -122,7 +122,7 @@ module GameLoader(input clk, input reset,
   wire has_chr_ram = (chrrom == 0);
   assign mapper_flags = {16'b0, has_chr_ram, ines[6][0], chr_size, prg_size, mapper};
   always @(posedge clk) begin
-    if (reset) begin
+    if (reset == 1) begin
       state <= 0;
       done <= 0;
       ctr <= 0;
@@ -187,7 +187,8 @@ module NES_Nexys4(input CLK100MHZ,
                  output AUD_SCK,
                  output AUD_SDIN,
 					  output systemclk, //added by steven miller on october 1 2024
-					  output[7:0] debug_cpu_memaddress //added by steven miller on october 1 2024
+					  output[7:0] debug_cpu_memaddress, //added by steven miller on october 1 2024
+					  output[7:0] debug_uart_data //added by steven miller on october 1 2024
                  );
 
   wire clock_locked;
@@ -201,8 +202,9 @@ module NES_Nexys4(input CLK100MHZ,
   wire [7:0] uart_addr;
   wire       uart_write;
   wire       uart_error;
-  UartDemux uart_demux(clk, 1'b0, UART_RXD, uart_data, uart_addr, uart_write, uart_error);
+  UartDemux uart_demux(clk,1'b0, UART_RXD, uart_data, uart_addr, uart_write, uart_error);
   assign     UART_TXD = 1;
+  assign debug_uart_data = uart_data;
 
   // Loader
   wire [7:0] loader_input = uart_data;
@@ -267,9 +269,9 @@ module NES_Nexys4(input CLK100MHZ,
                     loader_addr, loader_write_data, loader_write,
                     mapper_flags, loader_done, loader_fail);
 
-  wire reset_nes = (BTN[0] || !loader_done);
-  wire run_mem = (nes_ce == 0) && !reset_nes;
-  wire run_nes = (nes_ce == 3) && !reset_nes;
+  wire reset_nes = (BTN[0]); //modified by steven miller on october 3 2024 //|| !loader_done);
+  wire run_mem = !reset_nes;//modified by steven miller on october 3 2024 (nes_ce == 0) && !reset_nes;
+  wire run_nes = !reset_nes;//modified by steven miller on october 3 2024 (nes_ce == 3) && !reset_nes;
 
   // NES is clocked at every 4th cycle.
   always @(posedge clk)
@@ -304,7 +306,7 @@ module NES_Nexys4(input CLK100MHZ,
                           MemOE, MemWR, MemAdv, MemClk, RamCS, RamCRE, RamUB, RamLB, MemAdr, Memout, Memin);
   reg ramfail;
   always @(posedge clk) begin
-    if (loader_reset)
+    if (loader_reset == 1)
       ramfail <= 0;
     else
       ramfail <= ram_busy && loader_write || ramfail;

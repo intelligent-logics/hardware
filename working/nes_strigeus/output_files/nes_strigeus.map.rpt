@@ -1,5 +1,5 @@
 Analysis & Synthesis report for nes_strigeus
-Tue Oct 01 22:33:36 2024
+Thu Oct 03 16:47:38 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -76,14 +76,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 01 22:33:35 2024       ;
+; Analysis & Synthesis Status     ; Successful - Thu Oct 03 16:47:37 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; nes_strigeus                                ;
 ; Top-level Entity Name           ; NES_Nexys4                                  ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 12453                                       ;
-; Total pins                      ; 120                                         ;
+; Total pins                      ; 128                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 2,138,112                                   ;
 ; Total DSP Blocks                ; 10                                          ;
@@ -191,7 +191,7 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.00        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
@@ -200,9 +200,9 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 3            ;   0.1%      ;
 ;     Processor 4            ;   0.1%      ;
 ;     Processor 5            ;   0.1%      ;
-;     Processor 6            ;   0.1%      ;
-;     Processor 7            ;   0.1%      ;
-;     Processor 8            ;   0.1%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -257,18 +257,18 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------------------------------------------+
 ; Resource                                    ; Usage                                                        ;
 +---------------------------------------------+--------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 9270                                                         ;
+; Estimate of Logic utilization (ALMs needed) ; 9256                                                         ;
 ;                                             ;                                                              ;
-; Combinational ALUT usage for logic          ; 8732                                                         ;
-;     -- 7 input functions                    ; 212                                                          ;
-;     -- 6 input functions                    ; 4549                                                         ;
-;     -- 5 input functions                    ; 679                                                          ;
-;     -- 4 input functions                    ; 895                                                          ;
-;     -- <=3 input functions                  ; 2397                                                         ;
+; Combinational ALUT usage for logic          ; 8710                                                         ;
+;     -- 7 input functions                    ; 214                                                          ;
+;     -- 6 input functions                    ; 4548                                                         ;
+;     -- 5 input functions                    ; 641                                                          ;
+;     -- 4 input functions                    ; 882                                                          ;
+;     -- <=3 input functions                  ; 2425                                                         ;
 ;                                             ;                                                              ;
 ; Dedicated logic registers                   ; 12453                                                        ;
 ;                                             ;                                                              ;
-; I/O pins                                    ; 120                                                          ;
+; I/O pins                                    ; 128                                                          ;
 ; Total MLAB memory bits                      ; 0                                                            ;
 ; Total block memory bits                     ; 2138112                                                      ;
 ;                                             ;                                                              ;
@@ -279,8 +279,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                                                              ;
 ; Maximum fan-out node                        ; clk_21mhz:clock_21mhz|altera_pll:altera_pll_i|outclk_wire[0] ;
 ; Maximum fan-out                             ; 12747                                                        ;
-; Total fan-out                               ; 85479                                                        ;
-; Average fan-out                             ; 3.93                                                         ;
+; Total fan-out                               ; 85319                                                        ;
+; Average fan-out                             ; 3.92                                                         ;
 +---------------------------------------------+--------------------------------------------------------------+
 
 
@@ -289,10 +289,10 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                      ; Entity Name         ; Library Name ;
 +-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |NES_Nexys4                                     ; 8732 (94)           ; 12453 (61)                ; 2138112           ; 10         ; 120  ; 0            ; |NES_Nexys4                                                                                                              ; NES_Nexys4          ; work         ;
+; |NES_Nexys4                                     ; 8710 (90)           ; 12453 (60)                ; 2138112           ; 10         ; 128  ; 0            ; |NES_Nexys4                                                                                                              ; NES_Nexys4          ; work         ;
 ;    |GameLoader:loader|                          ; 136 (136)           ; 112 (112)                 ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|GameLoader:loader                                                                                            ; GameLoader          ; work         ;
-;    |Hq2x:hq2x|                                  ; 3605 (3278)         ; 7944 (7944)               ; 24576             ; 9          ; 0    ; 0            ; |NES_Nexys4|Hq2x:hq2x                                                                                                    ; Hq2x                ; work         ;
-;       |Blend:blender|                           ; 217 (98)            ; 0 (0)                     ; 0                 ; 9          ; 0    ; 0            ; |NES_Nexys4|Hq2x:hq2x|Blend:blender                                                                                      ; Blend               ; work         ;
+;    |Hq2x:hq2x|                                  ; 3596 (3278)         ; 7944 (7944)               ; 24576             ; 9          ; 0    ; 0            ; |NES_Nexys4|Hq2x:hq2x                                                                                                    ; Hq2x                ; work         ;
+;       |Blend:blender|                           ; 208 (89)            ; 0 (0)                     ; 0                 ; 9          ; 0    ; 0            ; |NES_Nexys4|Hq2x:hq2x|Blend:blender                                                                                      ; Blend               ; work         ;
 ;          |DiffCheck:diff_checker|               ; 56 (56)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|Hq2x:hq2x|Blend:blender|DiffCheck:diff_checker                                                               ; DiffCheck           ; work         ;
 ;          |InnerBlend:inner_blend1|              ; 21 (21)             ; 0 (0)                     ; 0                 ; 3          ; 0    ; 0            ; |NES_Nexys4|Hq2x:hq2x|Blend:blender|InnerBlend:inner_blend1                                                              ; InnerBlend          ; work         ;
 ;          |InnerBlend:inner_blend2|              ; 21 (21)             ; 0 (0)                     ; 0                 ; 3          ; 0    ; 0            ; |NES_Nexys4|Hq2x:hq2x|Blend:blender|InnerBlend:inner_blend2                                                              ; InnerBlend          ; work         ;
@@ -303,21 +303,21 @@ https://fpgasoftware.intel.com/eula.
 ;          |altsyncram_6cn1:auto_generated|       ; 0 (0)               ; 0 (0)                     ; 24576             ; 0          ; 0    ; 0            ; |NES_Nexys4|Hq2x:hq2x|altsyncram:outbuf_rtl_0|altsyncram_6cn1:auto_generated                                             ; altsyncram_6cn1     ; work         ;
 ;    |LedDriver:led_driver|                       ; 43 (43)             ; 35 (35)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|LedDriver:led_driver                                                                                         ; LedDriver           ; work         ;
 ;    |MemoryController:memory|                    ; 14 (14)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|MemoryController:memory                                                                                      ; MemoryController    ; work         ;
-;    |NES:nes|                                    ; 4057 (166)          ; 4139 (5)                  ; 16384             ; 1          ; 0    ; 0            ; |NES_Nexys4|NES:nes                                                                                                      ; NES                 ; work         ;
-;       |APU:apu|                                 ; 586 (103)           ; 351 (29)                  ; 8192              ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|APU:apu                                                                                              ; APU                 ; work         ;
+;    |NES:nes|                                    ; 4047 (164)          ; 4139 (5)                  ; 16384             ; 1          ; 0    ; 0            ; |NES_Nexys4|NES:nes                                                                                                      ; NES                 ; work         ;
+;       |APU:apu|                                 ; 580 (103)           ; 351 (29)                  ; 8192              ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|APU:apu                                                                                              ; APU                 ; work         ;
 ;          |ApuLookupTable:lookup|                ; 16 (16)             ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|APU:apu|ApuLookupTable:lookup                                                                        ; ApuLookupTable      ; work         ;
 ;             |altsyncram:lookup_rtl_0|           ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|APU:apu|ApuLookupTable:lookup|altsyncram:lookup_rtl_0                                                ; altsyncram          ; work         ;
 ;                |altsyncram_ia02:auto_generated| ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|APU:apu|ApuLookupTable:lookup|altsyncram:lookup_rtl_0|altsyncram_ia02:auto_generated                 ; altsyncram_ia02     ; work         ;
-;          |DmcChan:Dmc|                          ; 120 (120)           ; 90 (90)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|APU:apu|DmcChan:Dmc                                                                                  ; DmcChan             ; work         ;
+;          |DmcChan:Dmc|                          ; 116 (116)           ; 90 (90)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|APU:apu|DmcChan:Dmc                                                                                  ; DmcChan             ; work         ;
 ;          |LenCtr_Lookup:len|                    ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|APU:apu|LenCtr_Lookup:len                                                                            ; LenCtr_Lookup       ; work         ;
-;          |NoiseChan:Noi|                        ; 72 (72)             ; 55 (55)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|APU:apu|NoiseChan:Noi                                                                                ; NoiseChan           ; work         ;
-;          |SquareChan:Sq1|                       ; 99 (99)             ; 63 (63)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq1                                                                               ; SquareChan          ; work         ;
+;          |NoiseChan:Noi|                        ; 69 (69)             ; 55 (55)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|APU:apu|NoiseChan:Noi                                                                                ; NoiseChan           ; work         ;
+;          |SquareChan:Sq1|                       ; 100 (100)           ; 63 (63)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq1                                                                               ; SquareChan          ; work         ;
 ;          |SquareChan:Sq2|                       ; 105 (105)           ; 63 (63)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq2                                                                               ; SquareChan          ; work         ;
 ;          |TriangleChan:Tri|                     ; 61 (61)             ; 51 (51)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|APU:apu|TriangleChan:Tri                                                                             ; TriangleChan        ; work         ;
-;       |CPU:cpu|                                 ; 400 (88)            ; 122 (62)                  ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|CPU:cpu                                                                                              ; CPU                 ; work         ;
+;       |CPU:cpu|                                 ; 395 (84)            ; 122 (62)                  ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|CPU:cpu                                                                                              ; CPU                 ; work         ;
 ;          |AddressGenerator:addgen|              ; 35 (35)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|CPU:cpu|AddressGenerator:addgen                                                                      ; AddressGenerator    ; work         ;
-;          |MicroCodeTable:micro2|                ; 181 (57)            ; 27 (18)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|CPU:cpu|MicroCodeTable:micro2                                                                        ; MicroCodeTable      ; work         ;
-;             |MicroCodeTableInner:inner|         ; 124 (124)           ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|CPU:cpu|MicroCodeTable:micro2|MicroCodeTableInner:inner                                              ; MicroCodeTableInner ; work         ;
+;          |MicroCodeTable:micro2|                ; 180 (58)            ; 27 (18)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|CPU:cpu|MicroCodeTable:micro2                                                                        ; MicroCodeTable      ; work         ;
+;             |MicroCodeTableInner:inner|         ; 122 (122)           ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|CPU:cpu|MicroCodeTable:micro2|MicroCodeTableInner:inner                                              ; MicroCodeTableInner ; work         ;
 ;          |NewAlu:new_alu|                       ; 78 (59)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|CPU:cpu|NewAlu:new_alu                                                                               ; NewAlu              ; work         ;
 ;             |MyAddSub:addsub|                   ; 19 (9)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|CPU:cpu|NewAlu:new_alu|MyAddSub:addsub                                                               ; MyAddSub            ; work         ;
 ;                |MUXCY_L:MUXCY_L0|               ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|CPU:cpu|NewAlu:new_alu|MyAddSub:addsub|MUXCY_L:MUXCY_L0                                              ; MUXCY_L             ; work         ;
@@ -329,47 +329,47 @@ https://fpgasoftware.intel.com/eula.
 ;                |XOR2:X1|                        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|CPU:cpu|NewAlu:new_alu|MyAddSub:addsub|XOR2:X1                                                       ; XOR2                ; work         ;
 ;                |XORCY:XORCY5|                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|CPU:cpu|NewAlu:new_alu|MyAddSub:addsub|XORCY:XORCY5                                                  ; XORCY               ; work         ;
 ;          |ProgramCounter:pc|                    ; 18 (18)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|CPU:cpu|ProgramCounter:pc                                                                            ; ProgramCounter      ; work         ;
-;       |DmaController:dma|                       ; 19 (19)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|DmaController:dma                                                                                    ; DmaController       ; work         ;
+;       |DmaController:dma|                       ; 20 (20)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|DmaController:dma                                                                                    ; DmaController       ; work         ;
 ;       |MemoryMultiplex:mem|                     ; 13 (13)             ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MemoryMultiplex:mem                                                                                  ; MemoryMultiplex     ; work         ;
-;       |MultiMapper:multi_mapper|                ; 1015 (295)          ; 781 (0)                   ; 8192              ; 1          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper                                                                             ; MultiMapper         ; work         ;
+;       |MultiMapper:multi_mapper|                ; 1006 (293)          ; 781 (0)                   ; 8192              ; 1          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper                                                                             ; MultiMapper         ; work         ;
 ;          |MMC0:mmc0|                            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC0:mmc0                                                                   ; MMC0                ; work         ;
-;          |MMC1:mmc1|                            ; 36 (36)             ; 24 (24)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC1:mmc1                                                                   ; MMC1                ; work         ;
+;          |MMC1:mmc1|                            ; 37 (37)             ; 24 (24)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC1:mmc1                                                                   ; MMC1                ; work         ;
 ;          |MMC2:mmc2|                            ; 13 (13)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC2:mmc2                                                                   ; MMC2                ; work         ;
-;          |MMC3:mmc3|                            ; 99 (99)             ; 90 (90)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC3:mmc3                                                                   ; MMC3                ; work         ;
-;          |MMC5:mmc5|                            ; 261 (261)           ; 249 (249)                 ; 8192              ; 1          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC5:mmc5                                                                   ; MMC5                ; work         ;
+;          |MMC3:mmc3|                            ; 92 (92)             ; 90 (90)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC3:mmc3                                                                   ; MMC3                ; work         ;
+;          |MMC5:mmc5|                            ; 256 (256)           ; 249 (249)                 ; 8192              ; 1          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC5:mmc5                                                                   ; MMC5                ; work         ;
 ;             |altsyncram:expansion_ram_rtl_0|    ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC5:mmc5|altsyncram:expansion_ram_rtl_0                                    ; altsyncram          ; work         ;
 ;                |altsyncram_09n1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC5:mmc5|altsyncram:expansion_ram_rtl_0|altsyncram_09n1:auto_generated     ; altsyncram_09n1     ; work         ;
 ;          |Mapper13:map13|                       ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper13:map13                                                              ; Mapper13            ; work         ;
 ;          |Mapper15:map15|                       ; 1 (1)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper15:map15                                                              ; Mapper15            ; work         ;
-;          |Mapper228:map228|                     ; 1 (1)               ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper228:map228                                                            ; Mapper228           ; work         ;
-;          |Mapper234:map234|                     ; 18 (18)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper234:map234                                                            ; Mapper234           ; work         ;
-;          |Mapper28:map28|                       ; 32 (32)             ; 18 (18)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper28:map28                                                              ; Mapper28            ; work         ;
-;          |Mapper34:map34|                       ; 10 (10)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper34:map34                                                              ; Mapper34            ; work         ;
+;          |Mapper228:map228|                     ; 2 (2)               ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper228:map228                                                            ; Mapper228           ; work         ;
+;          |Mapper234:map234|                     ; 19 (19)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper234:map234                                                            ; Mapper234           ; work         ;
+;          |Mapper28:map28|                       ; 35 (35)             ; 18 (18)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper28:map28                                                              ; Mapper28            ; work         ;
+;          |Mapper34:map34|                       ; 11 (11)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper34:map34                                                              ; Mapper34            ; work         ;
 ;          |Mapper41:map41|                       ; 10 (10)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper41:map41                                                              ; Mapper41            ; work         ;
 ;          |Mapper66:map66|                       ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper66:map66                                                              ; Mapper66            ; work         ;
 ;          |Mapper68:map68|                       ; 20 (20)             ; 47 (47)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper68:map68                                                              ; Mapper68            ; work         ;
-;          |Mapper69:map69|                       ; 69 (69)             ; 111 (111)                 ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69                                                              ; Mapper69            ; work         ;
-;          |Mapper71:map71|                       ; 7 (7)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper71:map71                                                              ; Mapper71            ; work         ;
+;          |Mapper69:map69|                       ; 68 (68)             ; 111 (111)                 ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69                                                              ; Mapper69            ; work         ;
+;          |Mapper71:map71|                       ; 8 (8)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper71:map71                                                              ; Mapper71            ; work         ;
 ;          |Mapper79:map79|                       ; 4 (4)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper79:map79                                                              ; Mapper79            ; work         ;
-;          |NesEvent:nesev|                       ; 34 (34)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|NesEvent:nesev                                                              ; NesEvent            ; work         ;
-;          |Rambo1:rambo1|                        ; 97 (97)             ; 116 (116)                 ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1                                                               ; Rambo1              ; work         ;
-;       |PPU:ppu|                                 ; 1858 (107)          ; 2851 (20)                 ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|PPU:ppu                                                                                              ; PPU                 ; work         ;
-;          |BgPainter:bg_painter|                 ; 6 (6)               ; 68 (68)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|PPU:ppu|BgPainter:bg_painter                                                                         ; BgPainter           ; work         ;
-;          |ClockGen:clock|                       ; 37 (37)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|PPU:ppu|ClockGen:clock                                                                               ; ClockGen            ; work         ;
-;          |LoopyGen:loopy0|                      ; 103 (103)           ; 35 (35)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|PPU:ppu|LoopyGen:loopy0                                                                              ; LoopyGen            ; work         ;
-;          |PaletteRam:palette_ram|               ; 169 (169)           ; 156 (156)                 ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|PPU:ppu|PaletteRam:palette_ram                                                                       ; PaletteRam          ; work         ;
-;          |SpriteAddressGen:address_gen|         ; 15 (15)             ; 15 (15)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteAddressGen:address_gen                                                                 ; SpriteAddressGen    ; work         ;
-;          |SpriteRAM:sprite_ram|                 ; 1166 (1166)         ; 2320 (2320)               ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteRAM:sprite_ram                                                                         ; SpriteRAM           ; work         ;
+;          |NesEvent:nesev|                       ; 33 (33)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|NesEvent:nesev                                                              ; NesEvent            ; work         ;
+;          |Rambo1:rambo1|                        ; 96 (96)             ; 116 (116)                 ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1                                                               ; Rambo1              ; work         ;
+;       |PPU:ppu|                                 ; 1869 (111)          ; 2851 (20)                 ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|PPU:ppu                                                                                              ; PPU                 ; work         ;
+;          |BgPainter:bg_painter|                 ; 7 (7)               ; 68 (68)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|PPU:ppu|BgPainter:bg_painter                                                                         ; BgPainter           ; work         ;
+;          |ClockGen:clock|                       ; 36 (36)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|PPU:ppu|ClockGen:clock                                                                               ; ClockGen            ; work         ;
+;          |LoopyGen:loopy0|                      ; 96 (96)             ; 35 (35)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|PPU:ppu|LoopyGen:loopy0                                                                              ; LoopyGen            ; work         ;
+;          |PaletteRam:palette_ram|               ; 181 (181)           ; 156 (156)                 ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|PPU:ppu|PaletteRam:palette_ram                                                                       ; PaletteRam          ; work         ;
+;          |SpriteAddressGen:address_gen|         ; 14 (14)             ; 15 (15)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteAddressGen:address_gen                                                                 ; SpriteAddressGen    ; work         ;
+;          |SpriteRAM:sprite_ram|                 ; 1169 (1169)         ; 2320 (2320)               ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteRAM:sprite_ram                                                                         ; SpriteRAM           ; work         ;
 ;          |SpriteSet:sprite_gen|                 ; 255 (10)            ; 216 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen                                                                         ; SpriteSet           ; work         ;
-;             |Sprite:sprite0|                    ; 31 (31)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite0                                                          ; Sprite              ; work         ;
+;             |Sprite:sprite0|                    ; 30 (30)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite0                                                          ; Sprite              ; work         ;
 ;             |Sprite:sprite1|                    ; 30 (30)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite1                                                          ; Sprite              ; work         ;
 ;             |Sprite:sprite2|                    ; 30 (30)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite2                                                          ; Sprite              ; work         ;
 ;             |Sprite:sprite3|                    ; 30 (30)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite3                                                          ; Sprite              ; work         ;
 ;             |Sprite:sprite4|                    ; 32 (32)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite4                                                          ; Sprite              ; work         ;
 ;             |Sprite:sprite5|                    ; 30 (30)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite5                                                          ; Sprite              ; work         ;
 ;             |Sprite:sprite6|                    ; 31 (31)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite6                                                          ; Sprite              ; work         ;
-;             |Sprite:sprite7|                    ; 31 (31)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite7                                                          ; Sprite              ; work         ;
-;    |SoundDriver:sound_driver|                   ; 12 (12)             ; 41 (41)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|SoundDriver:sound_driver                                                                                     ; SoundDriver         ; work         ;
+;             |Sprite:sprite7|                    ; 32 (32)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite7                                                          ; Sprite              ; work         ;
+;    |SoundDriver:sound_driver|                   ; 13 (13)             ; 42 (42)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|SoundDriver:sound_driver                                                                                     ; SoundDriver         ; work         ;
 ;    |UartDemux:uart_demux|                       ; 36 (16)             ; 46 (29)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|UartDemux:uart_demux                                                                                         ; UartDemux           ; work         ;
 ;       |Rs232Rx:uart|                            ; 20 (20)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|UartDemux:uart_demux|Rs232Rx:uart                                                                            ; Rs232Rx             ; work         ;
 ;    |VgaDriver:vga|                              ; 62 (62)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |NES_Nexys4|VgaDriver:vga                                                                                                ; VgaDriver           ; work         ;
@@ -449,8 +449,9 @@ Encoding Type:  One-Hot
 +--------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+
 ; Register name                                                                                          ; Reason for Removal                                                               ;
 +--------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+
+; led_enable[0..2]                                                                                       ; Stuck at VCC due to stuck port data_in                                           ;
 ; led_value[16..31]                                                                                      ; Stuck at GND due to stuck port data_in                                           ;
-; led_enable[0..7]                                                                                       ; Stuck at VCC due to stuck port data_in                                           ;
+; led_enable[3..7]                                                                                       ; Stuck at VCC due to stuck port data_in                                           ;
 ; LedDriver:led_driver|SSEG_CA[7]                                                                        ; Stuck at VCC due to stuck port data_in                                           ;
 ; MemoryController:memory|dout_b[1..7]                                                                   ; Stuck at GND due to stuck port data_in                                           ;
 ; MemoryController:memory|dout_a[1..7]                                                                   ; Stuck at GND due to stuck port data_in                                           ;
@@ -481,13 +482,11 @@ Encoding Type:  One-Hot
 ; NES:nes|MultiMapper:multi_mapper|Mapper15:map15|prg_rom_bank[1]                                        ; Merged with NES:nes|MultiMapper:multi_mapper|Mapper13:map13|chr_bank[1]          ;
 ; NES:nes|MultiMapper:multi_mapper|Mapper228:map228|chr_bank[1]                                          ; Merged with NES:nes|MultiMapper:multi_mapper|Mapper13:map13|chr_bank[1]          ;
 ; SoundDriver:sound_driver|sclk_div[0]                                                                   ; Merged with sound_ctr[0]                                                         ;
-; nes_ce[0]                                                                                              ; Merged with sound_ctr[0]                                                         ;
 ; GameLoader:loader|state~3                                                                              ; Lost fanout                                                                      ;
 ; GameLoader:loader|state~4                                                                              ; Lost fanout                                                                      ;
 ; UartDemux:uart_demux|state~6                                                                           ; Lost fanout                                                                      ;
 ; UartDemux:uart_demux|state~7                                                                           ; Lost fanout                                                                      ;
 ; NES:nes|CPU:cpu|MicroCodeTable:micro2|AluFlags[8]                                                      ; Merged with NES:nes|CPU:cpu|IR[0]                                                ;
-; SoundDriver:sound_driver|sclk_div[1]                                                                   ; Merged with nes_ce[1]                                                            ;
 ; NES:nes|PPU:ppu|PaletteRam:palette_ram|palette~24                                                      ; Stuck at GND due to stuck port clock_enable                                      ;
 ; NES:nes|PPU:ppu|PaletteRam:palette_ram|palette~72                                                      ; Stuck at GND due to stuck port clock_enable                                      ;
 ; NES:nes|PPU:ppu|PaletteRam:palette_ram|palette~120                                                     ; Stuck at GND due to stuck port clock_enable                                      ;
@@ -524,7 +523,7 @@ Encoding Type:  One-Hot
 ; NES:nes|PPU:ppu|PaletteRam:palette_ram|palette~146                                                     ; Stuck at GND due to stuck port clock_enable                                      ;
 ; NES:nes|PPU:ppu|PaletteRam:palette_ram|palette~52                                                      ; Stuck at GND due to stuck port clock_enable                                      ;
 ; NES:nes|PPU:ppu|PaletteRam:palette_ram|palette~148                                                     ; Stuck at GND due to stuck port clock_enable                                      ;
-; Total Number of Removed Registers = 117                                                                ;                                                                                  ;
+; Total Number of Removed Registers = 115                                                                ;                                                                                  ;
 +--------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+
 
 
@@ -572,7 +571,7 @@ Encoding Type:  One-Hot
 ; Number of registers using Synchronous Load   ; 372   ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 12198 ;
+; Number of registers using Clock Enable       ; 12183 ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -600,258 +599,258 @@ Encoding Type:  One-Hot
 +----------------------------------------------------------------+----------------------------------------------------------------+------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteRAM:sprite_ram|state[0]                     ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|MemoryController:memory|MemAdr[8]                                 ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |NES_Nexys4|VgaDriver:vga|vga_b[0]                                            ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|MemoryController:memory|cycles[1]                                 ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |NES_Nexys4|MemoryController:memory|busy                                      ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|apu_irq_delayed                                           ;
-; 3:1                ; 40 bits   ; 80 LEs        ; 0 LEs                ; 80 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|CPU:cpu|IR[7]                                             ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|CPU:cpu|AddressGenerator:addgen|AL[4]                     ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|LoopyGen:loopy0|loopy_t[12]                       ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|LoopyGen:loopy0|loopy_t[2]                        ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|LoopyGen:loopy0|loopy_t[7]                        ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC5:mmc5|vscroll[0]             ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|NesEvent:nesev|old_val           ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper68:map68|use_chr_rom       ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|CPU:cpu|AddressGenerator:addgen|AH[2]                     ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|DmaController:dma|sprite_dma_addr[14]                     ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC3:mmc3|bank_select[2]         ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC3:mmc3|chr_bank_0[0]          ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC3:mmc3|chr_bank_1[4]          ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC3:mmc3|chr_bank_2[6]          ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC3:mmc3|chr_bank_3[0]          ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC3:mmc3|chr_bank_4[4]          ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC3:mmc3|chr_bank_5[6]          ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC3:mmc3|prg_bank_0[2]          ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC3:mmc3|prg_bank_1[1]          ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |NES_Nexys4|GameLoader:loader|ctr[3]                                          ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |NES_Nexys4|UartDemux:uart_demux|Rs232Rx:uart|timeout[3]                      ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |NES_Nexys4|Hq2x:hq2x|y[2]                                                    ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|Hq2x:hq2x|yshort[1]                                               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|CPU:cpu|X[7]                                              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|CPU:cpu|A[4]                                              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|CPU:cpu|Y[4]                                              ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC3:mmc3|ram_enable             ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC5:mmc5|prg_mode[1]            ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|ram_enable        ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|FrameSeqMode                                      ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|joypad_bits2[0]                                                   ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|joypad_bits[4]                                                    ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|DmaController:dma|sprite_dma_lastval[1]                   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq2|Volume[1]                          ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq2|SweepShift[1]                      ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq1|Volume[3]                          ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq1|SweepShift[0]                      ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|TriangleChan:Tri|SeqPos[4]                        ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|NoiseChan:Noi|Volume[0]                           ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 0 LEs                ; 28 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|NoiseChan:Noi|Shift[13]                           ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|bank_select[2]     ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|chr_bank_0[5]      ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|chr_bank_1[4]      ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|chr_bank_2[4]      ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|chr_bank_3[5]      ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|chr_bank_4[2]      ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|chr_bank_5[6]      ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|prg_bank_0[1]      ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|prg_bank_1[5]      ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|chr_bank_8[0]      ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|chr_bank_9[3]      ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|prg_bank_2[4]      ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper68:map68|nametable_1[4]    ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper68:map68|nametable_0[3]    ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|chr_bank[0][1]    ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|chr_bank[1][2]    ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|chr_bank[2][1]    ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|chr_bank[3][2]    ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|chr_bank[4][7]    ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|chr_bank[5][3]    ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|chr_bank[6][7]    ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|chr_bank[7][2]    ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper28:map28|mode[2]           ;
-; 3:1                ; 21 bits   ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper228:map228|prg_bank[4]     ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC1:mmc1|control[0]             ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper41:map41|prg_bank[2]       ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|mirroring[1]      ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|addr[0]           ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper79:map79|prg_bank[0]       ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper234:map234|block[1]        ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper68:map68|chr_bank_0[0]     ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper68:map68|chr_bank_1[3]     ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper68:map68|chr_bank_2[6]     ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper68:map68|chr_bank_3[3]     ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper34:map34|chr_bank_1[3]     ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper34:map34|chr_bank_0[0]     ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC5:mmc5|prg_bank_3[2]          ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|prg_bank[0][0]    ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|prg_bank[1][3]    ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|prg_bank[2][3]    ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|prg_bank[3][3]    ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper41:map41|chr_inner_bank[1] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper234:map234|inner_chr[0]    ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper28:map28|inner[0]          ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper68:map68|prg_bank[2]       ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper71:map71|prg_bank[0]       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper28:map28|outer[1]          ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper34:map34|prg_bank[1]       ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|LoopyGen:loopy0|loopy_t[10]                       ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|DmcChan:Dmc|SampleAddress[3]                      ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |NES_Nexys4|Hq2x:hq2x|Curr2[4]                                                ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteRAM:sprite_ram|p[1]                         ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|DmcChan:Dmc|IrqEnable                             ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite0|pix2[6]       ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite0|pix1[6]       ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite0|x_coord[1]    ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite7|pix2[6]       ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite7|pix1[6]       ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite7|x_coord[3]    ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite6|pix2[5]       ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite6|pix1[2]       ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite6|x_coord[0]    ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite5|pix2[6]       ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite5|pix1[2]       ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite5|x_coord[5]    ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite4|pix2[3]       ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite4|pix1[6]       ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite4|x_coord[0]    ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite3|pix2[2]       ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite3|pix1[2]       ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite3|x_coord[3]    ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite2|pix2[1]       ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite2|pix1[5]       ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite2|x_coord[7]    ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite1|pix2[1]       ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite1|pix1[0]       ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite1|x_coord[7]    ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|Enabled[2]                                        ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|TriangleChan:Tri|LinCtrPeriod[6]                  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|DmcChan:Dmc|BitsUsed[0]                           ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|DmcChan:Dmc|SampleLen[1]                          ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|DmcChan:Dmc|SampleBuffer[3]                       ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|TriangleChan:Tri|Period[7]                        ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|TriangleChan:Tri|Period[8]                        ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|NoiseChan:Noi|Period[2]                           ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC3:mmc3|counter[0]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC3:mmc3|irq_latch[2]           ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|a12_ctr[1]         ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|irq_trigger       ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|irq_latch[7]       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper71:map71|prg_bank[2]       ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|ClockGen:clock|cycle[8]                           ;
-; 4:1                ; 22 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; Yes        ; |NES_Nexys4|GameLoader:loader|mem_addr[10]                                    ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|MemoryController:memory|RamLB                                     ;
-; 4:1                ; 30 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|NesEvent:nesev|counter[26]       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|cpu_cycle_counter[0]                                      ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|CPU:cpu|SP[1]                                             ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|ClockGen:clock|scanline[0]                        ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |NES_Nexys4|VgaDriver:vga|v[1]                                                ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteRAM:sprite_ram|oam_ptr[2]                   ;
-; 4:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq2|TimerCtr[3]                        ;
-; 4:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq1|TimerCtr[1]                        ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|DmcChan:Dmc|Cycles[8]                             ;
-; 4:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|TriangleChan:Tri|TimerCtr[6]                      ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|NoiseChan:Noi|TimerCtr[2]                         ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper66:map66|chr_bank[2]       ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper66:map66|chr_bank[0]       ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|DmcChan:Dmc|ShiftReg[2]                           ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq2|EnvDivider[3]                      ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq2|SweepDivider[0]                    ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq1|EnvDivider[3]                      ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq1|SweepDivider[0]                    ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|NoiseChan:Noi|EnvDivider[0]                       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|BgPainter:bg_painter|current_attribute_table[0]   ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|cycle_counter[0]   ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|counter[1]         ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|irq_counter[11]   ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|irq_counter[4]    ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|DmcChan:Dmc|BytesLeft[6]                          ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|DmaController:dma|sprite_dma_addr[3]                      ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq2|Period[8]                          ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq2|SeqPos[2]                          ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq1|Period[10]                         ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq1|SeqPos[0]                          ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq2|Envelope[2]                        ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq2|Period[4]                          ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq1|Envelope[0]                        ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq1|Period[3]                          ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC1:mmc1|shift[3]               ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC1:mmc1|control[3]             ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|MemoryController:memory|MemAdr[19]                                ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|TriangleChan:Tri|LinCtr[6]                        ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC3:mmc3|a12_ctr[3]             ;
-; 6:1                ; 11 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|DmcChan:Dmc|Address[0]                            ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|LoopyGen:loopy0|loopy_v[12]                       ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|LoopyGen:loopy0|loopy_v[4]                        ;
-; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|NoiseChan:Noi|LenCtr[1]                           ;
-; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|TriangleChan:Tri|LenCtr[4]                        ;
-; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq2|LenCtr[7]                          ;
-; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq1|LenCtr[2]                          ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|DmcChan:Dmc|ActivationDelay[1]                    ;
-; 6:1                ; 15 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|Cycles[13]                                        ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|CPU:cpu|T[3]                                              ;
-; 6:1                ; 13 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |NES_Nexys4|GameLoader:loader|bytes_left[4]                                   ;
-; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |NES_Nexys4|GameLoader:loader|bytes_left[15]                                  ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|DmaController:dma|spr_state[0]                            ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|LoopyGen:loopy0|loopy_v[9]                        ;
-; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|LoopyGen:loopy0|loopy_v[6]                        ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|NoiseChan:Noi|Envelope[2]                         ;
-; 7:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|DmcChan:Dmc|Dac[3]                                ;
-; 7:1                ; 6 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |NES_Nexys4|MemoryController:memory|MemAdr[15]                                ;
-; 13:1               ; 2 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|ClkL                                              ;
-; 1:1                ; 15 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|CPU:cpu|ProgramCounter:pc|Add0                            ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|PPU:ppu|vram_a[11]                                        ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteRAM:sprite_ram|Mux0                         ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|CPU:cpu|NewAlu:new_alu|Mux0                               ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|CPU:cpu|NewAlu:new_alu|Mux15                              ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|CPU:cpu|NewAlu:new_alu|Mux16                              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|CPU:cpu|NextIR[7]                                         ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq2|ShiftRight0                        ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq1|ShiftRight0                        ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq1|PeriodRhs[10]                      ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq1|PeriodRhs[5]                       ;
-; 4:1                ; 18 bits   ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC5:mmc5|Mux17                  ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |NES_Nexys4|NES:nes|CPU:cpu|ProgramCounter:pc|Add0                            ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |NES_Nexys4|NES:nes|CPU:cpu|ProgramCounter:pc|Add0                            ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |NES_Nexys4|NES:nes|CPU:cpu|ProgramCounter:pc|Add0                            ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteAddressGen:address_gen|load_in[16]          ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 21 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|CPU:cpu|Mux6                                              ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|PPU:ppu|vram_a[7]                                         ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|PPU:ppu|vram_a[1]                                         ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC5:mmc5|mirrbits[1]            ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|PPU:ppu|comb                                              ;
-; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|Hq2x:hq2x|comb                                                    ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 24 LEs               ; 16 LEs                 ; No         ; |NES_Nexys4|NES:nes|CPU:cpu|NewAlu:new_alu|Mux31                              ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|APU:apu|comb                                              ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq2|ShiftRight0                        ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|APU:apu|comb                                              ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|APU:apu|comb                                              ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; No         ; |NES_Nexys4|LedDriver:led_driver|Mux3                                         ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC5:mmc5|exram_read_addr[7]     ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC5:mmc5|exram_read_addr[1]     ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |NES_Nexys4|NES:nes|MemoryMultiplex:mem|memory_addr[2]                        ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 21 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|chr_to_ppu[1]                                             ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|PPU:ppu|bg_pixel[1]                                       ;
-; 7:1                ; 7 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|prg_addr[10]                                              ;
-; 7:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|prg_addr[5]                                               ;
-; 7:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|addr[1]                                                   ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |NES_Nexys4|UartDemux:uart_demux|state                                        ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC5:mmc5|override_attr[0]       ;
-; 6:1                ; 15 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|Hq2x:hq2x|Blend:blender|Input2[3]                                 ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |NES_Nexys4|GameLoader:loader|state                                           ;
-; 10:1               ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq1|PeriodRhs[3]                       ;
-; 128:1              ; 2 bits    ; 170 LEs       ; 20 LEs               ; 150 LEs                ; No         ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteRAM:sprite_ram|Selector5                    ;
-; 128:1              ; 3 bits    ; 255 LEs       ; 12 LEs               ; 243 LEs                ; No         ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteRAM:sprite_ram|Selector2                    ;
-; 128:1              ; 2 bits    ; 170 LEs       ; 6 LEs                ; 164 LEs                ; No         ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteRAM:sprite_ram|Selector7                    ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|PPU:ppu|obj_pixel[0]                                      ;
-; 11:1               ; 4 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|from_data_bus[4]                                          ;
-; 18:1               ; 2 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|PPU:ppu|comb                                              ;
-; 14:1               ; 2 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|from_data_bus[6]                                          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteRAM:sprite_ram|state[0]                        ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|ClockGen:clock|cycle[6]                              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|MemoryController:memory|MemAdr[7]                                    ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |NES_Nexys4|VgaDriver:vga|vga_r[3]                                               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|MemoryController:memory|cycles[1]                                    ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |NES_Nexys4|MemoryController:memory|RamCS                                        ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|cpu_cycle_counter[1]                                         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|InternalClock                                        ;
+; 3:1                ; 40 bits   ; 80 LEs        ; 0 LEs                ; 80 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|CPU:cpu|MicroCodeTable:micro2|MicroCodeTableInner:inner|M[6] ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|CPU:cpu|AddressGenerator:addgen|AL[5]                        ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|LoopyGen:loopy0|loopy_t[12]                          ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|LoopyGen:loopy0|loopy_t[0]                           ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|LoopyGen:loopy0|loopy_t[6]                           ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC5:mmc5|vscroll[6]                ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper68:map68|mirroring            ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|CPU:cpu|AddressGenerator:addgen|AH[7]                        ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|DmaController:dma|sprite_dma_addr[13]                        ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC3:mmc3|chr_a12_invert            ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC3:mmc3|chr_bank_0[3]             ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC3:mmc3|chr_bank_1[0]             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC3:mmc3|chr_bank_2[0]             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC3:mmc3|chr_bank_3[1]             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC3:mmc3|chr_bank_4[0]             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC3:mmc3|chr_bank_5[0]             ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC3:mmc3|prg_bank_0[4]             ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC3:mmc3|prg_bank_1[3]             ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |NES_Nexys4|GameLoader:loader|ctr[2]                                             ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |NES_Nexys4|UartDemux:uart_demux|Rs232Rx:uart|timeout[1]                         ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |NES_Nexys4|Hq2x:hq2x|y[5]                                                       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|Hq2x:hq2x|yshort[1]                                                  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|CPU:cpu|X[6]                                                 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|CPU:cpu|A[3]                                                 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|CPU:cpu|Y[4]                                                 ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC3:mmc3|ram_enable                ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC5:mmc5|prg_mode[0]               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|ram_enable           ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|FrameSeqMode                                         ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|joypad_bits2[0]                                                      ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|joypad_bits[0]                                                       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|DmaController:dma|sprite_dma_lastval[6]                      ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq2|Volume[0]                             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq2|SweepShift[1]                         ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq1|Duty[1]                               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq1|SweepShift[1]                         ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|TriangleChan:Tri|SeqPos[3]                           ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|NoiseChan:Noi|EnvLoop                                ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 0 LEs                ; 28 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|NoiseChan:Noi|Shift[8]                               ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|bank_select[1]        ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|chr_bank_0[5]         ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|chr_bank_1[6]         ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|chr_bank_2[6]         ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|chr_bank_3[0]         ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|chr_bank_4[1]         ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|chr_bank_5[7]         ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|prg_bank_0[3]         ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|prg_bank_1[4]         ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|chr_bank_8[7]         ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|chr_bank_9[7]         ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|prg_bank_2[5]         ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper68:map68|nametable_1[4]       ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper68:map68|nametable_0[1]       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|chr_bank[0][7]       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|chr_bank[1][3]       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|chr_bank[2][4]       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|chr_bank[3][0]       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|chr_bank[4][7]       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|chr_bank[5][7]       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|chr_bank[6][2]       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|chr_bank[7][7]       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper28:map28|mode[5]              ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper228:map228|prg_chip[1]        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC1:mmc1|control[0]                ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper41:map41|chr_outer_bank[0]    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|mirroring[0]         ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper71:map71|ciram_select         ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper79:map79|prg_bank[2]          ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper234:map234|block[0]           ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper68:map68|chr_bank_0[1]        ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper68:map68|chr_bank_1[5]        ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper68:map68|chr_bank_2[4]        ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper68:map68|chr_bank_3[6]        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper34:map34|chr_bank_1[2]        ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper34:map34|chr_bank_0[3]        ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC5:mmc5|prg_bank_3[0]             ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|prg_bank[0][0]       ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|prg_bank[1][4]       ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|prg_bank[2][1]       ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|prg_bank[3][1]       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper41:map41|chr_inner_bank[1]    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper234:map234|inner_chr[0]       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper28:map28|inner[2]             ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper68:map68|prg_bank[2]          ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper71:map71|prg_bank[0]          ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper28:map28|outer[2]             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper34:map34|prg_bank[0]          ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|LoopyGen:loopy0|loopy_t[11]                          ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|DmcChan:Dmc|SampleAddress[2]                         ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |NES_Nexys4|Hq2x:hq2x|Curr2[4]                                                   ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteRAM:sprite_ram|p[2]                            ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|DmcChan:Dmc|Loop                                     ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite0|pix2[0]          ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite0|pix1[6]          ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite0|x_coord[5]       ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite7|pix2[3]          ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite7|pix1[0]          ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite7|x_coord[3]       ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite6|pix2[1]          ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite6|pix1[4]          ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite6|x_coord[6]       ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite5|pix2[4]          ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite5|pix1[3]          ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite5|x_coord[2]       ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite4|pix2[0]          ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite4|pix1[3]          ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite4|x_coord[5]       ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite3|pix2[3]          ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite3|pix1[1]          ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite3|x_coord[1]       ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite2|pix2[3]          ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite2|pix1[2]          ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite2|x_coord[4]       ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite1|pix2[0]          ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite1|pix1[5]          ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteSet:sprite_gen|Sprite:sprite1|x_coord[1]       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|Enabled[3]                                           ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|TriangleChan:Tri|LinCtrl                             ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|DmcChan:Dmc|BitsUsed[2]                              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|DmcChan:Dmc|SampleLen[5]                             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC3:mmc3|counter[7]                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|DmcChan:Dmc|SampleBuffer[2]                          ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|TriangleChan:Tri|Period[5]                           ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|TriangleChan:Tri|Period[8]                           ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|NoiseChan:Noi|Period[2]                              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC3:mmc3|irq_latch[3]              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|a12_ctr[0]            ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|irq_trigger          ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|irq_latch[1]          ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|nmi_active                                                   ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper71:map71|prg_bank[2]          ;
+; 4:1                ; 22 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; Yes        ; |NES_Nexys4|GameLoader:loader|mem_addr[10]                                       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|MemoryController:memory|RamLB                                        ;
+; 4:1                ; 30 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|NesEvent:nesev|counter[18]          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|CPU:cpu|SP[0]                                                ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|ClockGen:clock|scanline[0]                           ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |NES_Nexys4|VgaDriver:vga|v[7]                                                   ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteRAM:sprite_ram|oam_ptr[4]                      ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq2|TimerCtr[9]                           ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq1|TimerCtr[3]                           ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|DmcChan:Dmc|Cycles[8]                                ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|TriangleChan:Tri|TimerCtr[4]                         ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|NoiseChan:Noi|TimerCtr[4]                            ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper66:map66|chr_bank[2]          ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper66:map66|chr_bank[1]          ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|DmcChan:Dmc|ShiftReg[4]                              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq2|EnvDivider[2]                         ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq2|SweepDivider[0]                       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq1|EnvDivider[0]                         ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq1|SweepDivider[0]                       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|NoiseChan:Noi|EnvDivider[3]                          ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|BgPainter:bg_painter|current_attribute_table[0]      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|cycle_counter[0]      ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Rambo1:rambo1|counter[0]            ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|irq_counter[10]      ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|Mapper69:map69|irq_counter[2]       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC3:mmc3|a12_ctr[2]                ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|DmcChan:Dmc|BytesLeft[5]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|DmaController:dma|sprite_dma_addr[3]                         ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq2|Period[9]                             ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq2|SeqPos[0]                             ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq1|Period[10]                            ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq1|SeqPos[0]                             ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq2|Envelope[0]                           ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq2|Period[2]                             ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq1|Envelope[2]                           ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq1|Period[0]                             ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC1:mmc1|shift[3]                  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC1:mmc1|control[2]                ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |NES_Nexys4|MemoryController:memory|MemAdr[20]                                   ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|TriangleChan:Tri|LinCtr[4]                           ;
+; 6:1                ; 11 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|DmcChan:Dmc|Address[2]                               ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|LoopyGen:loopy0|loopy_v[13]                          ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|LoopyGen:loopy0|loopy_v[2]                           ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|NoiseChan:Noi|LenCtr[3]                              ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|TriangleChan:Tri|LenCtr[5]                           ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq2|LenCtr[2]                             ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq1|LenCtr[7]                             ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|DmcChan:Dmc|ActivationDelay[1]                       ;
+; 6:1                ; 15 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|Cycles[14]                                           ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|CPU:cpu|T[2]                                                 ;
+; 6:1                ; 13 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |NES_Nexys4|GameLoader:loader|bytes_left[8]                                      ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |NES_Nexys4|GameLoader:loader|bytes_left[15]                                     ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|DmaController:dma|spr_state[0]                               ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|LoopyGen:loopy0|loopy_v[8]                           ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|PPU:ppu|LoopyGen:loopy0|loopy_v[7]                           ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|NoiseChan:Noi|Envelope[0]                            ;
+; 7:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|DmcChan:Dmc|Dac[1]                                   ;
+; 7:1                ; 6 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |NES_Nexys4|MemoryController:memory|MemAdr[14]                                   ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |NES_Nexys4|NES:nes|APU:apu|ClkE                                                 ;
+; 1:1                ; 15 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|CPU:cpu|ProgramCounter:pc|Add0                               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|PPU:ppu|vram_a[10]                                           ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteRAM:sprite_ram|Mux1                            ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|CPU:cpu|NewAlu:new_alu|Mux2                                  ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|CPU:cpu|NewAlu:new_alu|Mux10                                 ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|CPU:cpu|NewAlu:new_alu|Mux19                                 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|CPU:cpu|NextIR[0]                                            ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq2|ShiftRight0                           ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq1|ShiftRight0                           ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq1|PeriodRhs[10]                         ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq1|PeriodRhs[4]                          ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC5:mmc5|Mux17                     ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |NES_Nexys4|NES:nes|CPU:cpu|ProgramCounter:pc|Add0                               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |NES_Nexys4|NES:nes|CPU:cpu|ProgramCounter:pc|Add0                               ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |NES_Nexys4|NES:nes|CPU:cpu|ProgramCounter:pc|Add0                               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteAddressGen:address_gen|load_in[11]             ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 21 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|CPU:cpu|Mux10                                                ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|PPU:ppu|vram_a[7]                                            ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|PPU:ppu|vram_a[1]                                            ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC5:mmc5|mirrbits[1]               ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|PPU:ppu|comb                                                 ;
+; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|Hq2x:hq2x|comb                                                       ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 24 LEs               ; 16 LEs                 ; No         ; |NES_Nexys4|NES:nes|CPU:cpu|NewAlu:new_alu|Mux28                                 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|APU:apu|comb                                                 ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq2|ShiftRight0                           ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|APU:apu|comb                                                 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|APU:apu|comb                                                 ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; No         ; |NES_Nexys4|LedDriver:led_driver|Mux2                                            ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC5:mmc5|exram_read_addr[7]        ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC5:mmc5|exram_read_addr[3]        ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |NES_Nexys4|NES:nes|MemoryMultiplex:mem|memory_addr[0]                           ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 21 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|chr_to_ppu[6]                                                ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|PPU:ppu|bg_pixel[0]                                          ;
+; 7:1                ; 7 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|prg_addr[13]                                                 ;
+; 7:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|prg_addr[6]                                                  ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|addr[2]                                                      ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |NES_Nexys4|UartDemux:uart_demux|state                                           ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |NES_Nexys4|NES:nes|MultiMapper:multi_mapper|MMC5:mmc5|override_attr[1]          ;
+; 6:1                ; 15 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|Hq2x:hq2x|Blend:blender|Input2[0]                                    ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |NES_Nexys4|GameLoader:loader|state                                              ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|APU:apu|SquareChan:Sq1|PeriodRhs[0]                          ;
+; 128:1              ; 2 bits    ; 170 LEs       ; 20 LEs               ; 150 LEs                ; No         ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteRAM:sprite_ram|Selector5                       ;
+; 128:1              ; 3 bits    ; 255 LEs       ; 12 LEs               ; 243 LEs                ; No         ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteRAM:sprite_ram|Selector2                       ;
+; 128:1              ; 2 bits    ; 170 LEs       ; 6 LEs                ; 164 LEs                ; No         ; |NES_Nexys4|NES:nes|PPU:ppu|SpriteRAM:sprite_ram|Selector7                       ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|PPU:ppu|obj_pixel[0]                                         ;
+; 11:1               ; 4 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|from_data_bus[4]                                             ;
+; 18:1               ; 2 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|PPU:ppu|comb                                                 ;
+; 14:1               ; 2 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |NES_Nexys4|NES:nes|from_data_bus[6]                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------+
@@ -1579,15 +1578,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 12453                       ;
-;     ENA               ; 11242                       ;
-;     ENA SCLR          ; 602                         ;
+;     ENA               ; 11239                       ;
+;     ENA SCLR          ; 590                         ;
 ;     ENA SCLR SLD      ; 157                         ;
 ;     ENA SLD           ; 197                         ;
-;     SCLR              ; 47                          ;
+;     SCLR              ; 59                          ;
 ;     SLD               ; 18                          ;
-;     plain             ; 190                         ;
+;     plain             ; 193                         ;
 ; arriav_io_obuf        ; 16                          ;
-; arriav_lcell_comb     ; 8733                        ;
+; arriav_lcell_comb     ; 8711                        ;
 ;     arith             ; 683                         ;
 ;         0 data inputs ; 14                          ;
 ;         1 data inputs ; 423                         ;
@@ -1595,27 +1594,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         3 data inputs ; 35                          ;
 ;         4 data inputs ; 58                          ;
 ;         5 data inputs ; 28                          ;
-;     extend            ; 212                         ;
-;         7 data inputs ; 212                         ;
-;     normal            ; 7755                        ;
+;     extend            ; 214                         ;
+;         7 data inputs ; 214                         ;
+;     normal            ; 7731                        ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 93                          ;
-;         2 data inputs ; 1062                        ;
-;         3 data inputs ; 561                         ;
-;         4 data inputs ; 837                         ;
-;         5 data inputs ; 651                         ;
-;         6 data inputs ; 4549                        ;
+;         1 data inputs ; 91                          ;
+;         2 data inputs ; 1078                        ;
+;         3 data inputs ; 575                         ;
+;         4 data inputs ; 824                         ;
+;         5 data inputs ; 613                         ;
+;         6 data inputs ; 4548                        ;
 ;     shared            ; 83                          ;
 ;         0 data inputs ; 7                           ;
 ;         1 data inputs ; 16                          ;
 ;         2 data inputs ; 60                          ;
 ; arriav_mac            ; 10                          ;
-; boundary_port         ; 120                         ;
+; boundary_port         ; 128                         ;
 ; generic_pll           ; 1                           ;
 ; stratixv_ram_block    ; 292                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 22.10                       ;
-; Average LUT depth     ; 7.21                        ;
+; Average LUT depth     ; 7.20                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1624,7 +1623,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:47     ;
+; Top            ; 00:00:23     ;
 +----------------+--------------+
 
 
@@ -1634,7 +1633,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Oct 01 22:32:16 2024
+    Info: Processing started: Thu Oct 03 16:47:00 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off nes_strigeus -c nes_strigeus
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -1703,8 +1702,8 @@ Info (12021): Found 47 design units, including 47 entities, in source file fpgan
     Info (12023): Found entity 43: Mapper234 File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/mmu.v Line: 1482
     Info (12023): Found entity 44: MultiMapper File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/mmu.v Line: 1554
     Info (12023): Found entity 45: DmaController File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/nes.v Line: 46
-    Info (12023): Found entity 46: MemoryMultiplex File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/nes.v Line: 96
-    Info (12023): Found entity 47: NES File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/nes.v Line: 123
+    Info (12023): Found entity 46: MemoryMultiplex File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/nes.v Line: 97
+    Info (12023): Found entity 47: NES File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/nes.v Line: 124
 Info (12021): Found 1 design units, including 1 entities, in source file clk_pll.v
     Info (12023): Found entity 1: clk_pll File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/clk_pll.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file clk_pll/clk_pll_0002.v
@@ -1721,10 +1720,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file fpganes
     Info (12023): Found entity 1: XOR2 File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/XOR2.v Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file game_ram.v
     Info (12023): Found entity 1: game_ram File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/game_ram.v Line: 40
-Warning (10236): Verilog HDL Implicit Net warning at NES_Nexys4.v(304): created implicit net for "Memout" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 304
-Warning (10236): Verilog HDL Implicit Net warning at NES_Nexys4.v(304): created implicit net for "Memin" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 304
+Warning (10236): Verilog HDL Implicit Net warning at NES_Nexys4.v(306): created implicit net for "Memout" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 306
+Warning (10236): Verilog HDL Implicit Net warning at NES_Nexys4.v(306): created implicit net for "Memin" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 306
 Info (12127): Elaborating entity "NES_Nexys4" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at NES_Nexys4.v(271): object "run_mem" assigned a value but never read File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 271
+Warning (10036): Verilog HDL or VHDL warning at NES_Nexys4.v(273): object "run_mem" assigned a value but never read File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 273
 Warning (10230): Verilog HDL assignment warning at nes_palette.txt(1): truncated value with size 16 to match size of target (15) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/nes_palette.txt Line: 1
 Warning (10230): Verilog HDL assignment warning at nes_palette.txt(2): truncated value with size 16 to match size of target (15) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/nes_palette.txt Line: 2
 Warning (10230): Verilog HDL assignment warning at nes_palette.txt(3): truncated value with size 16 to match size of target (15) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/nes_palette.txt Line: 3
@@ -1789,12 +1788,12 @@ Warning (10230): Verilog HDL assignment warning at nes_palette.txt(61): truncate
 Warning (10230): Verilog HDL assignment warning at nes_palette.txt(62): truncated value with size 16 to match size of target (15) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/nes_palette.txt Line: 62
 Warning (10230): Verilog HDL assignment warning at nes_palette.txt(63): truncated value with size 16 to match size of target (15) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/nes_palette.txt Line: 63
 Warning (10230): Verilog HDL assignment warning at nes_palette.txt(64): truncated value with size 16 to match size of target (15) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/nes_palette.txt Line: 64
-Warning (10230): Verilog HDL assignment warning at NES_Nexys4.v(276): truncated value with size 32 to match size of target (2) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 276
-Warning (10230): Verilog HDL assignment warning at NES_Nexys4.v(340): truncated value with size 32 to match size of target (8) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 340
-Warning (10030): Net "pallut.data_a" at NES_Nexys4.v(222) has no driver or initial value, using a default initial value '0' File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 222
-Warning (10030): Net "pallut.waddr_a" at NES_Nexys4.v(222) has no driver or initial value, using a default initial value '0' File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 222
-Warning (10030): Net "pallut.we_a" at NES_Nexys4.v(222) has no driver or initial value, using a default initial value '0' File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 222
-Info (12128): Elaborating entity "clk_21mhz" for hierarchy "clk_21mhz:clock_21mhz" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 197
+Warning (10230): Verilog HDL assignment warning at NES_Nexys4.v(278): truncated value with size 32 to match size of target (2) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 278
+Warning (10230): Verilog HDL assignment warning at NES_Nexys4.v(342): truncated value with size 32 to match size of target (8) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 342
+Warning (10030): Net "pallut.data_a" at NES_Nexys4.v(224) has no driver or initial value, using a default initial value '0' File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 224
+Warning (10030): Net "pallut.waddr_a" at NES_Nexys4.v(224) has no driver or initial value, using a default initial value '0' File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 224
+Warning (10030): Net "pallut.we_a" at NES_Nexys4.v(224) has no driver or initial value, using a default initial value '0' File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 224
+Info (12128): Elaborating entity "clk_21mhz" for hierarchy "clk_21mhz:clock_21mhz" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 198
 Info (12128): Elaborating entity "altera_pll" for hierarchy "clk_21mhz:clock_21mhz|altera_pll:altera_pll_i" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/clk_pll/clk_pll_0002.v Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
 Info (12130): Elaborated megafunction instantiation "clk_21mhz:clock_21mhz|altera_pll:altera_pll_i" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/clk_pll/clk_pll_0002.v Line: 85
@@ -1859,26 +1858,26 @@ Info (12133): Instantiated megafunction "clk_21mhz:clock_21mhz|altera_pll:altera
     Info (12134): Parameter "duty_cycle17" = "50"
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
-Info (12128): Elaborating entity "UartDemux" for hierarchy "UartDemux:uart_demux" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 204
+Info (12128): Elaborating entity "UartDemux" for hierarchy "UartDemux:uart_demux" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 205
 Info (12128): Elaborating entity "Rs232Rx" for hierarchy "UartDemux:uart_demux|Rs232Rx:uart" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/hw_uart.v Line: 64
 Warning (10230): Verilog HDL assignment warning at hw_uart.v(34): truncated value with size 32 to match size of target (6) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/hw_uart.v Line: 34
 Warning (10230): Verilog HDL assignment warning at hw_uart.v(43): truncated value with size 32 to match size of target (6) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/hw_uart.v Line: 43
 Warning (10230): Verilog HDL assignment warning at hw_uart.v(54): truncated value with size 32 to match size of target (6) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/hw_uart.v Line: 54
-Info (12128): Elaborating entity "LedDriver" for hierarchy "LedDriver:led_driver" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 228
+Info (12128): Elaborating entity "LedDriver" for hierarchy "LedDriver:led_driver" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 230
 Warning (10230): Verilog HDL assignment warning at hw_led.v(15): truncated value with size 32 to match size of target (17) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/hw_led.v Line: 15
 Warning (10230): Verilog HDL assignment warning at hw_led.v(18): truncated value with size 32 to match size of target (3) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/hw_led.v Line: 18
-Info (12128): Elaborating entity "GameLoader" for hierarchy "GameLoader:loader" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 268
+Info (12128): Elaborating entity "GameLoader" for hierarchy "GameLoader:loader" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 270
 Warning (10230): Verilog HDL assignment warning at NES_Nexys4.v(105): truncated value with size 32 to match size of target (3) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 105
 Warning (10230): Verilog HDL assignment warning at NES_Nexys4.v(113): truncated value with size 32 to match size of target (3) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 113
 Warning (10230): Verilog HDL assignment warning at NES_Nexys4.v(134): truncated value with size 32 to match size of target (4) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 134
 Warning (10230): Verilog HDL assignment warning at NES_Nexys4.v(143): truncated value with size 32 to match size of target (22) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 143
 Warning (10230): Verilog HDL assignment warning at NES_Nexys4.v(144): truncated value with size 32 to match size of target (22) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 144
 Info (10264): Verilog HDL Case Statement information at NES_Nexys4.v(131): all case item expressions in this case statement are onehot File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 131
-Info (12128): Elaborating entity "NES" for hierarchy "NES:nes" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 289
-Warning (10230): Verilog HDL assignment warning at nes.v(160): truncated value with size 32 to match size of target (2) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/nes.v Line: 160
-Warning (10034): Output port "dbgadr" at nes.v(145) has no driver File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/nes.v Line: 145
-Warning (10034): Output port "dbgctr" at nes.v(147) has no driver File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/nes.v Line: 147
-Info (12128): Elaborating entity "CPU" for hierarchy "NES:nes|CPU:cpu" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/nes.v Line: 182
+Info (12128): Elaborating entity "NES" for hierarchy "NES:nes" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 291
+Warning (10230): Verilog HDL assignment warning at nes.v(161): truncated value with size 32 to match size of target (2) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/nes.v Line: 161
+Warning (10034): Output port "dbgadr" at nes.v(146) has no driver File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/nes.v Line: 146
+Warning (10034): Output port "dbgctr" at nes.v(148) has no driver File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/nes.v Line: 148
+Info (12128): Elaborating entity "CPU" for hierarchy "NES:nes|CPU:cpu" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/nes.v Line: 183
 Warning (10230): Verilog HDL assignment warning at cpu.v(214): truncated value with size 32 to match size of target (3) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/cpu.v Line: 214
 Warning (10230): Verilog HDL assignment warning at cpu.v(255): truncated value with size 32 to match size of target (1) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/cpu.v Line: 255
 Info (12128): Elaborating entity "AddressGenerator" for hierarchy "NES:nes|CPU:cpu|AddressGenerator:addgen" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/cpu.v Line: 221
@@ -1903,8 +1902,8 @@ Info (12128): Elaborating entity "MUXCY" for hierarchy "NES:nes|CPU:cpu|NewAlu:n
 Info (12128): Elaborating entity "XORCY" for hierarchy "NES:nes|CPU:cpu|NewAlu:new_alu|MyAddSub:addsub|XORCY:XORCY0" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/cpu.v Line: 21
 Info (12128): Elaborating entity "XOR2" for hierarchy "NES:nes|CPU:cpu|NewAlu:new_alu|MyAddSub:addsub|XOR2:X1" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/cpu.v Line: 29
 Info (12128): Elaborating entity "ProgramCounter" for hierarchy "NES:nes|CPU:cpu|ProgramCounter:pc" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/cpu.v Line: 243
-Info (12128): Elaborating entity "DmaController" for hierarchy "NES:nes|DmaController:dma" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/nes.v Line: 211
-Info (12128): Elaborating entity "APU" for hierarchy "NES:nes|APU:apu" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/nes.v Line: 227
+Info (12128): Elaborating entity "DmaController" for hierarchy "NES:nes|DmaController:dma" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/nes.v Line: 212
+Info (12128): Elaborating entity "APU" for hierarchy "NES:nes|APU:apu" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/nes.v Line: 228
 Warning (10230): Verilog HDL assignment warning at apu.v(715): truncated value with size 32 to match size of target (1) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/apu.v Line: 715
 Warning (10230): Verilog HDL assignment warning at apu.v(718): truncated value with size 32 to match size of target (16) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/apu.v Line: 718
 Info (12128): Elaborating entity "LenCtr_Lookup" for hierarchy "NES:nes|APU:apu|LenCtr_Lookup:len" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/apu.v Line: 664
@@ -1938,7 +1937,7 @@ Info (12128): Elaborating entity "ApuLookupTable" for hierarchy "NES:nes|APU:apu
 Warning (10030): Net "lookup.data_a" at apu.v(553) has no driver or initial value, using a default initial value '0' File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/apu.v Line: 553
 Warning (10030): Net "lookup.waddr_a" at apu.v(553) has no driver or initial value, using a default initial value '0' File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/apu.v Line: 553
 Warning (10030): Net "lookup.we_a" at apu.v(553) has no driver or initial value, using a default initial value '0' File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/apu.v Line: 553
-Info (12128): Elaborating entity "PPU" for hierarchy "NES:nes|PPU:ppu" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/nes.v Line: 252
+Info (12128): Elaborating entity "PPU" for hierarchy "NES:nes|PPU:ppu" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/nes.v Line: 253
 Warning (10036): Verilog HDL or VHDL warning at ppu.v(492): object "color_intensity" assigned a value but never read File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/ppu.v Line: 492
 Warning (10175): Verilog HDL warning at ppu.v(656): ignoring unsupported system task File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/ppu.v Line: 656
 Info (10264): Verilog HDL Case Statement information at ppu.v(689): all case item expressions in this case statement are onehot File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/ppu.v Line: 689
@@ -1996,7 +1995,7 @@ Warning (10230): Verilog HDL assignment warning at oam_palette.txt(30): truncate
 Warning (10230): Verilog HDL assignment warning at oam_palette.txt(31): truncated value with size 8 to match size of target (6) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/oam_palette.txt Line: 31
 Warning (10230): Verilog HDL assignment warning at oam_palette.txt(32): truncated value with size 8 to match size of target (6) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/oam_palette.txt Line: 32
 Warning (10230): Verilog HDL assignment warning at ppu.v(456): truncated value with size 32 to match size of target (5) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/ppu.v Line: 456
-Info (12128): Elaborating entity "MultiMapper" for hierarchy "NES:nes|MultiMapper:multi_mapper" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/nes.v Line: 267
+Info (12128): Elaborating entity "MultiMapper" for hierarchy "NES:nes|MultiMapper:multi_mapper" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/nes.v Line: 268
 Info (12128): Elaborating entity "MMC0" for hierarchy "NES:nes|MultiMapper:multi_mapper|MMC0:mmc0" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/mmu.v Line: 1573
 Info (12128): Elaborating entity "MMC1" for hierarchy "NES:nes|MultiMapper:multi_mapper|MMC1:mmc1" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/mmu.v Line: 1578
 Warning (10230): Verilog HDL assignment warning at mmu.v(71): truncated value with size 32 to match size of target (5) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/mmu.v Line: 71
@@ -2031,23 +2030,23 @@ Warning (10230): Verilog HDL assignment warning at mmu.v(808): truncated value w
 Info (12128): Elaborating entity "NesEvent" for hierarchy "NES:nes|MultiMapper:multi_mapper|NesEvent:nesev" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/mmu.v Line: 1667
 Warning (10230): Verilog HDL assignment warning at mmu.v(1418): truncated value with size 32 to match size of target (30) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/mmu.v Line: 1418
 Warning (10175): Verilog HDL warning at mmu.v(1421): ignoring unsupported system task File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/mmu.v Line: 1421
-Info (12128): Elaborating entity "MemoryMultiplex" for hierarchy "NES:nes|MemoryMultiplex:mem" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/nes.v Line: 285
-Info (12128): Elaborating entity "MemoryController" for hierarchy "MemoryController:memory" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 304
+Info (12128): Elaborating entity "MemoryMultiplex" for hierarchy "NES:nes|MemoryMultiplex:mem" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/nes.v Line: 287
+Info (12128): Elaborating entity "MemoryController" for hierarchy "MemoryController:memory" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 306
 Warning (10230): Verilog HDL assignment warning at NES_Nexys4.v(78): truncated value with size 32 to match size of target (2) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 78
-Info (12128): Elaborating entity "VgaDriver" for hierarchy "VgaDriver:vga" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 318
+Info (12128): Elaborating entity "VgaDriver" for hierarchy "VgaDriver:vga" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 320
 Warning (10230): Verilog HDL assignment warning at vga.v(27): truncated value with size 32 to match size of target (10) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/vga.v Line: 27
 Warning (10230): Verilog HDL assignment warning at vga.v(37): truncated value with size 32 to match size of target (1) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/vga.v Line: 37
 Warning (10230): Verilog HDL assignment warning at vga.v(39): truncated value with size 32 to match size of target (10) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/vga.v Line: 39
 Warning (10230): Verilog HDL assignment warning at vga.v(40): truncated value with size 32 to match size of target (1) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/vga.v Line: 40
-Info (12128): Elaborating entity "Hq2x" for hierarchy "Hq2x:hq2x" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 326
+Info (12128): Elaborating entity "Hq2x" for hierarchy "Hq2x:hq2x" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 328
 Warning (10230): Verilog HDL assignment warning at hq2x.v(248): truncated value with size 32 to match size of target (9) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/hq2x.v Line: 248
 Info (12128): Elaborating entity "DiffCheck" for hierarchy "Hq2x:hq2x|DiffCheck:diffcheck0" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/hq2x.v Line: 195
 Info (12128): Elaborating entity "Blend" for hierarchy "Hq2x:hq2x|Blend:blender" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/hq2x.v Line: 218
 Info (12128): Elaborating entity "InnerBlend" for hierarchy "Hq2x:hq2x|Blend:blender|InnerBlend:inner_blend1" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/hq2x.v Line: 95
-Info (12128): Elaborating entity "SoundDriver" for hierarchy "SoundDriver:sound_driver" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 346
+Info (12128): Elaborating entity "SoundDriver" for hierarchy "SoundDriver:sound_driver" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 348
 Warning (10230): Verilog HDL assignment warning at hw_sound.v(16): truncated value with size 32 to match size of target (5) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/hw_sound.v Line: 16
 Warning (10230): Verilog HDL assignment warning at hw_sound.v(23): truncated value with size 32 to match size of target (4) File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/hw_sound.v Line: 23
-Info (12128): Elaborating entity "game_ram" for hierarchy "game_ram:game_ram_inst" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 359
+Info (12128): Elaborating entity "game_ram" for hierarchy "game_ram:game_ram_inst" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 361
 Info (12128): Elaborating entity "altsyncram" for hierarchy "game_ram:game_ram_inst|altsyncram:altsyncram_component" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/game_ram.v Line: 89
 Info (12130): Elaborated megafunction instantiation "game_ram:game_ram_inst|altsyncram:altsyncram_component" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/game_ram.v Line: 89
 Info (12133): Instantiated megafunction "game_ram:game_ram_inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/game_ram.v Line: 89
@@ -10015,7 +10014,7 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "game_ram:game_ram_inst|altsyncram:altsyncram_component|altsyncram_79n1:auto_generated|ram_block1a8160" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/db/altsyncram_79n1.tdf Line: 179566
         Warning (14320): Synthesized away node "game_ram:game_ram_inst|altsyncram:altsyncram_component|altsyncram_79n1:auto_generated|ram_block1a8176" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/db/altsyncram_79n1.tdf Line: 179918
 Info (276014): Found 9 instances of uninferred RAM logic
-    Info (276004): RAM logic "pallut" is uninferred due to inappropriate RAM size File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 222
+    Info (276004): RAM logic "pallut" is uninferred due to inappropriate RAM size File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 224
     Info (276007): RAM logic "Hq2x:hq2x|inbuf" is uninferred due to asynchronous read logic File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/hq2x.v Line: 184
     Info (276007): RAM logic "NES:nes|PPU:ppu|PaletteRam:palette_ram|palette" is uninferred due to asynchronous read logic File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/ppu.v Line: 451
     Info (276007): RAM logic "NES:nes|PPU:ppu|SpriteRAM:sprite_ram|sprtemp" is uninferred due to asynchronous read logic File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/ppu.v Line: 229
@@ -10198,19 +10197,19 @@ Warning (21074): Design contains 16 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[14]" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 163
     Warning (15610): No output dependent on input pin "SW[15]" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 163
     Warning (15610): No output dependent on input pin "MemWait" File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/nes_strigeus/fpganes/src/NES_Nexys4.v Line: 176
-Info (21057): Implemented 20492 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 20480 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 25 input pins
-    Info (21059): Implemented 79 output pins
+    Info (21059): Implemented 87 output pins
     Info (21060): Implemented 16 bidirectional pins
-    Info (21061): Implemented 20069 logic cells
+    Info (21061): Implemented 20049 logic cells
     Info (21064): Implemented 292 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 10 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8192 warnings
-    Info: Peak virtual memory: 5328 megabytes
-    Info: Processing ended: Tue Oct 01 22:33:36 2024
-    Info: Elapsed time: 00:01:20
-    Info: Total CPU time (on all processors): 00:00:36
+    Info: Peak virtual memory: 5326 megabytes
+    Info: Processing ended: Thu Oct 03 16:47:38 2024
+    Info: Elapsed time: 00:00:38
+    Info: Total CPU time (on all processors): 00:00:23
 
 
 +------------------------------------------+

@@ -62,7 +62,8 @@ module DmaController(input clk, input ce, input reset,
   reg [7:0] sprite_dma_lastval;
   reg [15:0] sprite_dma_addr;     // sprite dma source addr
   wire [8:0] new_sprite_dma_addr = sprite_dma_addr[7:0] + 8'h01;
-  always @(posedge clk) if (reset) begin
+  always @(posedge clk) 
+  if (reset == 1) begin
     dmc_state <= 0;
     spr_state <= 0;    
     sprite_dma_lastval <= 0;
@@ -154,7 +155,7 @@ module NES(input clk, input reset, input ce,
   // CPU does its memory I/O on cycle #0. It will be available in time for cycle #2.
   reg [1:0] cpu_cycle_counter;
   always @(posedge clk) begin
-    if (reset)
+    if (reset == 1)
       cpu_cycle_counter <= 0;
     else if (ce)
       cpu_cycle_counter <= (cpu_cycle_counter == 2) ? 0 : cpu_cycle_counter + 1;
@@ -165,7 +166,7 @@ module NES(input clk, input reset, input ce,
   wire nmi;
   reg nmi_active;
   always @(posedge clk) begin
-    if (reset)
+    if (reset == 1)
       nmi_active <= 0;
     else if (ce && cpu_cycle_counter == 0)
       nmi_active <= nmi;
@@ -269,7 +270,8 @@ module NES(input clk, input reset, input ce,
                              
   // Mapper IRQ seems to be delayed by one PPU clock.   
   // APU IRQ seems delayed by one APU clock.
-  always @(posedge clk) if (reset) begin
+  always @(posedge clk) 
+  if (reset == 1) begin
     mapper_irq_delayed <= 0;
     apu_irq_delayed <= 0;
   end else begin

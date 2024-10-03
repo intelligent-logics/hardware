@@ -45,7 +45,7 @@ module Rs232Rx(input clk, input UART_RX, output [7:0] data, output send);
       recving <= 1;
       if (recving && recvbuf[0]) begin
         recving <= 0;
-        data_valid <= UART_RX;
+        data_valid <= 1;
       end
     end
     // Once we see a start bit we want to wait
@@ -66,7 +66,8 @@ module UartDemux(input clk, input RESET, input UART_RX, output reg [7:0] data, o
   reg [7:0] cksum;
   reg [7:0] count;
   wire [7:0] new_cksum = cksum + indata;
-  always @(posedge clk) if (RESET) begin
+  always @(posedge clk) 
+  if (RESET == 1) begin
     write <= 0;
     state <= 0;
     count <= 0;
@@ -74,7 +75,8 @@ module UartDemux(input clk, input RESET, input UART_RX, output reg [7:0] data, o
     addr <= 0;
     data <= 0;
     checksum_error <= 0;
-  end else begin
+  end 
+  else begin
     write <= 0;
     if (insend) begin
       cksum <= new_cksum;

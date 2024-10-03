@@ -108,7 +108,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : A27       :        :                   :      
 GND                          : AA1       : gnd    :                   :         :           :                
 GND                          : AA2       : gnd    :                   :         :           :                
 GND                          : AA3       : gnd    :                   :         :           :                
-SW[2]                        : AA4       : input  : 2.5 V             :         : 3A        : N              
+MemAdr[21]                   : AA4       : output : 2.5 V             :         : 3A        : N              
 VCCIO3A                      : AA5       : power  :                   : 2.5V    : 3A        :                
 nCSO, DATA4                  : AA6       :        :                   :         : 3A        :                
 DCLK                         : AA8       :        :                   :         : 3A        :                
@@ -116,45 +116,45 @@ GND                          : AA9       : gnd    :                   :         
 VCCPD3A                      : AA10      : power  :                   : 2.5V    : 3A        :                
 systemclk                    : AA11      : output : 2.5 V             :         : 3A        : Y              
 VCCIO3B                      : AA12      : power  :                   : 2.5V    : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA13      :        :                   :         : 4A        :                
+MemAdr[5]                    : AA13      : output : 2.5 V             :         : 4A        : N              
 VCCPD3B4A                    : AA14      : power  :                   : 2.5V    : 3B, 4A    :                
-SW[5]                        : AA15      : input  : 2.5 V             :         : 4A        : N              
+SW[14]                       : AA15      : input  : 2.5 V             :         : 4A        : N              
 VCCIO4A                      : AA16      : power  :                   : 2.5V    : 4A        :                
 GND                          : AA17      : gnd    :                   :         :           :                
-MemAdr[0]                    : AA18      : output : 2.5 V             :         : 4A        : N              
-MemAdr[11]                   : AA19      : output : 2.5 V             :         : 4A        : N              
+SSEG_AN[3]                   : AA18      : output : 2.5 V             :         : 4A        : N              
+SW[6]                        : AA19      : input  : 2.5 V             :         : 4A        : N              
 vga_b[1]                     : AA20      : output : 2.5 V             :         : 5A        : Y              
 VCCA_FPLL                    : AA21      : power  :                   : 2.5V    :           :                
-MemAdv                       : AA23      : output : 2.5 V             :         : 5A        : N              
+SW[15]                       : AA23      : input  : 2.5 V             :         : 5A        : N              
 LED[1]                       : AA24      : output : 2.5 V             :         : 5A        : Y              
 VREFB5BN0                    : AA25      : power  :                   :         : 5B        :                
-MemDB[10]                    : AA26      : bidir  : 2.5 V             :         : 5B        : N              
+MemDB[0]                     : AA26      : bidir  : 2.5 V             :         : 5B        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA27      :        :                   :         : 6B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA28      :        :                   :         : 6B        :                
 GND                          : AB1       : gnd    :                   :         :           :                
 GND                          : AB2       : gnd    :                   :         :           :                
 GND                          : AB3       : gnd    :                   :         :           :                
-SW[3]                        : AB4       : input  : 2.5 V             :         : 3A        : N              
+SW[7]                        : AB4       : input  : 2.5 V             :         : 3A        : N              
 TCK                          : AB5       : input  :                   :         : 3A        :                
 AS_DATA3, DATA3              : AB6       :        :                   :         : 3A        :                
-debug_cpu_memaddress[1]      : AB23      : output : 2.5 V             :         : 5A        : Y              
+debug_uart_data[1]           : AB23      : output : 2.5 V             :         : 5A        : Y              
 GND                          : AB24      : gnd    :                   :         :           :                
-SW[1]                        : AB25      : input  : 2.5 V             :         : 5B        : N              
-MemDB[8]                     : AB26      : bidir  : 2.5 V             :         : 5B        : N              
+MemWR                        : AB25      : output : 2.5 V             :         : 5B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB26      :        :                   :         : 5B        :                
 GND                          : AB27      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB28      :        :                   :         : 6B        :                
 GND                          : AC1       : gnd    :                   :         :           :                
 GND                          : AC2       : gnd    :                   :         :           :                
 GND                          : AC3       : gnd    :                   :         :           :                
-SW[15]                       : AC4       : input  : 2.5 V             :         : 3A        : N              
+MemAdr[1]                    : AC4       : output : 2.5 V             :         : 3A        : N              
 AS_DATA2, DATA2              : AC5       :        :                   :         : 3A        :                
 AS_DATA1, DATA1              : AC6       :        :                   :         : 3A        :                
 TMS                          : AC7       : input  :                   :         : 3A        :                
 VCC_AUX                      : AC8       : power  :                   : 2.5V    :           :                
 VCC_AUX                      : AC21      : power  :                   : 2.5V    :           :                
-debug_cpu_memaddress[2]      : AC22      : output : 2.5 V             :         : 4A        : Y              
+debug_uart_data[2]           : AC22      : output : 2.5 V             :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC23      :        :                   :         : 4A        :                
-MemDB[15]                    : AC24      : bidir  : 2.5 V             :         : 5A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC24      :        :                   :         : 5A        :                
 VCCIO5A                      : AC25      : power  :                   : 2.5V    : 5A        :                
 VREFB5AN0                    : AC26      : power  :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC27      :        :                   :         : 6B        :                
@@ -162,46 +162,46 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AC28      :        :                   :      
 DNU                          : AD1       :        :                   :         :           :                
 DNU                          : AD2       :        :                   :         :           :                
 GND                          : AD3       : gnd    :                   :         :           :                
-MemAdr[5]                    : AD4       : output : 2.5 V             :         : 3A        : N              
+MemAdr[10]                   : AD4       : output : 2.5 V             :         : 3A        : N              
 BTN[0]                       : AD5       : input  : 2.5 V             :         : 3A        : Y              
 GND                          : AD6       : gnd    :                   :         :           :                
 AS_DATA0, ASDO, DATA0        : AD7       :        :                   :         : 3A        :                
 GND                          : AD8       : gnd    :                   :         :           :                
 VCCPD3B4A                    : AD9       : power  :                   : 2.5V    : 3B, 4A    :                
-SSEG_AN[2]                   : AD10      : output : 2.5 V             :         : 3B        : N              
-SSEG_AN[7]                   : AD11      : output : 2.5 V             :         : 3B        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD12      :        :                   :         : 3B        :                
+SW[2]                        : AD10      : input  : 2.5 V             :         : 3B        : N              
+debug_cpu_memaddress[2]      : AD11      : output : 2.5 V             :         : 3B        : N              
+SSEG_CA[1]                   : AD12      : output : 2.5 V             :         : 3B        : N              
 VCCPD3B4A                    : AD13      : power  :                   : 2.5V    : 3B, 4A    :                
 GND                          : AD14      : gnd    :                   :         :           :                
 VCC_AUX                      : AD15      : power  :                   : 2.5V    :           :                
 VCCPD3B4A                    : AD16      : power  :                   : 2.5V    : 3B, 4A    :                
-debug_cpu_memaddress[3]      : AD17      : output : 2.5 V             :         : 4A        : Y              
+debug_uart_data[3]           : AD17      : output : 2.5 V             :         : 4A        : Y              
 VCCPD3B4A                    : AD18      : power  :                   : 2.5V    : 3B, 4A    :                
-MemAdr[1]                    : AD19      : output : 2.5 V             :         : 4A        : N              
-debug_cpu_memaddress[4]      : AD20      : output : 2.5 V             :         : 4A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD19      :        :                   :         : 4A        :                
+debug_uart_data[4]           : AD20      : output : 2.5 V             :         : 4A        : Y              
 VCCPD3B4A                    : AD21      : power  :                   : 2.5V    : 3B, 4A    :                
 GND                          : AD22      : gnd    :                   :         :           :                
 CPU_RESET                    : AD23      : input  : 2.5 V             :         : 4A        : Y              
 VCCPGM                       : AD24      : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
 GND                          : AD25      : gnd    :                   :         :           :                
-SW[7]                        : AD26      : input  : 2.5 V             :         : 5A        : N              
+SW[9]                        : AD26      : input  : 2.5 V             :         : 5A        : N              
 VCCIO6B_HPS                  : AD27      : power  :                   : 2.5V    : 6B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD28      :        :                   :         : 6B        :                
 GND                          : AE1       : gnd    :                   :         :           :                
 GND                          : AE2       : gnd    :                   :         :           :                
 GND                          : AE3       : gnd    :                   :         :           :                
-SSEG_CA[6]                   : AE4       : output : 2.5 V             :         : 3B        : N              
+debug_cpu_memaddress[5]      : AE4       : output : 2.5 V             :         : 3B        : N              
 VREFB3AN0                    : AE5       : power  :                   :         : 3A        :                
-debug_cpu_memaddress[6]      : AE6       : output : 2.5 V             :         : 3A        : Y              
-SSEG_CA[3]                   : AE7       : output : 2.5 V             :         : 3B        : N              
-SSEG_CA[4]                   : AE8       : output : 2.5 V             :         : 3B        : N              
-SSEG_CA[2]                   : AE9       : output : 2.5 V             :         : 3B        : N              
+debug_uart_data[6]           : AE6       : output : 2.5 V             :         : 3A        : Y              
+SW[3]                        : AE7       : input  : 2.5 V             :         : 3B        : N              
+debug_cpu_memaddress[6]      : AE8       : output : 2.5 V             :         : 3B        : N              
+SW[1]                        : AE9       : input  : 2.5 V             :         : 3B        : N              
 VCCIO3B                      : AE10      : power  :                   : 2.5V    : 3B        :                
-SSEG_AN[0]                   : AE11      : output : 2.5 V             :         : 3B        : N              
-MemAdr[14]                   : AE12      : output : 2.5 V             :         : 3B        : N              
+MemAdr[13]                   : AE11      : output : 2.5 V             :         : 3B        : N              
+MemAdr[15]                   : AE12      : output : 2.5 V             :         : 3B        : N              
 VCCIO3B                      : AE13      : power  :                   : 2.5V    : 3B        :                
 DNU                          : AE14      :        :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AE15      :        :                   :         : 4A        :                
+MemAdr[9]                    : AE15      : output : 2.5 V             :         : 4A        : N              
 GND                          : AE16      : gnd    :                   :         :           :                
 vga_r[0]                     : AE17      : output : 2.5 V             :         : 4A        : Y              
 GND                          : AE18      : gnd    :                   :         :           :                
@@ -210,93 +210,93 @@ vga_r[1]                     : AE20      : output : 2.5 V             :         
 VCCIO4A                      : AE21      : power  :                   : 2.5V    : 4A        :                
 vga_b[2]                     : AE22      : output : 2.5 V             :         : 4A        : Y              
 BTN[1]                       : AE23      : input  : 2.5 V             :         : 4A        : Y              
-debug_cpu_memaddress[5]      : AE24      : output : 2.5 V             :         : 4A        : Y              
-MemDB[5]                     : AE25      : bidir  : 2.5 V             :         : 5A        : N              
-MemDB[14]                    : AE26      : bidir  : 2.5 V             :         : 5A        : N              
+debug_uart_data[5]           : AE24      : output : 2.5 V             :         : 4A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE25      :        :                   :         : 5A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AE26      :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE27      :        :                   :         : 6B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE28      :        :                   :         : 6B        :                
 GND                          : AF1       : gnd    :                   :         :           :                
 GND                          : AF2       : gnd    :                   :         :           :                
 GND                          : AF3       : gnd    :                   :         :           :                
-SSEG_AN[6]                   : AF4       : output : 2.5 V             :         : 3B        : N              
+debug_cpu_memaddress[3]      : AF4       : output : 2.5 V             :         : 3B        : N              
 RamLB                        : AF5       : output : 2.5 V             :         : 3B        : N              
-SSEG_AN[3]                   : AF6       : output : 2.5 V             :         : 3B        : N              
-RamUB                        : AF7       : output : 2.5 V             :         : 3B        : N              
-AUD_LRCK                     : AF8       : output : 2.5 V             :         : 3B        : N              
-BTN[4]                       : AF9       : input  : 2.5 V             :         : 3B        : N              
-MemAdr[20]                   : AF10      : output : 2.5 V             :         : 3B        : N              
-SSEG_AN[5]                   : AF11      : output : 2.5 V             :         : 3B        : N              
+MemAdr[14]                   : AF6       : output : 2.5 V             :         : 3B        : N              
+MemAdr[16]                   : AF7       : output : 2.5 V             :         : 3B        : N              
+debug_cpu_memaddress[0]      : AF8       : output : 2.5 V             :         : 3B        : N              
+SW[4]                        : AF9       : input  : 2.5 V             :         : 3B        : N              
+SSEG_CA[3]                   : AF10      : output : 2.5 V             :         : 3B        : N              
+MemAdr[20]                   : AF11      : output : 2.5 V             :         : 3B        : N              
 VREFB3BN0                    : AF12      : power  :                   :         : 3B        :                
-MemDB[6]                     : AF13      : bidir  : 2.5 V             :         : 4A        : N              
+SSEG_CA[5]                   : AF13      : output : 2.5 V             :         : 4A        : N              
 VCCIO4A                      : AF14      : power  :                   : 2.5V    : 4A        :                
-MemAdr[4]                    : AF15      : output : 2.5 V             :         : 4A        : N              
+SSEG_AN[6]                   : AF15      : output : 2.5 V             :         : 4A        : N              
 VREFB4AN0                    : AF16      : power  :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF17      :        :                   :         : 4A        :                
+BTN[4]                       : AF17      : input  : 2.5 V             :         : 4A        : N              
 vga_g[2]                     : AF18      : output : 2.5 V             :         : 4A        : Y              
 VCCIO4A                      : AF19      : power  :                   : 2.5V    : 4A        :                
 vga_r[2]                     : AF20      : output : 2.5 V             :         : 4A        : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF21      :        :                   :         : 4A        :                
+SW[0]                        : AF21      : input  : 2.5 V             :         : 4A        : N              
 vga_b[3]                     : AF22      : output : 2.5 V             :         : 4A        : Y              
-MemDB[3]                     : AF23      : bidir  : 2.5 V             :         : 4A        : N              
+MemDB[11]                    : AF23      : bidir  : 2.5 V             :         : 4A        : N              
 GND                          : AF24      : gnd    :                   :         :           :                
-SW[14]                       : AF25      : input  : 2.5 V             :         : 4A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF26      :        :                   :         : 5A        :                
-MemDB[1]                     : AF27      : bidir  : 2.5 V             :         : 4A        : N              
-SSEG_CA[7]                   : AF28      : output : 2.5 V             :         : 4A        : N              
+MemDB[14]                    : AF25      : bidir  : 2.5 V             :         : 4A        : N              
+SW[5]                        : AF26      : input  : 2.5 V             :         : 5A        : N              
+MemDB[7]                     : AF27      : bidir  : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF28      :        :                   :         : 4A        :                
 GND                          : AG1       : gnd    :                   :         :           :                
 GND                          : AG2       : gnd    :                   :         :           :                
 GND                          : AG3       : gnd    :                   :         :           :                
 VCCIO3B                      : AG4       : power  :                   : 2.5V    : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG5       :        :                   :         : 3B        :                
-RamCS                        : AG6       : output : 2.5 V             :         : 3B        : N              
+MemAdr[2]                    : AG5       : output : 2.5 V             :         : 3B        : N              
+MemAdr[19]                   : AG6       : output : 2.5 V             :         : 3B        : N              
 GND                          : AG7       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG8       :        :                   :         : 4A        :                
-SSEG_CA[0]                   : AG9       : output : 2.5 V             :         : 4A        : N              
-MemAdr[6]                    : AG10      : output : 2.5 V             :         : 4A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG11      :        :                   :         : 4A        :                
+SSEG_CA[6]                   : AG8       : output : 2.5 V             :         : 4A        : N              
+AUD_SCK                      : AG9       : output : 2.5 V             :         : 4A        : N              
+MemOE                        : AG10      : output : 2.5 V             :         : 4A        : N              
+RamUB                        : AG11      : output : 2.5 V             :         : 4A        : N              
 VCCIO4A                      : AG12      : power  :                   : 2.5V    : 4A        :                
-MemAdr[12]                   : AG13      : output : 2.5 V             :         : 4A        : N              
-debug_cpu_memaddress[7]      : AG14      : output : 2.5 V             :         : 4A        : Y              
+MemAdr[11]                   : AG13      : output : 2.5 V             :         : 4A        : N              
+debug_uart_data[7]           : AG14      : output : 2.5 V             :         : 4A        : Y              
 vga_g[1]                     : AG15      : output : 2.5 V             :         : 4A        : Y              
-MemDB[11]                    : AG16      : bidir  : 2.5 V             :         : 4A        : N              
+SW[12]                       : AG16      : input  : 2.5 V             :         : 4A        : N              
 GND                          : AG17      : gnd    :                   :         :           :                
 vga_g[3]                     : AG18      : output : 2.5 V             :         : 4A        : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG19      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG20      :        :                   :         : 4A        :                
+MemDB[10]                    : AG19      : bidir  : 2.5 V             :         : 4A        : N              
+SSEG_AN[1]                   : AG20      : output : 2.5 V             :         : 4A        : N              
 vga_b[0]                     : AG21      : output : 2.5 V             :         : 4A        : Y              
 VCCIO4A                      : AG22      : power  :                   : 2.5V    : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG23      :        :                   :         : 4A        :                
 vga_v                        : AG24      : output : 2.5 V             :         : 4A        : Y              
-SW[13]                       : AG25      : input  : 2.5 V             :         : 4A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG26      :        :                   :         : 4A        :                
+MemClk                       : AG25      : output : 2.5 V             :         : 4A        : N              
+MemDB[13]                    : AG26      : bidir  : 2.5 V             :         : 4A        : N              
 GND                          : AG27      : gnd    :                   :         :           :                
-MemDB[2]                     : AG28      : bidir  : 2.5 V             :         : 4A        : N              
-MemAdr[15]                   : AH2       : output : 2.5 V             :         : 3B        : N              
-MemWR                        : AH3       : output : 2.5 V             :         : 3B        : N              
-MemAdr[19]                   : AH4       : output : 2.5 V             :         : 3B        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH5       :        :                   :         : 3B        :                
-MemAdr[16]                   : AH6       : output : 2.5 V             :         : 3B        : N              
-SW[12]                       : AH7       : input  : 2.5 V             :         : 4A        : N              
-MemAdr[2]                    : AH8       : output : 2.5 V             :         : 4A        : N              
-MemAdr[7]                    : AH9       : output : 2.5 V             :         : 4A        : N              
+SSEG_CA[7]                   : AG28      : output : 2.5 V             :         : 4A        : N              
+MemAdr[17]                   : AH2       : output : 2.5 V             :         : 3B        : N              
+MemAdr[12]                   : AH3       : output : 2.5 V             :         : 3B        : N              
+MemAdr[0]                    : AH4       : output : 2.5 V             :         : 3B        : N              
+SSEG_AN[7]                   : AH5       : output : 2.5 V             :         : 3B        : N              
+SSEG_AN[4]                   : AH6       : output : 2.5 V             :         : 3B        : N              
+MemAdr[4]                    : AH7       : output : 2.5 V             :         : 4A        : N              
+SSEG_AN[5]                   : AH8       : output : 2.5 V             :         : 4A        : N              
+MemAdr[8]                    : AH9       : output : 2.5 V             :         : 4A        : N              
 GND                          : AH10      : gnd    :                   :         :           :                
-MemDB[4]                     : AH11      : bidir  : 2.5 V             :         : 4A        : N              
-MemDB[9]                     : AH12      : bidir  : 2.5 V             :         : 4A        : N              
+SSEG_CA[0]                   : AH11      : output : 2.5 V             :         : 4A        : N              
+SSEG_AN[0]                   : AH12      : output : 2.5 V             :         : 4A        : N              
 UART_RXD                     : AH13      : input  : 2.5 V             :         : 4A        : Y              
-MemAdr[3]                    : AH14      : output : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AH14      :        :                   :         : 4A        :                
 VCCIO4A                      : AH15      : power  :                   : 2.5V    : 4A        :                
-MemAdr[9]                    : AH16      : output : 2.5 V             :         : 4A        : N              
-MemOE                        : AH17      : output : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AH16      :        :                   :         : 4A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AH17      :        :                   :         : 4A        :                
 vga_r[3]                     : AH18      : output : 2.5 V             :         : 4A        : Y              
-MemDB[7]                     : AH19      : bidir  : 2.5 V             :         : 4A        : N              
+SW[8]                        : AH19      : input  : 2.5 V             :         : 4A        : N              
 GND                          : AH20      : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH21      :        :                   :         : 4A        :                
+RamCRE                       : AH21      : output : 2.5 V             :         : 4A        : N              
 vga_h                        : AH22      : output : 2.5 V             :         : 4A        : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH23      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH24      :        :                   :         : 4A        :                
+MemDB[8]                     : AH23      : bidir  : 2.5 V             :         : 4A        : N              
+MemDB[2]                     : AH24      : bidir  : 2.5 V             :         : 4A        : N              
 VCCIO4A                      : AH25      : power  :                   : 2.5V    : 4A        :                
-SW[9]                        : AH26      : input  : 2.5 V             :         : 4A        : N              
-SW[11]                       : AH27      : input  : 2.5 V             :         : 4A        : N              
+SW[11]                       : AH26      : input  : 2.5 V             :         : 4A        : N              
+MemDB[9]                     : AH27      : bidir  : 2.5 V             :         : 4A        : N              
 RREF                         : B1        :        :                   :         :           :                
 DNU                          : B2        :        :                   :         :           :                
 GND                          : B3        : gnd    :                   :         :           :                
@@ -336,7 +336,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : C8        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : C9        :        :                   :         : 7D        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C10       :        :                   :         : 7D        :                
 GND                          : C11       : gnd    :                   :         :           :                
-RamCRE                       : C12       : output : 2.5 V             :         : 8A        : N              
+BTN[3]                       : C12       : input  : 2.5 V             :         : 8A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : C13       :        :                   :         : 7C        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C14       :        :                   :         : 7B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C15       :        :                   :         : 7B        :                
@@ -360,11 +360,11 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : D4        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : D5        :        :                   :         : 7D        :                
 VCCIO7D_HPS                  : D6        : power  :                   : 2.5V    : 7D        :                
 VCCBAT                       : D7        : power  :                   : 1.2V    :           :                
-SW[6]                        : D8        : input  : 2.5 V             :         : 8A        : N              
+MemDB[6]                     : D8        : bidir  : 2.5 V             :         : 8A        : N              
 VREFB8AN0                    : D9        : power  :                   :         : 8A        :                
 GND                          : D10       : gnd    :                   :         :           :                
 UART_TXD                     : D11       : output : 2.5 V             :         : 8A        : Y              
-BTN[3]                       : D12       : input  : 2.5 V             :         : 8A        : N              
+MemDB[3]                     : D12       : bidir  : 2.5 V             :         : 8A        : N              
 GND                          : D13       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D14       :        :                   :         : 7C        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D15       :        :                   :         : 7B        :                
@@ -388,7 +388,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : E4        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : E5        :        :                   :         : 7D        :                
 nCE                          : E6        :        :                   :         : 9A        :                
 VCCIO8A                      : E7        : power  :                   : 2.5V    : 8A        :                
-MemClk                       : E8        : output : 2.5 V             :         : 8A        : N              
+BTN[2]                       : E8        : input  : 2.5 V             :         : 8A        : N              
 GND                          : E9        : gnd    :                   :         :           :                
 VCCPD8A                      : E10       : power  :                   : 2.5V    : 8A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E11       :        :                   :         : 8A        :                
@@ -636,12 +636,12 @@ DNU                          : T2        :        :                   :         
 GND                          : T3        : gnd    :                   :         :           :                
 VCC                          : T4        : power  :                   : 1.1V    :           :                
 VCC                          : T5        : power  :                   : 1.1V    :           :                
-MemDB[0]                     : T8        : bidir  : 2.5 V             :         : 3A        : N              
+MemAdr[22]                   : T8        : output : 2.5 V             :         : 3A        : N              
 VCC                          : T9        : power  :                   : 1.1V    :           :                
 GND                          : T10       : gnd    :                   :         :           :                
-SSEG_AN[1]                   : T11       : output : 2.5 V             :         : 3B        : N              
-SSEG_CA[5]                   : T12       : output : 2.5 V             :         : 3B        : N              
-MemAdr[13]                   : T13       : output : 2.5 V             :         : 3B        : N              
+debug_cpu_memaddress[7]      : T11       : output : 2.5 V             :         : 3B        : N              
+AUD_SDIN                     : T12       : output : 2.5 V             :         : 3B        : N              
+SSEG_AN[2]                   : T13       : output : 2.5 V             :         : 3B        : N              
 GND                          : T14       : gnd    :                   :         :           :                
 VCC                          : T15       : power  :                   : 1.1V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T16       :        :                   :         : 6B        :                
@@ -661,12 +661,12 @@ GND                          : U3        : gnd    :                   :         
 VCCA_FPLL                    : U4        : power  :                   : 2.5V    :           :                
 GND                          : U5        : gnd    :                   :         :           :                
 DNU                          : U8        :        :                   :         :           :                
-MemDB[12]                    : U9        : bidir  : 2.5 V             :         : 3A        : N              
-SSEG_CA[1]                   : U10       : output : 2.5 V             :         : 3A        : N              
-SSEG_AN[4]                   : U11       : output : 2.5 V             :         : 3B        : N              
+MemAdr[3]                    : U9        : output : 2.5 V             :         : 3A        : N              
+MemAdr[7]                    : U10       : output : 2.5 V             :         : 3A        : N              
+RamCS                        : U11       : output : 2.5 V             :         : 3B        : N              
 GND                          : U12       : gnd    :                   :         :           :                
-MemAdr[8]                    : U13       : output : 2.5 V             :         : 4A        : N              
-SW[0]                        : U14       : input  : 2.5 V             :         : 4A        : N              
+AUD_LRCK                     : U13       : output : 2.5 V             :         : 4A        : N              
+SSEG_CA[2]                   : U14       : output : 2.5 V             :         : 4A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : U15       :        :                   :         : 6B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U16       :        :                   :         : 6B        :                
 GND                          : U17       : gnd    :                   :         :           :                
@@ -686,10 +686,10 @@ GND                          : V4        : gnd    :                   :         
 GND                          : V5        : gnd    :                   :         :           :                
 GND                          : V8        : gnd    :                   :         :           :                
 GND                          : V9        : gnd    :                   :         :           :                
-AUD_MCLK                     : V10       : output : 2.5 V             :         : 3A        : N              
+debug_cpu_memaddress[1]      : V10       : output : 2.5 V             :         : 3A        : N              
 CLK100MHZ                    : V11       : input  : 2.5 V             :         : 3B        : Y              
-MemAdr[18]                   : V12       : output : 2.5 V             :         : 3B        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : V13       :        :                   :         : 4A        :                
+AUD_MCLK                     : V12       : output : 2.5 V             :         : 3B        : N              
+SSEG_CA[4]                   : V13       : output : 2.5 V             :         : 4A        : N              
 GND                          : V14       : gnd    :                   :         :           :                
 LED[3]                       : V15       : output : 2.5 V             :         : 5A        : Y              
 LED[2]                       : V16       : output : 2.5 V             :         : 5A        : Y              
@@ -711,18 +711,18 @@ VCCA_FPLL                    : W5        : power  :                   : 2.5V    
 RESERVED_INPUT_WITH_WEAK_PULLUP : W8        :        :                   :         : 3A        :                
 VCCIO3A                      : W9        : power  :                   : 2.5V    : 3A        :                
 TDI                          : W10       : input  :                   :         : 3A        :                
-debug_cpu_memaddress[0]      : W11       : output : 2.5 V             :         : 3B        : Y              
-MemAdr[17]                   : W12       : output : 2.5 V             :         : 3B        : N              
+debug_uart_data[0]           : W11       : output : 2.5 V             :         : 3B        : Y              
+MemAdr[18]                   : W12       : output : 2.5 V             :         : 3B        : N              
 VCCIO4A                      : W13       : power  :                   : 2.5V    : 4A        :                
-MemAdr[10]                   : W14       : output : 2.5 V             :         : 4A        : N              
+SW[13]                       : W14       : input  : 2.5 V             :         : 4A        : N              
 LED[0]                       : W15       : output : 2.5 V             :         : 5A        : Y              
 GND                          : W16       : gnd    :                   :         :           :                
 VCCIO5A                      : W17       : power  :                   : 2.5V    : 5A        :                
 GND                          : W18       : gnd    :                   :         :           :                
 VCCPD5B                      : W19       : power  :                   : 2.5V    : 5B        :                
-MemWait                      : W20       : input  : 2.5 V             :         : 5B        : N              
-BTN[2]                       : W21       : input  : 2.5 V             :         : 5B        : N              
-SW[10]                       : W24       : input  : 2.5 V             :         : 5B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W20       :        :                   :         : 5B        :                
+SW[10]                       : W21       : input  : 2.5 V             :         : 5B        : N              
+MemDB[1]                     : W24       : bidir  : 2.5 V             :         : 5B        : N              
 VCCIO5B                      : W25       : power  :                   : 2.5V    : 5B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W26       :        :                   :         : 6B        :                
 VCCIO6B_HPS                  : W27       : power  :                   : 2.5V    : 6B        :                
@@ -730,23 +730,23 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : W28       :        :                   :      
 DNU                          : Y1        :        :                   :         :           :                
 DNU                          : Y2        :        :                   :         :           :                
 GND                          : Y3        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : Y4        :        :                   :         : 3A        :                
-AUD_SCK                      : Y5        : output : 2.5 V             :         : 3A        : N              
-SW[4]                        : Y8        : input  : 2.5 V             :         : 3A        : N              
+MemDB[4]                     : Y4        : bidir  : 2.5 V             :         : 3A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y5        :        :                   :         : 3A        :                
+debug_cpu_memaddress[4]      : Y8        : output : 2.5 V             :         : 3A        : N              
 TDO                          : Y9        : output :                   :         : 3A        :                
 VCCPGM                       : Y10       : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
-AUD_SDIN                     : Y11       : output : 2.5 V             :         : 3A        : N              
+MemDB[5]                     : Y11       : bidir  : 2.5 V             :         : 3A        : N              
 GND                          : Y12       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : Y13       :        :                   :         : 4A        :                
+MemAdr[6]                    : Y13       : output : 2.5 V             :         : 4A        : N              
 GND                          : Y14       : gnd    :                   :         :           :                
-MemDB[13]                    : Y15       : bidir  : 2.5 V             :         : 4A        : N              
-MemAdr[21]                   : Y16       : output : 2.5 V             :         : 5A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y15       :        :                   :         : 4A        :                
+MemWait                      : Y16       : input  : 2.5 V             :         : 5A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y17       :        :                   :         : 5A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : Y18       :        :                   :         : 5A        :                
-SW[8]                        : Y19       : input  : 2.5 V             :         : 5A        : N              
+MemAdv                       : Y18       : output : 2.5 V             :         : 5A        : N              
+MemDB[12]                    : Y19       : bidir  : 2.5 V             :         : 5A        : N              
 GND                          : Y20       : gnd    :                   :         :           :                
 VCCPD5A                      : Y21       : power  :                   : 2.5V    : 5A        :                
-MemAdr[22]                   : Y24       : output : 2.5 V             :         : 5B        : N              
+MemDB[15]                    : Y24       : bidir  : 2.5 V             :         : 5B        : N              
 GND                          : Y25       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y26       :        :                   :         : 6B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y27       :        :                   :         : 6B        :                

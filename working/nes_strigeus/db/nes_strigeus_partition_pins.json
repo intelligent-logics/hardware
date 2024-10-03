@@ -280,6 +280,38 @@
 					"strict" : false
 				},
 				{
+					"name" : "debug_uart_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_uart_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_uart_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_uart_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_uart_data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_uart_data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_uart_data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_uart_data[7]",
+					"strict" : false
+				},
+				{
 					"name" : "SW[0]",
 					"strict" : false
 				},
