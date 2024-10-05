@@ -103,7 +103,7 @@ int main(int argc, char * argv[]) {
   dcb.DCBlength = sizeof(DCB);
   dcb.ByteSize = 8;
   dcb.StopBits = ONESTOPBIT;
-  dcb.BaudRate = 2147720;
+  dcb.BaudRate = 2147720; //1073860
   dcb.fBinary = TRUE;
   if (!SetCommState(h, &dcb)) {
     printf("SetCommState failed\n");
@@ -111,6 +111,8 @@ int main(int argc, char * argv[]) {
   }
 
   FILE *f = fopen("C:\\Users\\steve\\git_repos\\school\\cen3907\\NES_fpga_development\\hardware_development\\working\\nes_strigeus\\fpganes\\loader\\Debug\\ems.nes", "rb");
+  //FILE *f = fopen(argv[1], "rb");
+
   if (!f) { printf("File open fail\n"); return 1; }
 
   { char v = 1; WritePacket(h, 0x35, &v, 1); }

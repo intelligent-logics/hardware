@@ -57,20 +57,6 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name VERILOG_FILE fpganes/src/hw_sound.v
-set_global_assignment -name VERILOG_FILE fpganes/src/hq2x.v
-set_global_assignment -name VERILOG_FILE fpganes/src/vga.v
-set_global_assignment -name VERILOG_FILE fpganes/src/hw_led.v
-set_global_assignment -name VERILOG_FILE fpganes/src/hw_uart.v
-set_global_assignment -name VERILOG_FILE fpganes/src/NES_Nexys4.v
-set_global_assignment -name VERILOG_FILE fpganes/src/nes.v
-set_global_assignment -name QIP_FILE clk_pll.qip
-set_global_assignment -name SIP_FILE clk_pll.sip
-set_global_assignment -name VERILOG_FILE fpganes/src/MUXCY_L.v
-set_global_assignment -name VERILOG_FILE fpganes/src/MUXCY_D.v
-set_global_assignment -name VERILOG_FILE fpganes/src/MUXCY.v
-set_global_assignment -name VERILOG_FILE fpganes/src/XORCY.v
-set_global_assignment -name VERILOG_FILE fpganes/src/XOR2.v
 set_location_assignment PIN_AF22 -to vga_b[3]
 set_location_assignment PIN_AE22 -to vga_b[2]
 set_location_assignment PIN_AA20 -to vga_b[1]
@@ -91,18 +77,35 @@ set_location_assignment PIN_AF28 -to UART_RXD
 set_location_assignment PIN_AD26 -to UART_TXD
 set_location_assignment PIN_AD5 -to BTN[0]
 set_location_assignment PIN_AE23 -to BTN[1]
-set_global_assignment -name QIP_FILE game_ram.qip
 set_location_assignment PIN_W15 -to LED[0]
 set_location_assignment PIN_AA24 -to LED[1]
 set_location_assignment PIN_V16 -to LED[2]
 set_location_assignment PIN_V15 -to LED[3]
 set_location_assignment PIN_AA11 -to systemclk
-set_location_assignment PIN_AG14 -to debug_uart_data[7]
-set_location_assignment PIN_AE6 -to debug_uart_data[6]
-set_location_assignment PIN_AE24 -to debug_uart_data[5]
-set_location_assignment PIN_AD20 -to debug_uart_data[4]
-set_location_assignment PIN_AD17 -to debug_uart_data[3]
-set_location_assignment PIN_AC22 -to debug_uart_data[2]
-set_location_assignment PIN_AB23 -to debug_uart_data[1]
-set_location_assignment PIN_W11 -to debug_uart_data[0]
+set_location_assignment PIN_AF26 -to debug_loader_config
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name STRATIXV_CONFIGURATION_SCHEME "PASSIVE SERIAL"
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN ON
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name ACTIVE_SERIAL_CLOCK FREQ_100MHZ
+set_global_assignment -name VERILOG_FILE fpganes/src/hw_sound.v
+set_global_assignment -name VERILOG_FILE fpganes/src/hq2x.v
+set_global_assignment -name VERILOG_FILE fpganes/src/vga.v
+set_global_assignment -name VERILOG_FILE fpganes/src/hw_led.v
+set_global_assignment -name VERILOG_FILE fpganes/src/hw_uart.v
+set_global_assignment -name VERILOG_FILE fpganes/src/NES_Nexys4.v
+set_global_assignment -name VERILOG_FILE fpganes/src/nes.v
+set_global_assignment -name VERILOG_FILE fpganes/src/MUXCY_L.v
+set_global_assignment -name VERILOG_FILE fpganes/src/MUXCY_D.v
+set_global_assignment -name VERILOG_FILE fpganes/src/MUXCY.v
+set_global_assignment -name VERILOG_FILE fpganes/src/XORCY.v
+set_global_assignment -name VERILOG_FILE fpganes/src/XOR2.v
+set_global_assignment -name QIP_FILE game_ram.qip
+set_global_assignment -name QIP_FILE clk_pll/clk_pll.qip
+set_global_assignment -name SIP_FILE clk_pll/clk_pll.sip
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

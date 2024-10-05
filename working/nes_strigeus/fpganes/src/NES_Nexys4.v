@@ -89,7 +89,9 @@ module GameLoader(input clk, input reset,
                   output reg [21:0] mem_addr, output [7:0] mem_data, output mem_write,
                   output [31:0] mapper_flags,
                   output reg done,
-                  output error);
+                  output error,
+						output[1:0] loader_state //added by steven miller on october 3 2024
+						);
   reg [1:0] state = 0;
   reg [7:0] prgsize;
   reg [3:0] ctr;
@@ -100,7 +102,10 @@ module GameLoader(input clk, input reset,
   wire [7:0] prgrom = ines[4];
   wire [7:0] chrrom = ines[5];
   assign mem_data = indata;
+  //if there is still data to write, and were in state 1 or state 2 and the clock is rising
+  //then raise the memwrite signal to high
   assign mem_write = (bytes_left != 0) && (state == 1 || state == 2) && indata_clk;
+  assign loader_state = state; //added by steven miller on october 3 2024
   
   wire [2:0] prg_size = prgrom <= 1  ? 0 :
                         prgrom <= 2  ? 1 : 
@@ -127,27 +132,39 @@ module GameLoader(input clk, input reset,
       done <= 0;
       ctr <= 0;
       mem_addr <= 0;  // Address for PRG
-    end else begin
+    end 
+	 else
+	 
+	 begin
       case(state)
       // Read 16 bytes of ines header
-      0: if (indata_clk) begin
+      0: if (indata_clk) 
+		begin
            ctr <= ctr + 1;
            ines[ctr] <= indata;
            bytes_left <= {prgrom, 14'b0};
+			  //when we reach the 16th byte. change states.
            if (ctr == 4'b1111)
-             state <= (ines[0] == 8'h4E) && (ines[1] == 8'h45) && (ines[2] == 8'h53) && (ines[3] == 8'h1A) && !ines[6][2] && !ines[6][3] ? 1 : 3;
+             state <=(ines[0] == 8'h4E) && (ines[1] == 8'h45) && (ines[2] == 8'h53) && (ines[3] == 8'h1A)?1: 3; //modified by steven miller on october 4 2024 (ines[0] == 8'h4E) && (ines[1] == 8'h45) && (ines[2] == 8'h53) && (ines[3] == 8'h1A) && !ines[6][2] && !ines[6][3] ? 1 : 3;
          end
-      1, 2: begin // Read the next |bytes_left| bytes into |mem_addr|
-          if (bytes_left != 0) begin
-            if (indata_clk) begin
+      1, 2: 
+		begin // Read the next |bytes_left| bytes into |mem_addr|
+          if (bytes_left != 0) 
+			 begin
+            if (indata_clk)
+				begin
               bytes_left <= bytes_left - 1;
               mem_addr <= mem_addr + 1;
             end
-          end else if (state == 1) begin
+          end 
+			 else if (state == 1) 
+			 begin
             state <= 2;
             mem_addr <= 22'b10_0000_0000_0000_0000_0000; // Address for CHR
             bytes_left <= {1'b0, chrrom, 13'b0};
-          end else if (state == 2) begin
+          end 
+			 else if (state == 2) 
+			 begin
             done <= 1;
           end
         end
@@ -160,10 +177,10 @@ endmodule
 module NES_Nexys4(input CLK100MHZ,
                  input CPU_RESET,
                  input [4:0] BTN,
-                 input [15:0] SW,
+                 input [4:0] SW,
                  output [3:0] LED,
-                 output [7:0] SSEG_CA,
-                 output [7:0] SSEG_AN,
+                 //output [7:0] SSEG_CA,
+                 //output [7:0] SSEG_AN,
                  // UART
                  input UART_RXD,
                  output UART_TXD,
@@ -179,8 +196,8 @@ module NES_Nexys4(input CLK100MHZ,
                  output RamCRE,         // CRE = Control Register. LOW = Normal mode.
                  output RamUB,          // Upper byte enable
                  output RamLB,          // Lower byte enable
-                 output [22:0] MemAdr,
-                 inout [15:0] MemDB,
+                 //output [22:0] MemAdr,
+                 //inout [15:0] MemDB,
                  // Sound board
                  output AUD_MCLK,
                  output AUD_LRCK,
@@ -188,27 +205,36 @@ module NES_Nexys4(input CLK100MHZ,
                  output AUD_SDIN,
 					  output systemclk, //added by steven miller on october 1 2024
 					  output[7:0] debug_cpu_memaddress, //added by steven miller on october 1 2024
-					  output[7:0] debug_uart_data //added by steven miller on october 1 2024
+					  output[7:0] debug_uart_data, //added by steven miller on october 3 2024
+					  output[7:0] debug_uart_address, //added by steven miller on october 3 2024
+					  output[7:0] debug_loader_data,//added by steven miller on october 3 2024
+					  output[7:0] debug_loader_address,//added by steven miller on october 3 2024
+					  output debug_loader_config,//added by steven miller on october 3 2024
+					  output[1:0] debug_loader_state,//added by steven miller on october 3 2024
+					  output[1:0] debug_uart_state,//added by steven miller on october 3 2024
+					  output debug_loader_clock//added by steven miller on october 4 2024
                  );
 
   wire clock_locked;
   wire clk;
   assign systemclk = clk; //added by steven miller on october 1 2024
+  wire[22:0] MemAdr;
   
-  clk_21mhz clock_21mhz(.refclk(CLK100MHZ), .outclk_0(clk),  .rst(1'b0), .locked(clock_locked));
+  clk_pll clk_21mhz(.refclk(CLK100MHZ), .outclk_0(clk),  .rst(1'b0), .locked(clock_locked));
 
   // UART
   wire [7:0] uart_data;
   wire [7:0] uart_addr;
   wire       uart_write;
   wire       uart_error;
-  UartDemux uart_demux(clk,1'b0, UART_RXD, uart_data, uart_addr, uart_write, uart_error);
+  UartDemux uart_demux(clk,1'b0, UART_RXD, uart_data, uart_addr, uart_write, uart_error,debug_uart_state);
   assign     UART_TXD = 1;
   assign debug_uart_data = uart_data;
+  assign debug_uart_address = uart_addr;
 
   // Loader
   wire [7:0] loader_input = uart_data;
-  wire       loader_clk   = (uart_addr == 8'h37) && uart_write;
+  wire       loader_clk   = uart_write; //modified by steven miller on october 5 2024 (uart_addr == 8'h37) && uart_write;
   reg  [7:0] loader_conf;
   reg  [7:0] loader_btn, loader_btn_2;
   always @(posedge clk) begin
@@ -219,16 +245,17 @@ module NES_Nexys4(input CLK100MHZ,
     if (uart_addr == 8'h41 && uart_write)
       loader_btn_2 <= uart_data;
   end
-
+  assign debug_loader_config = loader_conf[0];
   // NES Palette -> RGB332 conversion
   reg [14:0] pallut[0:63];
   initial $readmemh("nes_palette.txt", pallut);
-
+	//modified by steven miller on october 3 2024
   // LED Display
+  /*
   reg [31:0] led_value;
   reg [7:0] led_enable;
   LedDriver led_driver(clk, led_value, led_enable, SSEG_CA, SSEG_AN);
-
+*/
   wire [8:0] cycle;
   wire [8:0] scanline;
   wire [15:0] sample;
@@ -267,12 +294,12 @@ module NES_Nexys4(input CLK100MHZ,
   wire loader_done, loader_fail;
   GameLoader loader(clk, loader_reset, loader_input, loader_clk,
                     loader_addr, loader_write_data, loader_write,
-                    mapper_flags, loader_done, loader_fail);
+                    mapper_flags, loader_done, loader_fail,debug_loader_state);
 
   wire reset_nes = (BTN[0]); //modified by steven miller on october 3 2024 //|| !loader_done);
   wire run_mem = !reset_nes;//modified by steven miller on october 3 2024 (nes_ce == 0) && !reset_nes;
   wire run_nes = !reset_nes;//modified by steven miller on october 3 2024 (nes_ce == 3) && !reset_nes;
-
+  assign debug_loader_clock = loader_clk; //modified by steven miller on october 4 2024
   // NES is clocked at every 4th cycle.
   always @(posedge clk)
     nes_ce <= nes_ce + 1;
@@ -303,7 +330,9 @@ module NES_Nexys4(input CLK100MHZ,
                           memory_din_cpu,
                           memory_din_ppu,
                           ram_busy,
-                          MemOE, MemWR, MemAdv, MemClk, RamCS, RamCRE, RamUB, RamLB, MemAdr, Memout, Memin);
+                          MemOE, MemWR, MemAdv, MemClk, RamCS, RamCRE, RamUB, RamLB, MemAdr[22:0], Memout, Memin);
+  assign debug_loader_data =loader_write_data;//added by steven miller on october 3 2024
+  assign debug_loader_address = loader_addr;
   reg ramfail;
   always @(posedge clk) begin
     if (loader_reset == 1)
@@ -320,7 +349,7 @@ module NES_Nexys4(input CLK100MHZ,
   VgaDriver vga(clk, vga_h, vga_v, vga_r, vga_g, vga_b, vga_hcounter, vga_vcounter, doubler_x, doubler_pixel, doubler_sync, SW[0]);
   
   wire [14:0] pixel_in = pallut[color];
-  Hq2x hq2x(clk, pixel_in, SW[5], 
+  Hq2x hq2x(clk, pixel_in, SW[3], 
             scanline[8],        // reset_frame
             (cycle[8:3] == 42), // reset_line
             doubler_x,          // 0-511 for line 1, or 512-1023 for line 2.
@@ -332,10 +361,13 @@ module NES_Nexys4(input CLK100MHZ,
 //  wire sample_now_fir;
 //  FirFilter fir(clk, sound_signal, sound_signal_fir, sample_now_fir);
   // Display mapper info on screen
+  //modified by steven miller on october 3 2024
+  /*
   always @(posedge clk) begin
     led_enable <= 255;
     led_value <= sound_signal;
   end
+  */
 
   reg [7:0] sound_ctr;
   always @(posedge clk)

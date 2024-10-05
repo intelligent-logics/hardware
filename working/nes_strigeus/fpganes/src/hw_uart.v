@@ -58,14 +58,15 @@ endmodule
 // Decodes incoming UART signals and demuxes them into addr/data lines.
 // Packet Format: 
 //   1 byte checksum | 1 byte address | 1 byte count | (count + 1) data bytes
-module UartDemux(input clk, input RESET, input UART_RX, output reg [7:0] data, output reg [7:0] addr, output reg write, output reg checksum_error);
+module UartDemux(input clk, input RESET, input UART_RX, output reg [7:0] data, output reg [7:0] addr, output reg write, output reg checksum_error, output[1:0] uart_state);
   wire [7:0] indata;
   wire       insend;
   Rs232Rx uart(clk, UART_RX, indata, insend);
   reg [1:0] state = 0;
   reg [7:0] cksum;
   reg [7:0] count;
-  wire [7:0] new_cksum = cksum + indata;
+  wire [7:0] new_cksum = cksum + indata;//modified by steven miller on october 4 2024 wire [7:0] new_cksum = cksum + indata;
+  assign uart_state = state;
   always @(posedge clk) 
   if (RESET == 1) begin
     write <= 0;
@@ -79,25 +80,49 @@ module UartDemux(input clk, input RESET, input UART_RX, output reg [7:0] data, o
   else begin
     write <= 0;
     if (insend) begin
-      cksum <= new_cksum;
-      count <= count - 8'd1;
-      if (state == 0) begin
+     cksum <= new_cksum; //modified by steven miller on october 4 2024 cksum <= new_cksum;
+     count <= count - 8'd1; //modified by steven miller on october 5 2024 count <= count - 8'd1;
+		
+      if (state == 0) 
+		//recieve the first byte: the negative checksum
+		begin
         state <= 1;
-        cksum <= indata;
-      end else if (state == 1) begin
+        //cksum <= indata; //checksum is now equal to the negative of itself
+      end 
+		
+		else if (state == 1)
+		//recieve the second byte: the address to send the data to
+		begin
         addr <= indata;
         state <= 2;
-      end else if (state == 2) begin
+		  //checksum is now equal to itself plus the address
+		  //cksum <= cksum + indata;//added by steven miller on october 4 2024
+      end
+		
+		else if (state == 2)
+		//recieve the third byte: the count of data
+		begin
         count <= indata;
         state <= 3;
-      end else begin
+		  //checksum is now equal to itself plus the count of data
+		  //cksum <= cksum + indata;//added by steven miller on october 4 2024
+      end 
+		
+		else
+		//recieve the fourth byte: the actual data byte(s)
+		begin
         data <= indata;
         write <= 1;
-        if (count == 1) begin
+		  //checksum is now equal to itself plus the actual data byte(s)
+		  //cksum <= cksum + indata;//added by steven miller on october 4 2024
+		  //count <= count - 1;//added by steven miller on october 4 2024
+        if (count == 1)
+		  begin
           state <= 0;
-          if (new_cksum != 0)
+          if (cksum != 0)
             checksum_error <= 1;
         end
+		  
       end
     end
   end

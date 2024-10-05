@@ -16,66 +16,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "SSEG_CA[0]",
-					"strict" : false
-				},
-				{
-					"name" : "SSEG_CA[1]",
-					"strict" : false
-				},
-				{
-					"name" : "SSEG_CA[2]",
-					"strict" : false
-				},
-				{
-					"name" : "SSEG_CA[3]",
-					"strict" : false
-				},
-				{
-					"name" : "SSEG_CA[4]",
-					"strict" : false
-				},
-				{
-					"name" : "SSEG_CA[5]",
-					"strict" : false
-				},
-				{
-					"name" : "SSEG_CA[6]",
-					"strict" : false
-				},
-				{
-					"name" : "SSEG_AN[0]",
-					"strict" : false
-				},
-				{
-					"name" : "SSEG_AN[1]",
-					"strict" : false
-				},
-				{
-					"name" : "SSEG_AN[2]",
-					"strict" : false
-				},
-				{
-					"name" : "SSEG_AN[3]",
-					"strict" : false
-				},
-				{
-					"name" : "SSEG_AN[4]",
-					"strict" : false
-				},
-				{
-					"name" : "SSEG_AN[5]",
-					"strict" : false
-				},
-				{
-					"name" : "SSEG_AN[6]",
-					"strict" : false
-				},
-				{
-					"name" : "SSEG_AN[7]",
-					"strict" : false
-				},
-				{
 					"name" : "vga_v",
 					"strict" : false
 				},
@@ -149,90 +89,6 @@
 				},
 				{
 					"name" : "RamLB",
-					"strict" : false
-				},
-				{
-					"name" : "MemAdr[0]",
-					"strict" : false
-				},
-				{
-					"name" : "MemAdr[1]",
-					"strict" : false
-				},
-				{
-					"name" : "MemAdr[2]",
-					"strict" : false
-				},
-				{
-					"name" : "MemAdr[3]",
-					"strict" : false
-				},
-				{
-					"name" : "MemAdr[4]",
-					"strict" : false
-				},
-				{
-					"name" : "MemAdr[5]",
-					"strict" : false
-				},
-				{
-					"name" : "MemAdr[6]",
-					"strict" : false
-				},
-				{
-					"name" : "MemAdr[7]",
-					"strict" : false
-				},
-				{
-					"name" : "MemAdr[8]",
-					"strict" : false
-				},
-				{
-					"name" : "MemAdr[9]",
-					"strict" : false
-				},
-				{
-					"name" : "MemAdr[10]",
-					"strict" : false
-				},
-				{
-					"name" : "MemAdr[11]",
-					"strict" : false
-				},
-				{
-					"name" : "MemAdr[12]",
-					"strict" : false
-				},
-				{
-					"name" : "MemAdr[13]",
-					"strict" : false
-				},
-				{
-					"name" : "MemAdr[14]",
-					"strict" : false
-				},
-				{
-					"name" : "MemAdr[15]",
-					"strict" : false
-				},
-				{
-					"name" : "MemAdr[16]",
-					"strict" : false
-				},
-				{
-					"name" : "MemAdr[17]",
-					"strict" : false
-				},
-				{
-					"name" : "MemAdr[18]",
-					"strict" : false
-				},
-				{
-					"name" : "MemAdr[19]",
-					"strict" : false
-				},
-				{
-					"name" : "MemAdr[20]",
 					"strict" : false
 				},
 				{
@@ -312,6 +168,126 @@
 					"strict" : false
 				},
 				{
+					"name" : "debug_uart_address[0]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_uart_address[1]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_uart_address[2]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_uart_address[3]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_uart_address[4]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_uart_address[5]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_uart_address[6]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_uart_address[7]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_loader_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_loader_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_loader_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_loader_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_loader_data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_loader_data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_loader_data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_loader_data[7]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_loader_address[0]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_loader_address[1]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_loader_address[2]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_loader_address[3]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_loader_address[4]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_loader_address[5]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_loader_address[6]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_loader_address[7]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_loader_config",
+					"strict" : false
+				},
+				{
+					"name" : "debug_loader_state[0]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_loader_state[1]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_uart_state[0]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_uart_state[1]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_loader_clock",
+					"strict" : false
+				},
+				{
 					"name" : "SW[0]",
 					"strict" : false
 				},
@@ -320,7 +296,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[5]",
+					"name" : "SW[3]",
 					"strict" : false
 				},
 				{
@@ -337,10 +313,6 @@
 				},
 				{
 					"name" : "SW[4]",
-					"strict" : false
-				},
-				{
-					"name" : "SW[3]",
 					"strict" : false
 				}
 			]
