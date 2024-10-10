@@ -1,0 +1,39 @@
+|MOS6502
+data_input[0] => ~NO_FANOUT~
+data_input[1] => ~NO_FANOUT~
+data_input[2] => ~NO_FANOUT~
+data_input[3] => ~NO_FANOUT~
+data_input[4] => ~NO_FANOUT~
+data_input[5] => ~NO_FANOUT~
+data_input[6] => ~NO_FANOUT~
+data_input[7] => ~NO_FANOUT~
+clk => clk1.DATAIN
+nrst => register_addressoutput[0].CLK
+data_output[0] <= <GND>
+data_output[1] <= <GND>
+data_output[2] <= <GND>
+data_output[3] <= <GND>
+data_output[4] <= <GND>
+data_output[5] <= <GND>
+data_output[6] <= <GND>
+data_output[7] <= <GND>
+address_output[0] <= register_addressoutput[0].DB_MAX_OUTPUT_PORT_TYPE
+address_output[1] <= <GND>
+address_output[2] <= <GND>
+address_output[3] <= <GND>
+address_output[4] <= <GND>
+address_output[5] <= <GND>
+address_output[6] <= <GND>
+address_output[7] <= <GND>
+address_output[8] <= <GND>
+address_output[9] <= <GND>
+address_output[10] <= <GND>
+address_output[11] <= <GND>
+address_output[12] <= <GND>
+address_output[13] <= <GND>
+address_output[14] <= <GND>
+address_output[15] <= <GND>
+nrw_output <= <GND>
+clk1 <= clk.DB_MAX_OUTPUT_PORT_TYPE
+
+

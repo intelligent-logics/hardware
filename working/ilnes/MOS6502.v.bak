@@ -1,0 +1,51 @@
+//MOS6502.v
+/*
+Author(s): Steven Miller
+Date created: October 9 2024
+Purpose: CPU for NES
+
+Notes:
+	$ Steven 10/9/2024: initial creation
+*/
+
+//we need the following for inputs and outputs
+/*
+1 bit clock input
+8 bit data input
+8 bit data output
+16 bit address line output
+1 bit reset line
+*/
+
+module MOS6502
+(
+	input data_input[7:0],
+	input clk,
+	input nrst, //ACTIVE LOW
+	output data_output[7:0],
+	output address_output[15:0]
+);
+
+//registers
+reg[7:0] register_x; //x register
+reg[7:0] register_y; //y register
+reg[7:0] register_accumulator; //accumulator register
+reg[7:0] register_datainput; //register for data input line
+reg[15:0] register_addressoutput; //register for address output lines
+
+
+//BEGIN ARCHITECTURE
+
+//when reset is asserted
+always@(negedge nrst)
+begin
+register_x = 0;
+register_y = 0;
+register_accumulator = 0;
+register_datainput = 0;
+register_addressoutput = 0;
+end;
+
+always@(posedge clk)
+begin
+end;
