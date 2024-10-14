@@ -1,0 +1,18 @@
+//UART.v
+/*
+Author(s): Steven Miller
+Date created: October 12 2024
+Purpose: uart recieving and transmitting
+
+Notes:
+	$ Steven 10/12/2024: initial creation
+*/
+
+module UART
+(
+input data_reciever,
+output data_transmitter,
+input clk,
+input[7:0] data_tosend,
+output[7:0] data_recieved
+);

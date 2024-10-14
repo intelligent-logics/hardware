@@ -1,5 +1,5 @@
 Assembler report for ilnes
-Wed Oct 09 19:41:30 2024
+Mon Oct 14 12:04:46 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/ilnes/output_files/ilnes.sof
+  5. Assembler Device Options: C:/Users/steve/source/cen3097/senior_project/hardware/working/ilnes/output_files/ilnes.sof
   6. Assembler Messages
 
 
@@ -38,9 +38,9 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Oct 09 19:41:30 2024 ;
+; Assembler Status      ; Successful - Mon Oct 14 12:04:46 2024 ;
 ; Revision Name         ; ilnes                                 ;
-; Top-level Entity Name ; MOS6502                               ;
+; Top-level Entity Name ; uart_tx                               ;
 ; Family                ; Cyclone V                             ;
 ; Device                ; 5CSEBA6U23I7                          ;
 +-----------------------+---------------------------------------+
@@ -53,23 +53,23 @@ https://fpgasoftware.intel.com/eula.
 +--------+---------+---------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                                              ;
-+------------------------------------------------------------------------------------------------------------------------+
-; File Name                                                                                                              ;
-+------------------------------------------------------------------------------------------------------------------------+
-; C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/ilnes/output_files/ilnes.sof ;
-+------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                  ;
++--------------------------------------------------------------------------------------------+
+; File Name                                                                                  ;
++--------------------------------------------------------------------------------------------+
+; C:/Users/steve/source/cen3097/senior_project/hardware/working/ilnes/output_files/ilnes.sof ;
++--------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/ilnes/output_files/ilnes.sof ;
-+----------------+---------------------------------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                                                         ;
-+----------------+---------------------------------------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x00B03488                                                                                                                      ;
-; Checksum       ; 0x00B03488                                                                                                                      ;
-+----------------+---------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/steve/source/cen3097/senior_project/hardware/working/ilnes/output_files/ilnes.sof ;
++----------------+-----------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                             ;
++----------------+-----------------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x00B05CD2                                                                                          ;
+; Checksum       ; 0x00B05CD2                                                                                          ;
++----------------+-----------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -78,14 +78,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Oct 09 19:41:25 2024
+    Info: Processing started: Mon Oct 14 12:04:38 2024
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off ilnes -c ilnes
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4844 megabytes
-    Info: Processing ended: Wed Oct 09 19:41:30 2024
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 4834 megabytes
+    Info: Processing ended: Mon Oct 14 12:04:46 2024
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:06
 
 

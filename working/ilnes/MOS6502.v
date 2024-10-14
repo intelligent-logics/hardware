@@ -51,7 +51,7 @@ I[2]: Disable interrupt flag
 Z[1]: zero values just occurred with last operation
 C[0]: carry value just occurred with last operation
 */
-
+/*
 //wires
 wire clknot = ~clk;
 wire address = register_addressoutput;
@@ -82,4 +82,5 @@ always@(posedge clk)
 					register_instructionregister = data_input;
 				end
 	end
+	*/
 endmodule

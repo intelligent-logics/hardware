@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ilnes
-Wed Oct 09 19:50:10 2024
+Mon Oct 14 12:03:59 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,7 +10,20 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |uart_tx|state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |uart_tx
+ 13. Parameter Settings for User Entity Instance: shiftregister:txshiftregister
+ 14. Port Connectivity Checks: "shiftregister:txshiftregister"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+ 18. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -34,22 +47,27 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Wed Oct 09 19:50:10 2024           ;
-; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name               ; ilnes                                       ;
-; Top-level Entity Name       ; MOS6502                                     ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Oct 14 12:03:59 2024       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; ilnes                                       ;
+; Top-level Entity Name           ; uart_tx                                     ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 19                                          ;
+; Total pins                      ; 15                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -58,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEBA6U23I7       ;                    ;
-; Top-level entity name                                                           ; MOS6502            ; ilnes              ;
+; Top-level entity name                                                           ; uart_tx            ; ilnes              ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -144,15 +162,178 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 8           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                      ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                        ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------+---------+
+; shiftregister.v                  ; yes             ; User Verilog HDL File  ; C:/Users/steve/source/cen3097/senior_project/hardware/working/ilnes/shiftregister.v ;         ;
+; uart_tx.v                        ; yes             ; User Verilog HDL File  ; C:/Users/steve/source/cen3097/senior_project/hardware/working/ilnes/uart_tx.v       ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimate of Logic utilization (ALMs needed) ; 11         ;
+;                                             ;            ;
+; Combinational ALUT usage for logic          ; 20         ;
+;     -- 7 input functions                    ; 0          ;
+;     -- 6 input functions                    ; 0          ;
+;     -- 5 input functions                    ; 1          ;
+;     -- 4 input functions                    ; 4          ;
+;     -- <=3 input functions                  ; 15         ;
+;                                             ;            ;
+; Dedicated logic registers                   ; 19         ;
+;                                             ;            ;
+; I/O pins                                    ; 15         ;
+;                                             ;            ;
+; Total DSP Blocks                            ; 0          ;
+;                                             ;            ;
+; Maximum fan-out node                        ; rstn~input ;
+; Maximum fan-out                             ; 19         ;
+; Total fan-out                               ; 143        ;
+; Average fan-out                             ; 2.07       ;
++---------------------------------------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                 ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                    ; Entity Name   ; Library Name ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------+---------------+--------------+
+; |uart_tx                           ; 20 (10)             ; 19 (10)                   ; 0                 ; 0          ; 15   ; 0            ; |uart_tx                               ; uart_tx       ; work         ;
+;    |shiftregister:txshiftregister| ; 10 (10)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |uart_tx|shiftregister:txshiftregister ; shiftregister ; work         ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------+
+; State Machine - |uart_tx|state                       ;
++----------+----------+----------+----------+----------+
+; Name     ; state.11 ; state.10 ; state.01 ; state.00 ;
++----------+----------+----------+----------+----------+
+; state.00 ; 0        ; 0        ; 0        ; 0        ;
+; state.01 ; 0        ; 0        ; 1        ; 1        ;
+; state.10 ; 0        ; 1        ; 0        ; 1        ;
+; state.11 ; 1        ; 0        ; 0        ; 1        ;
++----------+----------+----------+----------+----------+
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; state~4                               ; Lost fanout                            ;
+; state~5                               ; Lost fanout                            ;
+; cycle_counter[3]                      ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 3 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 19    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 17    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 9     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |uart_tx|shiftregister:txshiftregister|shift_register[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |uart_tx ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; length         ; 8     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: shiftregister:txshiftregister ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; length         ; 8     ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "shiftregister:txshiftregister"                                                                                                                                                                ;
++-----------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-----------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; direction       ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; direction[-1]   ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; data_recieve    ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                                       ;
+; parallel_output ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
++-----------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 19                          ;
+;     CLR               ; 9                           ;
+;     ENA               ; 1                           ;
+;     ENA CLR           ; 8                           ;
+;     plain             ; 1                           ;
+; arriav_lcell_comb     ; 22                          ;
+;     normal            ; 22                          ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 10                          ;
+;         4 data inputs ; 4                           ;
+;         5 data inputs ; 1                           ;
+; boundary_port         ; 15                          ;
+;                       ;                             ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.12                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -161,19 +342,44 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Oct 09 19:50:01 2024
+    Info: Processing started: Mon Oct 14 12:03:49 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ilnes -c ilnes
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
-Warning (10229): Verilog HDL Expression warning at MOS6502.v(75): truncated literal to match 8 bits File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/ilnes/MOS6502.v Line: 75
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file mos6502.v
-    Info (12023): Found entity 1: MOS6502 File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/ilnes/MOS6502.v Line: 20
+    Info (12023): Found entity 1: MOS6502 File: C:/Users/steve/source/cen3097/senior_project/hardware/working/ilnes/MOS6502.v Line: 20
 Info (12021): Found 0 design units, including 0 entities, in source file mos6502_controller.v
-Error (10219): Verilog HDL Continuous Assignment error at MOS6502.v(59): object "register_instructionregister" on left-hand side of assignment must have a net type File: C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/ilnes/MOS6502.v Line: 59
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 2 warnings
-    Error: Peak virtual memory: 4770 megabytes
-    Error: Processing ended: Wed Oct 09 19:50:10 2024
-    Error: Elapsed time: 00:00:09
-    Error: Total CPU time (on all processors): 00:00:04
+Info (12021): Found 1 design units, including 1 entities, in source file uart.v
+    Info (12023): Found entity 1: uart File: C:/Users/steve/source/cen3097/senior_project/hardware/working/ilnes/uart.v Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file shiftregister.v
+    Info (12023): Found entity 1: shiftregister File: C:/Users/steve/source/cen3097/senior_project/hardware/working/ilnes/shiftregister.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file uart_rx.v
+    Info (12023): Found entity 1: uart_rx File: C:/Users/steve/source/cen3097/senior_project/hardware/working/ilnes/uart_rx.v Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file uart_tx.v
+    Info (12023): Found entity 1: uart_tx File: C:/Users/steve/source/cen3097/senior_project/hardware/working/ilnes/uart_tx.v Line: 11
+Info (12127): Elaborating entity "uart_tx" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at uart_tx.v(110): truncated value with size 32 to match size of target (4) File: C:/Users/steve/source/cen3097/senior_project/hardware/working/ilnes/uart_tx.v Line: 110
+Info (12128): Elaborating entity "shiftregister" for hierarchy "shiftregister:txshiftregister" File: C:/Users/steve/source/cen3097/senior_project/hardware/working/ilnes/uart_tx.v Line: 54
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/steve/source/cen3097/senior_project/hardware/working/ilnes/output_files/ilnes.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 37 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 4 output pins
+    Info (21061): Implemented 22 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4812 megabytes
+    Info: Processing ended: Mon Oct 14 12:03:59 2024
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:23
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/steve/source/cen3097/senior_project/hardware/working/ilnes/output_files/ilnes.map.smsg.
 
 

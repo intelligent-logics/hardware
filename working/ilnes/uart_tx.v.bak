@@ -1,0 +1,74 @@
+//UART_tx.v
+/*
+Author(s): Steven Miller
+Date created: October 12 2024
+Purpose: uart recieving
+
+Notes:
+	$ Steven 10/12/2024: initial creation
+*/
+module uart_rx
+#(parameter packet_length = 8)
+(
+output data_transmitter,
+input clk,
+output[packet_length-1:0] data_recieved_register,
+output data_transmitted_signal
+);
+
+/*wires*/
+wire[packet_length-1:0] x_parallel_signal;
+assign data_recieved = rx_parallel_signal;
+/*registers*/
+reg rx_shift_signal;
+reg rx_parallel_enable_signal;
+reg[(packet_length-1)/2:0] rx_shift_counter = 0;
+shiftregister rx_shiftregister
+(
+.data_recieve(data_reciever),
+.parallel_output(rx_parallel_signal),
+.shift(rx_shift_signal),
+.parallel_enable(rx_parallel_enable_signal),
+.direction(1), //0 is left, 1 is right
+.clk(clk),
+.rstn(1)
+);
+
+//add baud generator here
+
+//state machine
+reg[2:0] uart_state = 0;
+
+always@(posedge clk)
+begin
+	case(uart_state)
+		//initial state
+		3'd0:
+			begin
+				rx_shift_signal = 1;
+				rx_shift_counter = rx_shift_counter +1;
+				if(rx_shift_counter == packet_length)
+					begin
+						uart_state = uart_state +1;
+					end
+			end
+		//latch the data 
+		3'd1:
+			begin
+				rx_shift_signal <= 0;
+				rx_parallel_enable_signal <= 1;
+				uart_state = uart_state +1;
+				data_recieved_signal <= 1	
+			end
+		//decode the data
+		3'd2:
+		begin
+				//if the game is ready to be sent
+				if(rx_parallel_signal == "FE")
+					begin
+					
+					end
+		end
+	endcase
+end
+endmodule

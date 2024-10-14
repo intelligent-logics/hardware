@@ -1,0 +1,3 @@
+Warning (10268): Verilog HDL information at shiftregister.v(36): always construct contains both blocking and non-blocking assignments File: C:/Users/steve/source/cen3097/senior_project/hardware/working/ilnes/shiftregister.v Line: 36
+Warning (10268): Verilog HDL information at uart_rx.v(55): always construct contains both blocking and non-blocking assignments File: C:/Users/steve/source/cen3097/senior_project/hardware/working/ilnes/uart_rx.v Line: 55
+Warning (10268): Verilog HDL information at uart_tx.v(56): always construct contains both blocking and non-blocking assignments File: C:/Users/steve/source/cen3097/senior_project/hardware/working/ilnes/uart_tx.v Line: 56

@@ -1,0 +1,43 @@
+//shiftregister.v
+/*
+Author(s): Steven Miller
+Date created: October 12 2024
+Purpose: 8 bit shift register
+
+Notes:
+	$ Steven 10/12/2024: initial creation
+*/
+module shiftregister
+(
+input data_recieve,
+output[7:0] parallel_output,
+input shift,
+input parallel_enable,
+input clk,
+input rstn
+);
+
+//actual shift register
+reg[7:0] shift_register;
+//parallel output lines connected to each bit
+wire[7:0] register_parallel_output;
+
+initial
+(
+shift_register = 8'b0;
+register_parallel_output = 8'b0;
+);
+
+//at clk edge or rstn
+always@(posedge clk or negedge rstn)
+begin
+//if rstn is hit
+	if(rstn == 0)
+		begin
+			shift_register = 8'b0;
+			register_parallel_output = 8'b0;
+		end
+	
+end
+
+endmodule

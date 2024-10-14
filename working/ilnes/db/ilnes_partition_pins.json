@@ -4,11 +4,63 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "clk1",
+					"name" : "data_transmitter",
+					"strict" : false
+				},
+				{
+					"name" : "data_transmitted_signal",
+					"strict" : false
+				},
+				{
+					"name" : "current_state[0]",
+					"strict" : false
+				},
+				{
+					"name" : "current_state[1]",
+					"strict" : false
+				},
+				{
+					"name" : "rstn",
 					"strict" : false
 				},
 				{
 					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "shiftout",
+					"strict" : false
+				},
+				{
+					"name" : "data_transmit_register[0]",
+					"strict" : false
+				},
+				{
+					"name" : "data_transmit_register[1]",
+					"strict" : false
+				},
+				{
+					"name" : "data_transmit_register[2]",
+					"strict" : false
+				},
+				{
+					"name" : "data_transmit_register[3]",
+					"strict" : false
+				},
+				{
+					"name" : "data_transmit_register[4]",
+					"strict" : false
+				},
+				{
+					"name" : "data_transmit_register[5]",
+					"strict" : false
+				},
+				{
+					"name" : "data_transmit_register[6]",
+					"strict" : false
+				},
+				{
+					"name" : "data_transmit_register[7]",
 					"strict" : false
 				}
 			]

@@ -1,0 +1,195 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/steve/source/cen3097/senior_project/hardware/working/ilnes/simulation/qsim
+vshiftregister
+Z1 !s110 1728851265
+!i10b 1
+!s100 Z>LKi;I@DZXk@z;z<NJXg3
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I[T2OoR]]UUUoM6j4U@Lda0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1728851263
+Z4 8ilnes.vo
+Z5 Filnes.vo
+!i122 70
+L0 32 1179
+Z6 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1728851264.000000
+Z7 !s107 ilnes.vo|
+Z8 !s90 -work|work|ilnes.vo|
+!i113 1
+Z9 o-work work
+Z10 tCvgOpt 0
+vshiftregister_vlg_vec_tst
+R1
+!i10b 1
+!s100 PJD3C9nUO6c@j:CfX]e:?3
+R2
+I0<jchG^>nKBm5_CF<`0K21
+R3
+R0
+w1728851261
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 71
+L0 30 127
+R6
+r1
+!s85 0
+31
+!s108 1728851265.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R9
+R10
+vuart
+!s110 1728766713
+!i10b 1
+!s100 9K:00mjPbXOJ5QiWjZZ?63
+R2
+ID;neJ0BR9`j;0V9cP>K=91
+R3
+R0
+w1728766711
+R4
+R5
+!i122 36
+L0 32 1204
+R6
+r1
+!s85 0
+31
+Z11 !s108 1728766713.000000
+R7
+R8
+!i113 1
+R9
+R10
+vuart_rx
+Z12 !s110 1728856419
+!i10b 1
+!s100 BBa39k`i`7=>4b^nRzgje3
+R2
+I^I;?VCDVm8jD6F:i[dPI;2
+R3
+R0
+w1728856417
+R4
+R5
+!i122 104
+L0 32 1403
+R6
+r1
+!s85 0
+31
+Z13 !s108 1728856419.000000
+R7
+R8
+!i113 1
+R9
+R10
+vuart_rx_vlg_vec_tst
+R12
+!i10b 1
+!s100 3iPM`0YA@bnWCm2Ia>dm^0
+R2
+IdHAl];J:aBg2^UkkLU]1L0
+R3
+R0
+w1728856416
+Z14 8Waveform1.vwf.vt
+Z15 FWaveform1.vwf.vt
+!i122 105
+L0 30 56
+R6
+r1
+!s85 0
+31
+R13
+Z16 !s107 Waveform1.vwf.vt|
+Z17 !s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R9
+R10
+vuart_tx
+!s110 1728858887
+!i10b 1
+!s100 F::W<PVF1PhKajfjEmXjX2
+R2
+IRc4m<?`f?CEmNhfcniz]01
+R3
+R0
+w1728858886
+R4
+R5
+!i122 112
+L0 32 1202
+R6
+r1
+!s85 0
+31
+Z18 !s108 1728858887.000000
+R7
+R8
+!i113 1
+R9
+R10
+vuart_tx_vlg_vec_tst
+!s110 1728858888
+!i10b 1
+!s100 =UEJM`9QYM>9B`nkA3OR;1
+R2
+I5JZF:aO?=XEeI6J`ha6oH3
+R3
+R0
+w1728858884
+8Waveform2.vwf.vt
+FWaveform2.vwf.vt
+!i122 113
+L0 30 91
+R6
+r1
+!s85 0
+31
+R18
+!s107 Waveform2.vwf.vt|
+!s90 -work|work|Waveform2.vwf.vt|
+!i113 1
+R9
+R10
+vuart_vlg_vec_tst
+!s110 1728766714
+!i10b 1
+!s100 m?=P>O]8oC1A760Ek8Po72
+R2
+IJhNS<bG]52jI]=AO6]NkC3
+R3
+R0
+w1728766710
+R14
+R15
+!i122 37
+L0 30 86
+R6
+r1
+!s85 0
+31
+R11
+R16
+R17
+!i113 1
+R9
+R10
