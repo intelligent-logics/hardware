@@ -1,0 +1,53 @@
+//singleportram.v
+/*
+Author(s): Steven Miller
+Date created: October 14 2024
+Purpose: single port ram, created for cross platform compatibility
+Notes: taken from https://www.chipverify.com/verilog/verilog-single-port-ram
+log:
+	$ Steven 10/14/2024: initial creation
+*/
+
+module singleportram
+#(parameter addr_width = 11)
+#(parameter data_width = 8)
+#(parameter depth = 2047)
+(
+	input clk,
+	input [addr_width-1:0] address,
+	input [data_width-1:0] datain,
+	input csn, //ACTIVE LOW
+	input wen, //ACTIVE LOW
+	input oen, //ACTIVE LOW
+	output [datawidth-1:0] dataout
+);
+
+/*registers*/
+reg [data_width-1:0] temp_data;
+reg [data_width-1:0] memory[depth];
+
+/*wires*/
+wire cs = not(csn);
+wire we = not(wen);
+wire oe = not(oen);
+
+always@(posedge clk)
+begin
+	if(cs & we)
+		begin
+			memory[address] <= data;
+		end
+	else if(cs & !we)
+		begin
+			temp_data <= memory[address];
+		end
+end
+if(cs & oe & !we)
+	begin
+		dataout = temp_data;
+	end
+else
+	begin
+		dataout = 'hz;
+	end
+endmodule

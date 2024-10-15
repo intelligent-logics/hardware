@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/simulation/qsim
+vclock_divider
+Z1 !s110 1728961133
+!i10b 1
+!s100 `B?Ni7^?eMilBd2XozU183
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IGiH4bX9QEY2?1l1J=`hBO1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1728961132
+8russian_core.vo
+Frussian_core.vo
+!i122 10
+L0 32 351
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1728961133.000000
+!s107 russian_core.vo|
+!s90 -work|work|russian_core.vo|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+vclock_divider_vlg_vec_tst
+R1
+!i10b 1
+!s100 g>n^HaRTWe8bn029Tm89Y3
+R2
+IXYW??4YOILl[HFeF[5ZIn3
+R3
+R0
+w1728961131
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 11
+L0 30 35
+R4
+r1
+!s85 0
+31
+R5
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R6
+R7

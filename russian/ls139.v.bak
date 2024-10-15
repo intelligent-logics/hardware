@@ -1,0 +1,55 @@
+//ls139.v
+/*
+Author(s): Steven Miller
+Date created: October 14 2024
+Purpose: replacement for ls139 decoder
+Notes:See https://www.ti.com/lit/ds/symlink/sn54ls139a-sp.pdf?ts=1728938098960&ref_url=https%253A%252F%252Fwww.google.com%252F
+log:
+	$ Steven 10/14/2024: initial creation
+*/
+
+module ls139
+(
+	input[1:0] A,
+	input[1:0] B,
+	input G1n,
+	input G2n,
+	output reg[3:0] Y1,
+	output reg[3:0] Y2
+);
+
+always@(A,B,G1n,G2n)
+begin
+	case(A)
+	if(G1n == 0)
+		begin
+			2'b00:
+				Y1 <= 4'b0001;
+			2'b01:
+				Y1 <= 4'b0010;
+			2'b10:
+				Y1 <= 4'b0100;
+			2'b11:
+				Y1 <= 4'b1000;
+		end
+	else if(G1n == 1)
+		begin
+			Y1 <= 4b'1111;
+		end
+	endcase
+	case(B)
+		if(G2n == 0)
+		begin
+			2'b00:
+			2'b01:
+			2'b10:
+			2'b11:
+		end
+	else
+		begin
+			
+		end
+	endcase
+end
+
+endmodule;

@@ -1,0 +1,113 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "debug_addressoutput[0]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_addressoutput[1]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_addressoutput[2]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_addressoutput[3]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_addressoutput[4]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_addressoutput[5]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_addressoutput[6]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_addressoutput[7]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_addressoutput[8]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_addressoutput[9]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_addressoutput[10]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_addressoutput[11]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_addressoutput[12]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_addressoutput[13]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_addressoutput[14]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_addressoutput[15]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_dataoutput[0]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_dataoutput[1]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_dataoutput[2]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_dataoutput[3]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_dataoutput[4]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_dataoutput[5]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_dataoutput[6]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_dataoutput[7]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_clk",
+					"strict" : false
+				},
+				{
+					"name" : "rstn",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

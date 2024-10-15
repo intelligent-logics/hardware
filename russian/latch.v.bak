@@ -1,0 +1,14 @@
+//latch.v
+/*
+Author(s): Steven Miller
+Date created: October 14 2024
+Purpose: basic n bit latch
+log:
+	$ Steven 10/14/2024: initial creation
+*/
+
+module latch
+(parameter length = 8)
+(
+	
+);

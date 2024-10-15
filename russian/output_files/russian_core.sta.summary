@@ -1,0 +1,133 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 100C Model Setup 'nesclk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -8.057
+TNS   : -8.057
+
+Type  : Slow 1100mV 100C Model Setup 'clock_divider:clkdivider|out'
+Slack : -5.346
+TNS   : -2273.685
+
+Type  : Slow 1100mV 100C Model Hold 'clock_divider:clkdivider|out'
+Slack : 0.366
+TNS   : 0.000
+
+Type  : Slow 1100mV 100C Model Hold 'nesclk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.441
+TNS   : 0.000
+
+Type  : Slow 1100mV 100C Model Minimum Pulse Width 'clock_divider:clkdivider|out'
+Slack : -2.636
+TNS   : -675.960
+
+Type  : Slow 1100mV 100C Model Minimum Pulse Width 'nesclk|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 0.529
+TNS   : 0.000
+
+Type  : Slow 1100mV 100C Model Minimum Pulse Width 'clk50mhz'
+Slack : 9.944
+TNS   : 0.000
+
+Type  : Slow 1100mV 100C Model Minimum Pulse Width 'nesclk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 22.555
+TNS   : 0.000
+
+Type  : Slow 1100mV -40C Model Setup 'nesclk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -7.014
+TNS   : -7.014
+
+Type  : Slow 1100mV -40C Model Setup 'clock_divider:clkdivider|out'
+Slack : -5.468
+TNS   : -2208.880
+
+Type  : Slow 1100mV -40C Model Hold 'nesclk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.460
+TNS   : 0.000
+
+Type  : Slow 1100mV -40C Model Hold 'clock_divider:clkdivider|out'
+Slack : 0.476
+TNS   : 0.000
+
+Type  : Slow 1100mV -40C Model Minimum Pulse Width 'clock_divider:clkdivider|out'
+Slack : -2.636
+TNS   : -651.613
+
+Type  : Slow 1100mV -40C Model Minimum Pulse Width 'nesclk|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 0.529
+TNS   : 0.000
+
+Type  : Slow 1100mV -40C Model Minimum Pulse Width 'clk50mhz'
+Slack : 9.968
+TNS   : 0.000
+
+Type  : Slow 1100mV -40C Model Minimum Pulse Width 'nesclk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 22.475
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Setup 'nesclk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -6.343
+TNS   : -6.343
+
+Type  : Fast 1100mV 100C Model Setup 'clock_divider:clkdivider|out'
+Slack : -2.544
+TNS   : -984.502
+
+Type  : Fast 1100mV 100C Model Hold 'clock_divider:clkdivider|out'
+Slack : 0.176
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Hold 'nesclk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.206
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Minimum Pulse Width 'clock_divider:clkdivider|out'
+Slack : -2.174
+TNS   : -113.609
+
+Type  : Fast 1100mV 100C Model Minimum Pulse Width 'nesclk|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 0.529
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Minimum Pulse Width 'clk50mhz'
+Slack : 9.646
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Minimum Pulse Width 'nesclk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 22.839
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Setup 'nesclk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -4.604
+TNS   : -4.604
+
+Type  : Fast 1100mV -40C Model Setup 'clock_divider:clkdivider|out'
+Slack : -2.027
+TNS   : -773.327
+
+Type  : Fast 1100mV -40C Model Hold 'clock_divider:clkdivider|out'
+Slack : 0.157
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Hold 'nesclk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Minimum Pulse Width 'clock_divider:clkdivider|out'
+Slack : -2.174
+TNS   : -94.395
+
+Type  : Fast 1100mV -40C Model Minimum Pulse Width 'nesclk|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 0.529
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Minimum Pulse Width 'clk50mhz'
+Slack : 9.634
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Minimum Pulse Width 'nesclk|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 22.827
+TNS   : 0.000
+
+------------------------------------------------------------
