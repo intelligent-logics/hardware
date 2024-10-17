@@ -1,0 +1,285 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "WR",
+					"strict" : false
+				},
+				{
+					"name" : "PA[13]",
+					"strict" : false
+				},
+				{
+					"name" : "PA[12]",
+					"strict" : false
+				},
+				{
+					"name" : "PA[11]",
+					"strict" : false
+				},
+				{
+					"name" : "PA[10]",
+					"strict" : false
+				},
+				{
+					"name" : "PA[9]",
+					"strict" : false
+				},
+				{
+					"name" : "PA[8]",
+					"strict" : false
+				},
+				{
+					"name" : "PA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "PA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "PA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "PA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "PA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "PA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ALE",
+					"strict" : false
+				},
+				{
+					"name" : "RD",
+					"strict" : false
+				},
+				{
+					"name" : "DACLK",
+					"strict" : false
+				},
+				{
+					"name" : "NMI",
+					"strict" : false
+				},
+				{
+					"name" : "SYNC",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[23]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[22]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[21]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[20]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[19]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[18]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[17]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[16]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[15]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[14]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[13]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[12]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[11]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[10]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[9]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[8]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[7]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[6]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[5]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[4]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RGB[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DB[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DB[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DB[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DB[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DB[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DB[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DB[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DB[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PD_BUS[7]",
+					"strict" : false
+				},
+				{
+					"name" : "PD_BUS[6]",
+					"strict" : false
+				},
+				{
+					"name" : "PD_BUS[5]",
+					"strict" : false
+				},
+				{
+					"name" : "PD_BUS[4]",
+					"strict" : false
+				},
+				{
+					"name" : "PD_BUS[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PD_BUS[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PD_BUS[1]",
+					"strict" : false
+				},
+				{
+					"name" : "PD_BUS[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MODE",
+					"strict" : false
+				},
+				{
+					"name" : "nRES",
+					"strict" : false
+				},
+				{
+					"name" : "R_W",
+					"strict" : false
+				},
+				{
+					"name" : "N_DBE",
+					"strict" : false
+				},
+				{
+					"name" : "A[1]",
+					"strict" : false
+				},
+				{
+					"name" : "A[0]",
+					"strict" : false
+				},
+				{
+					"name" : "A[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VRAMCS",
+					"strict" : false
+				},
+				{
+					"name" : "VRAMA10",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

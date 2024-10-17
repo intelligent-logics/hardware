@@ -1,0 +1,10 @@
+
+
+C:/Users/eribe/Downloads/RP2C02-7--main (1)/RP2C02-7--main/Quartus/PLL.v
+
+Oct 17 03PM:36:29>: Error in CNX file format.
+
+Error messages are listed in file
+C:/Users/eribe/Downloads/RP2C02-7--main (1)/RP2C02-7--main/Quartus/PLL.cnxerr.
+
+Can't create the custom megafunction variation file(s)

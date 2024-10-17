@@ -41,6 +41,20 @@ reg[3:0] register_universalstate; //register for when instructions need multiple
 reg[7:0] register_instructionregister; //register for holding current instruction
 reg[15:0] register_programcounter; //our program counter
 /*processor status flags*/
+
+ppu inst_ppu(
+
+	.clk(clk1),
+	.reset(nrst),
+	.is_rendering(nrw_output),
+	.read(nrw_output),
+	.write(nrw_output),
+	.ain(address_output[2:0]),
+	.din(data_output),
+	
+	
+
+
 /*
 N[7]: negative value just occurred with last operation
 V[6]: overflow just occurred with last operation

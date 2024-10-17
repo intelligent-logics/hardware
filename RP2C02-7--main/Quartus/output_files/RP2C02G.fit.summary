@@ -1,0 +1,20 @@
+Fitter Status : Successful - Thu Oct 17 16:04:18 2024
+Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Revision Name : RP2C02G
+Top-level Entity Name : V1
+Family : Cyclone V
+Device : 5CGXFC7C7F23C8
+Timing Models : Final
+Logic utilization (in ALMs) : 510 / 56,480 ( < 1 % )
+Total registers : 1032
+Total pins : 71 / 268 ( 26 % )
+Total virtual pins : 0
+Total block memory bits : 20,416 / 7,024,640 ( < 1 % )
+Total RAM Blocks : 6 / 686 ( < 1 % )
+Total DSP Blocks : 0 / 156 ( 0 % )
+Total HSSI RX PCSs : 0 / 6 ( 0 % )
+Total HSSI PMA RX Deserializers : 0 / 6 ( 0 % )
+Total HSSI TX PCSs : 0 / 6 ( 0 % )
+Total HSSI PMA TX Serializers : 0 / 6 ( 0 % )
+Total PLLs : 1 / 13 ( 8 % )
+Total DLLs : 0 / 4 ( 0 % )
