@@ -1,0 +1,99 @@
+//datacontroller.v
+/* Author(s): Kieran Abesamis, Steven Miller
+Date created: October 17, 2024
+Purpose: Determines if address is in the range $8000-FFFF. Based on read/write enable, 
+handles data exchange between Cartridge RAM and CPU. Also sends enable for Cartridge RAM. 
+Notes: Error checked using AI Software (ClaudeAi/Chatgpt)
+log:
+    $ Kieran October 17, 2024 - Initial Creation
+	 $ Steven October 17 2024: fixed simple errors
+	 $ Steven October 21 2024: made address decoding combinational, corrected mistakes.
+ */
+
+/*While the NES does its own address
+decoding via the address lines and the rnw pin,
+quartus does not seem to understand this.
+Therefore, some sort of alternative address
+decoding method is needed to shut it up.*/
+/*
+memory mappings:
+$0000–$07FF Work RAM
+$0800–$0FFF	Mirror of $0000–$07FF
+$1000–$17FF	Mirror of $0000–$07FF
+$1800–$1FFF Mirror of $0000–$07FF
+$2000–$2007 PPU registers
+$2008–$3FFF Mirrors of $2000–$2007 (repeats every 8 bytes)
+$6000–$7FFF cartridge ram
+$8000–$FFFF cartridge rom
+*/
+module datacontroller(
+    input [15:0] address_in, // From CPU 
+    //input clk, 
+    input rw_enable,  // 1 for write, 0 for read
+    output reg r_en,  // READ enable signal to RAM
+    output reg w_en,   // Write enable signal to RAM
+    output reg[15:0] address_out, //MemController -> Cartridge RAM, Shifted by $8000 
+	 input data_from_cart, //databus coming from cartridge
+	 output data_to_cart, //databus going to cartridge
+	 inout data_wram,  //databus for wram and memory controller
+	 inout[7:0] data_cpu //databus for cpu and memory controller
+);
+
+    reg data_drive; // Control data direction
+	// reg new_address; //rom compatible address
+
+    // Address validation and data operations
+    always @(*) 
+	 begin
+	 //we want the cartridge
+        if (address_in >= 16'h8000) 
+			begin
+				//if write operation (rw is zero)
+            if (!rw_enable) 
+					begin
+                // Write operation
+                //data_out <= data_cpu; 
+                r_en <= 1'b0;          // Set RAM READ to low
+                w_en <= 1'b1;          // Set RAM WRITE to high
+					 data_cpu <= data_cpu; //
+					end 
+				else 
+				//if read operation (rw is one)
+					begin
+                // Read operation
+                //data_out <= 8'bZ;
+                r_en <= 1'b1;          // Set RAM READ to high
+                w_en <= 1'b0;          // Set RAM WRITE to low
+					 data_cpu <= data_from_cart; //take input from cartridge
+					end
+				//address_out <= address_in - 16'h8000;
+        end 
+		  //we want work ram
+		  else if (address_in <= $07FF)
+			begin
+				//if were reading from wram
+				if(rw_enable)
+					begin
+						 address_out <= address_in;
+						 r_en <= 1'b0; //disable cartridge
+						 w_en <= 1'b0; //disable cartridge
+						 data_cpu <= data_wram;
+					end
+				//if were reading from wram
+				else if (!rw_enable)
+					begin
+						 address_out <= address_in;
+						 r_en <= 1'b0; //disable cartridge
+						 w_en <= 1'b0; //disable cartridge
+						 data_wram <= data_cpu;
+					end
+			end
+    end
+
+    // Send current address to RAM
+   // assign address_out = address_in - 16'h8000; 
+
+    // Drive inout ports based on rw_enable
+   // assign data_cpu = (!rw_enable) ? data_cpu : q_in; // Only drive data_cpu during read
+
+endmodule

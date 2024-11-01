@@ -7,7 +7,7 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off russian_core -c russian_core --vector_source="C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/Waveform.vwf" --testbench_file="C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/simulation/qsim/Waveform.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off russian_core -c russian_core --vector_source="C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/Waveform1.vwf" --testbench_file="C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/simulation/qsim/Waveform1.vwf.vt"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -26,14 +26,17 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Mon Oct 14 22:58:50 2024
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off russian_core -c russian_core --vector_source=C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/Waveform.vwf --testbench_file=C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/simulation/qsim/Waveform.vwf.vt
+    Info: Processing started: Tue Oct 29 17:12:25 2024
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off russian_core -c russian_core --vector_source=C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/Waveform1.vwf --testbench_file=C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/simulation/qsim/Waveform1.vwf.vt
 Warning (20013): Ignored 16 assignments for entity "clkpll" -- entity does not exist in design
     Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_pll -entity clkpll -sip clkpll.sip -library lib_clkpll was ignored
     Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 20.1 -entity clkpll -sip clkpll.sip -library lib_clkpll was ignored
     Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV mwpim -entity clkpll -sip clkpll.sip -library lib_clkpll was ignored
-Warning (20013): Ignored 317 assignments for entity "clkpll_0002" -- entity does not exist in design
+Info (119006): Selected device 5CSEBA6U23I7 for design "russian_core"
+Warning (21300): LOCKED port on the PLL is not properly connected on instance "clkpll_0002:nesclk|altera_pll:altera_pll_i|general[0].gpll". The LOCKED port on the PLL should be connected when the FBOUTCLK port is connected. Although it is unnecessary to connect the LOCKED signal, any logic driven off of an output clock of the PLL will not know when the PLL is locked and ready.
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+
+when writing test bench files
 
 Completed successfully. 
 
@@ -60,20 +63,21 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Mon Oct 14 22:58:51 2024
+    Info: Processing started: Tue Oct 29 17:12:26 2024
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/simulation/qsim/ russian_core -c russian_core
 Warning (20013): Ignored 16 assignments for entity "clkpll" -- entity does not exist in design
     Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_pll -entity clkpll -sip clkpll.sip -library lib_clkpll was ignored
     Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 20.1 -entity clkpll -sip clkpll.sip -library lib_clkpll was ignored
     Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV mwpim -entity clkpll -sip clkpll.sip -library lib_clkpll was ignored
-Warning (20013): Ignored 317 assignments for entity "clkpll_0002" -- entity does not exist in design
+Info (119006): Selected device 5CSEBA6U23I7 for design "russian_core"
+Warning (21300): LOCKED port on the PLL is not properly connected on instance "clkpll_0002:nesclk|altera_pll:altera_pll_i|general[0].gpll". The LOCKED port on the PLL should be connected when the FBOUTCLK port is connected. Although it is unnecessary to connect the LOCKED signal, any logic driven off of an output clock of the PLL will not know when the PLL is locked and ready.
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file russian_core.vo in folder "C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4725 megabytes
-    Info: Processing ended: Mon Oct 14 22:58:52 2024
+    Info: Peak virtual memory: 4863 megabytes
+    Info: Processing ended: Tue Oct 29 17:12:27 2024
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
 
@@ -95,52 +99,120 @@ Reading pref.tcl
 # ** Warning: (vlib-34) Library already exists at "work".
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:58:53 on Oct 14,2024
+# Start time: 17:12:28 on Oct 29,2024
 # vlog -work work russian_core.vo 
-# -- Compiling module clock_divider
+# -- Compiling module russian_core
+
 # 
 # Top level modules:
-# 	clock_divider
-# End time: 22:58:53 on Oct 14,2024, Elapsed time: 0:00:00
+# 	russian_core
+# End time: 17:12:28 on Oct 29,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:58:53 on Oct 14,2024
-# vlog -work work Waveform.vwf.vt 
-# -- Compiling module clock_divider_vlg_vec_tst
+# Start time: 17:12:28 on Oct 29,2024
+# vlog -work work Waveform1.vwf.vt 
+# -- Compiling module russian_core_vlg_vec_tst
 # 
 # Top level modules:
-# 	clock_divider_vlg_vec_tst
-# End time: 22:58:53 on Oct 14,2024, Elapsed time: 0:00:00
+# 	russian_core_vlg_vec_tst
+# End time: 17:12:29 on Oct 29,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
-# vsim -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.clock_divider_vlg_vec_tst 
-# Start time: 22:58:53 on Oct 14,2024
-# Loading work.clock_divider_vlg_vec_tst
-# Loading work.clock_divider
+# vsim -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.MemController_vlg_vec_tst 
+# Start time: 17:12:29 on Oct 29,2024
+# Loading work.MemController_vlg_vec_tst
+# Loading work.MemController
 # Loading cyclonev_ver.cyclonev_io_obuf
 # Loading cyclonev_ver.cyclonev_io_ibuf
-# Loading cyclonev_ver.cyclonev_clkena
-# Loading altera_ver.dffeas
 # Loading cyclonev_ver.cyclonev_lcell_comb
-# Loading altera_ver.PRIM_GDFF_LOW
 # after#25
-# ** Note: $finish    : Waveform.vwf.vt(47)
-#    Time: 1 us  Iteration: 0  Instance: /clock_divider_vlg_vec_tst
-# End time: 22:58:53 on Oct 14,2024, Elapsed time: 0:00:00
+# ** Note: $finish    : Waveform1.vwf.vt(53)
+#    Time: 1 us  Iteration: 0  Instance: /MemController_vlg_vec_tst
+# End time: 17:12:29 on Oct 29,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/Waveform.vwf...
+Reading C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/Waveform1.vwf...
 
 Reading C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/simulation/qsim/russian_core.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/simulation/qsim/russian_core_20241014225853.sim.vwf
+Warning: address_in[15] - signal not found in VCD.
+
+Warning: address_in[14] - signal not found in VCD.
+
+Warning: address_in[13] - signal not found in VCD.
+
+Warning: address_in[12] - signal not found in VCD.
+
+Warning: address_in[11] - signal not found in VCD.
+
+Warning: address_in[10] - signal not found in VCD.
+
+Warning: address_in[9] - signal not found in VCD.
+
+Warning: address_in[8] - signal not found in VCD.
+
+Warning: address_in[7] - signal not found in VCD.
+
+Warning: address_in[6] - signal not found in VCD.
+
+Warning: address_in[5] - signal not found in VCD.
+
+Warning: address_in[4] - signal not found in VCD.
+
+Warning: address_in[3] - signal not found in VCD.
+
+Warning: address_in[2] - signal not found in VCD.
+
+Warning: address_in[1] - signal not found in VCD.
+
+Warning: address_in[0] - signal not found in VCD.
+
+Warning: address_out[15] - signal not found in VCD.
+
+Warning: address_out[14] - signal not found in VCD.
+
+Warning: address_out[13] - signal not found in VCD.
+
+Warning: address_out[12] - signal not found in VCD.
+
+Warning: address_out[11] - signal not found in VCD.
+
+Warning: address_out[10] - signal not found in VCD.
+
+Warning: address_out[9] - signal not found in VCD.
+
+Warning: address_out[8] - signal not found in VCD.
+
+Warning: address_out[7] - signal not found in VCD.
+
+Warning: address_out[6] - signal not found in VCD.
+
+Warning: address_out[5] - signal not found in VCD.
+
+Warning: address_out[4] - signal not found in VCD.
+
+Warning: address_out[3] - signal not found in VCD.
+
+Warning: address_out[2] - signal not found in VCD.
+
+Warning: address_out[1] - signal not found in VCD.
+
+Warning: address_out[0] - signal not found in VCD.
+
+Warning: r_en - signal not found in VCD.
+
+Warning: rw_enable - signal not found in VCD.
+
+Warning: w_en - signal not found in VCD.
+
+Writing the resulting VWF to C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/simulation/qsim/russian_core_20241029171229.sim.vwf
 
 Finished VCD to VWF conversion.
 

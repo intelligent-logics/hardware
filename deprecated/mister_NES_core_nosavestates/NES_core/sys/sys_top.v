@@ -31,8 +31,7 @@
 `endif
 
 
-module sys_top
-(
+module sys_top(
 	/////////// CLOCK //////////
 	input         FPGA_CLK1_50,
 	input         FPGA_CLK2_50,
@@ -70,20 +69,20 @@ module sys_top
 
 `ifdef DUAL_SDRAM
 	////////// SDR #2 //////////
-	output [12:0] SDRAM2_A,
-	inout  [15:0] SDRAM2_DQ,
-	output        SDRAM2_nWE,
-	output        SDRAM2_nCAS,
-	output        SDRAM2_nRAS,
-	output        SDRAM2_nCS,
-	output  [1:0] SDRAM2_BA,
-	output        SDRAM2_CLK,
+	//output [12:0] SDRAM2_A,
+	//inout  [15:0] SDRAM2_DQ,
+	//output        SDRAM2_nWE,
+	//output        SDRAM2_nCAS,
+	//output        SDRAM2_nRAS,
+	//output        SDRAM2_nCS,
+	//output  [1:0] SDRAM2_BA,
+	//output        SDRAM2_CLK,
 
 `else
 	//////////// VGA ///////////
-	output  [5:0] VGA_R,
-	output  [5:0] VGA_G,
-	output  [5:0] VGA_B,
+	//output  [5:0] VGA_R,
+	//output  [5:0] VGA_G,
+	//output  [5:0] VGA_B,
 	inout         VGA_HS,  // VGA_HS is secondary SD card detect when VGA_EN = 1 (inactive)
 	output		  VGA_VS,
 	input         VGA_EN,  // active low
@@ -133,7 +132,10 @@ module sys_top
 	output  [7:0] LED,
 
 	///////// USER IO ///////////
-	inout   [6:0] USER_IO
+	inout   [6:0] USER_IO,
+	
+	output[7:0] cpu_debug_instruction, //added by steven miller on october 30 2024
+	output system_clock //added by steven miller on october 31 2024
 );
 
 //////////////////////  Secondary SD  ///////////////////////////////////
@@ -1307,11 +1309,11 @@ csync csync_vga(clk_vid, vga_hs_osd, vga_vs_osd, vga_cs_osd);
 
 	wire cs1 = (vga_fb | vga_scaler) ? vgas_cs : vga_cs;
 
-	assign VGA_VS = (VGA_EN | SW[3]) ? 1'bZ      : ((vga_fb | vga_scaler) ? ~vgas_vs : ~vga_vs) | csync_en;
-	assign VGA_HS = (VGA_EN | SW[3]) ? 1'bZ      :  (vga_fb | vga_scaler) ? (csync_en ? ~vgas_cs : ~vgas_hs) : (csync_en ? ~vga_cs : ~vga_hs);
-	assign VGA_R  = (VGA_EN | SW[3]) ? 6'bZZZZZZ :  (vga_fb | vga_scaler) ? vgas_o[23:18] : vga_o[23:18];
-	assign VGA_G  = (VGA_EN | SW[3]) ? 6'bZZZZZZ :  (vga_fb | vga_scaler) ? vgas_o[15:10] : vga_o[15:10];
-	assign VGA_B  = (VGA_EN | SW[3]) ? 6'bZZZZZZ :  (vga_fb | vga_scaler) ? vgas_o[7:2]   : vga_o[7:2]  ;
+	assign VGA_VS = (VGA_EN | SW[3]) ? 1'bZ      : ((vga_fb | vga_scaler) ? ~vgas_vs : ~vga_vs) | csync_en; 
+	assign VGA_HS = (VGA_EN | SW[3]) ? 1'bZ      :  (vga_fb | vga_scaler) ? (csync_en ? ~vgas_cs : ~vgas_hs) : (csync_en ? ~vga_cs : ~vga_hs); 
+	//assign VGA_R  = (VGA_EN | SW[3]) ? 6'bZZZZZZ :  (vga_fb | vga_scaler) ? vgas_o[23:18] : vga_o[23:18]; 
+	//assign VGA_G  = (VGA_EN | SW[3]) ? 6'bZZZZZZ :  (vga_fb | vga_scaler) ? vgas_o[15:10] : vga_o[15:10]; 
+	//assign VGA_B  = (VGA_EN | SW[3]) ? 6'bZZZZZZ :  (vga_fb | vga_scaler) ? vgas_o[7:2]   : vga_o[7:2]  ; 
 `endif
 
 reg video_sync = 0;
@@ -1650,7 +1652,8 @@ emu emu
 `endif
 
 	.USER_OUT(user_out),
-	.USER_IN(user_in)
+	.USER_IN(user_in),
+	.debug_cpu_databus(cpu_debug_instruction) //added by steven miller on october 30 2024
 );
 
 endmodule

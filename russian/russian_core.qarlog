@@ -1,0 +1,52 @@
+Quartus Prime Archive log --	C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/russian_core.qarlog
+
+Archive:	C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/russian_core.qar
+Date:		Thu Oct 17 18:07:52 2024
+Quartus Prime		20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/MemController.v
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/Waveform.vwf
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/apu/Verilog/DPCM_TABLE.v
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/apu/Verilog/LENGTH_TABLE.v
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/apu/Verilog/NOISE_TABLE.v
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/apu/Verilog/RP2A03.v
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/clkpll.qip
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/clkpll.sip
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/clkpll.spd
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/clkpll.v
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/clkpll/clkpll_0002.qip
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/clkpll/clkpll_0002.v
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/clkpll_sim/clkpll.vo
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/clock_divider.v
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/cpu/Verilog/MOS6502_WBCD.v
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/game_ram/game_ram.qip
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/game_ram/game_ram.v
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/game_ram/game_ram_inst.v
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/hdmi/TopModule.v
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/hdmi/i2c/I2C_Controller.v
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/hdmi/i2c/I2C_HDMI_Config.v
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/hdmi/i2c/I2C_WRITE_WDATA.v
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/hdmi/pll/pll_25.cmp
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/hdmi/pll/pll_25.qip
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/hdmi/pll/pll_25.v
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/hdmi/pll/pll_25/pll_25_0002.qip
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/hdmi/pll/pll_25/pll_25_0002.v
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/hdmi/vgaHdmi.v
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/ls139.v
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/nbitlatch.v
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/ppu/Verilog/OAM2_RAM.v
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/ppu/Verilog/OAM_RAM.v
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/ppu/Verilog/PALETTE_RAM.v
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/ppu/Verilog/PALETTE_RGB_TABLE.v
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/ppu/Verilog/RP2C02.v
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/russian_core.qpf
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/russian_core.qsf
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/russian_core.v
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/singleportram.v
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/timing_generator.v
+c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 41 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

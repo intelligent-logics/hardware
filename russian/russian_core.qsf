@@ -56,6 +56,66 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_location_assignment PIN_Y13 -to clk50mhz
+set_location_assignment PIN_Y24 -to rstn
+set_location_assignment PIN_AG14 -to debug_addressoutput[0]
+set_location_assignment PIN_AE6 -to debug_addressoutput[1]
+set_location_assignment PIN_AE24 -to debug_addressoutput[2]
+set_location_assignment PIN_AD20 -to debug_addressoutput[3]
+set_location_assignment PIN_AD17 -to debug_addressoutput[4]
+set_location_assignment PIN_AC22 -to debug_addressoutput[5]
+set_location_assignment PIN_AB23 -to debug_addressoutput[6]
+set_location_assignment PIN_W11 -to debug_addressoutput[7]
+set_location_assignment PIN_AA19 -to debug_addressoutput[15]
+set_location_assignment PIN_Y19 -to debug_addressoutput[14]
+set_location_assignment PIN_AC23 -to debug_addressoutput[13]
+set_location_assignment PIN_C12 -to debug_addressoutput[12]
+set_location_assignment PIN_D12 -to debug_addressoutput[11]
+set_location_assignment PIN_AD23 -to debug_addressoutput[10]
+set_location_assignment PIN_AE23 -to debug_addressoutput[9]
+set_location_assignment PIN_AD5 -to debug_addressoutput[8]
+set_location_assignment PIN_AC24 -to debug_clk
+set_location_assignment PIN_T13 -to HDMI_I2S0
+set_location_assignment PIN_T11 -to HDMI_LRCLK
+set_location_assignment PIN_U11 -to HDMI_MCLK
+set_location_assignment PIN_T12 -to HDMI_SCLK
+set_location_assignment PIN_U10 -to HDMI_SCL
+set_location_assignment PIN_AA4 -to HDMI_SDA
+set_location_assignment PIN_AF11 -to HDMI_TXINT
+set_location_assignment PIN_V13 -to HDMI_VS
+set_location_assignment PIN_T8 -to HDMI_HS
+set_location_assignment PIN_AD19 -to HDMI_DE
+set_location_assignment PIN_AG5 -to HDMI_CLK
+set_location_assignment PIN_AF26 -to HDMI_READY
+set_location_assignment PIN_V11 -to clk50
+set_location_assignment PIN_AE8 -to HDMI_RGB[23]
+set_location_assignment PIN_AF9 -to HDMI_RGB[22]
+set_location_assignment PIN_AG6 -to HDMI_RGB[21]
+set_location_assignment PIN_AH6 -to HDMI_RGB[20]
+set_location_assignment PIN_AH5 -to HDMI_RGB[19]
+set_location_assignment PIN_AH4 -to HDMI_RGB[18]
+set_location_assignment PIN_AH2 -to HDMI_RGB[17]
+set_location_assignment PIN_AE4 -to HDMI_RGB[16]
+set_location_assignment PIN_AF5 -to HDMI_RGB[15]
+set_location_assignment PIN_AF8 -to HDMI_RGB[14]
+set_location_assignment PIN_AF6 -to HDMI_RGB[13]
+set_location_assignment PIN_AE7 -to HDMI_RGB[12]
+set_location_assignment PIN_AB4 -to HDMI_RGB[11]
+set_location_assignment PIN_AE9 -to HDMI_RGB[10]
+set_location_assignment PIN_Y4 -to HDMI_RGB[9]
+set_location_assignment PIN_AF10 -to HDMI_RGB[8]
+set_location_assignment PIN_Y5 -to HDMI_RGB[7]
+set_location_assignment PIN_AE11 -to HDMI_RGB[6]
+set_location_assignment PIN_AD10 -to HDMI_RGB[5]
+set_location_assignment PIN_AD11 -to HDMI_RGB[4]
+set_location_assignment PIN_Y8 -to HDMI_RGB[3]
+set_location_assignment PIN_W8 -to HDMI_RGB[2]
+set_location_assignment PIN_AE12 -to HDMI_RGB[1]
+set_location_assignment PIN_AD12 -to HDMI_RGB[0]
+set_global_assignment -name VERILOG_FILE hdmi/i2c/I2C_HDMI_Config.v
+set_global_assignment -name VERILOG_FILE hdmi/sync_vg.v
+set_global_assignment -name VERILOG_FILE hdmi/pattern_vg.v
+set_global_assignment -name VERILOG_FILE hdmi/top_sync_vg_pattern.v
 set_global_assignment -name VERILOG_FILE apu/Verilog/NOISE_TABLE.v
 set_global_assignment -name VERILOG_FILE apu/Verilog/LENGTH_TABLE.v
 set_global_assignment -name VERILOG_FILE apu/Verilog/DPCM_TABLE.v
@@ -73,29 +133,38 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name VERILOG_FILE ls139.v
 set_global_assignment -name QIP_FILE clkpll.qip
 set_global_assignment -name SIP_FILE clkpll.sip
-set_location_assignment PIN_V11 -to clk50mhz
-set_location_assignment PIN_Y24 -to rstn
-set_location_assignment PIN_W11 -to debug_addressoutput[0]
-set_location_assignment PIN_AB23 -to debug_addressoutput[1]
-set_location_assignment PIN_AC22 -to debug_addressoutput[2]
-set_location_assignment PIN_AD17 -to debug_addressoutput[3]
-set_location_assignment PIN_AD20 -to debug_addressoutput[4]
-set_location_assignment PIN_AE24 -to debug_addressoutput[5]
-set_location_assignment PIN_AE6 -to debug_addressoutput[6]
-set_location_assignment PIN_AG14 -to debug_addressoutput[7]
-set_location_assignment PIN_AH26 -to debug_addressoutput[15]
-set_location_assignment PIN_AF25 -to debug_addressoutput[14]
-set_location_assignment PIN_AF23 -to debug_addressoutput[13]
-set_location_assignment PIN_AH22 -to debug_addressoutput[12]
-set_location_assignment PIN_AG21 -to debug_addressoutput[11]
-set_location_assignment PIN_AA20 -to debug_addressoutput[10]
-set_location_assignment PIN_AE22 -to debug_addressoutput[9]
-set_location_assignment PIN_AF21 -to debug_addressoutput[8]
-set_location_assignment PIN_AC24 -to debug_clk
 set_global_assignment -name VERILOG_FILE clock_divider.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform.vwf
+set_global_assignment -name VERILOG_FILE timing_generator.v
+set_global_assignment -name VERILOG_FILE MemController.v
+set_global_assignment -name QIP_FILE game_ram/game_ram.qip
+set_global_assignment -name VERILOG_FILE hdmi/HDMI_toplevel.v
+set_location_assignment PIN_AF21 -to debug_dataoutput[0]
+set_location_assignment PIN_AE22 -to debug_dataoutput[1]
+set_location_assignment PIN_AA20 -to debug_dataoutput[2]
+set_location_assignment PIN_AG21 -to debug_dataoutput[3]
+set_location_assignment PIN_AH22 -to debug_dataoutput[4]
+set_location_assignment PIN_AF23 -to debug_dataoutput[5]
+set_location_assignment PIN_AF25 -to debug_dataoutput[6]
+set_location_assignment PIN_AH26 -to debug_dataoutput[7]
+set_global_assignment -name VERILOG_FILE datacontroller.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
+set_location_assignment PIN_AH16 -to debug_manualclock
+set_location_assignment PIN_W24 -to debug_stopclock
+set_location_assignment PIN_W20 -to debug_addresselect[1]
+set_location_assignment PIN_W21 -to debug_addresselect[0]
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name STRATIXV_CONFIGURATION_SCHEME "PASSIVE SERIAL"
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN ON
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name ACTIVE_SERIAL_CLOCK FREQ_100MHZ
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -122,7 +122,9 @@ module NES(
 	output        gg_avail,
 	input         gg_reset,
 	output  [2:0] emphasis,
-	output        save_written
+	output        save_written,
+	
+	output[7:0] debug_cpu_instruction //added by steven miller on october 30 2024
 );
 
 
@@ -162,6 +164,8 @@ assign apu_ce = cpu_ce;
 
 wire [7:0] from_data_bus;
 wire [7:0] cpu_dout;
+
+assign debug_cpu_instruction = from_data_bus; //added by steven miller on october 30 2024
 
 // odd or even apu cycle, AKA div_apu or apu_/clk2. This is actually not 50% duty cycle. It is high for 18
 // master cycles and low for 6 master cycles. It is considered active when low or "even".

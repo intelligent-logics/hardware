@@ -1,0 +1,60 @@
+//MemController.v
+/* Author(s): Kieran Abesamis
+Date created: October 17, 2024
+Purpose: Determines if address is in the range $8000-FFFF. Based on read/write enable, 
+handles data exchange between Cartridge RAM and CPU. Also sends enable for Cartridge RAM. 
+Notes: Error checked using AI Software (ClaudeAi/Chatgpt)
+log:
+    $ October 17, 2024 - Initial Creation
+ */
+
+module MemController(
+    input [15:0] address_in, // From CPU 
+    input clk, 
+    input [7:0] q_in,
+    input rw_enable,  // 1 for write, 0 for read
+
+    inout [7:0] data, // Connects MemController and Cartridge RAM 
+    inout [7:0] data_cpu, // Connects MemController and CPU RAM
+    
+    output [15:0] address_out, // To RAM 
+    output [7:0] q_out,
+    output reg r_en,  // READ enable signal to RAM
+    output reg w_en   // Write enable signal to RAM
+);
+
+    reg [7:0] data_out;
+    reg data_drive; // Control data direction
+
+    // Address validation and data operations
+    always @(posedge clk) begin
+        if (address_in >= 16'h8000) begin
+            if (rw_enable) begin
+                // Write operation
+                data_out <= data_cpu; 
+                data_drive <= 1;       // Drive data
+                r_en <= 1'b0;          // Set RAM READ to low
+                w_en <= 1'b1;          // Set RAM WRITE to high
+            end else begin
+                // Read operation
+                data_drive <= 0;       // High-Z state for data
+                r_en <= 1'b1;          // Set RAM READ to high
+                w_en <= 1'b0;          // Set RAM WRITE to low
+            end
+        end else begin
+            r_en <= 1'b0;
+            w_en <= 1'b0; 
+            data_drive <= 0;           // High-Z state for data
+        end
+    end
+
+    // Send current address to RAM
+    assign address_out = address_in - 16'h8000; 
+    // Send RAM 'q' to CPU 
+    assign q_out = q_in; 
+
+    // Drive inout ports based on data_drive
+    assign data = (data_drive) ? data_out : 8'bZ; // Drive data or high-Z
+    assign data_cpu = (rw_enable) ? 8'bZ : data; // Only drive data_cpu during read
+
+endmodule

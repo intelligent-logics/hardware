@@ -1,0 +1,9 @@
+//HDMI_toplevel.v
+/*
+Author(s): Steven Miller
+Date created: October 17 2024
+Purpose: sets up HDMI(hopefully)
+Notes: Not my code. Taken from https://vanhunteradams.com/DE1/VGA_Driver/Driver.html
+log:
+	$ Steven 10/17/2024: initial creation
+*/

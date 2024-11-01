@@ -1,0 +1,117 @@
+Archive Project report for russian_core
+Thu Oct 17 18:07:52 2024
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Thu Oct 17 18:07:52 2024 ;
+; Revision Name          ; russian_core                          ;
+; Top-level Entity Name  ; TopModule                             ;
+; Family                 ; Cyclone V                             ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
+Info: Archive will store files relative to the closest common parent directory
+Info (13213): Using common directory C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive 'C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/russian_core.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'russian_core.archive.rpt'
+Info (23030): Evaluation of Tcl script c:/intelfpga_lite/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4827 megabytes
+    Info: Processing ended: Thu Oct 17 18:07:52 2024
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:00
+
+
++--------------------------------------------------------------+
+; Files Archived                                               ;
++--------------------------------------------------------------+
+; File Name                                                    ;
++--------------------------------------------------------------+
+; apu/Verilog/DPCM_TABLE.v                                     ;
+; apu/Verilog/LENGTH_TABLE.v                                   ;
+; apu/Verilog/NOISE_TABLE.v                                    ;
+; apu/Verilog/RP2A03.v                                         ;
+; c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf ;
+; clkpll.qip                                                   ;
+; clkpll.sip                                                   ;
+; clkpll.spd                                                   ;
+; clkpll.v                                                     ;
+; clkpll/clkpll_0002.qip                                       ;
+; clkpll/clkpll_0002.v                                         ;
+; clkpll_sim/clkpll.vo                                         ;
+; clock_divider.v                                              ;
+; cpu/Verilog/MOS6502_WBCD.v                                   ;
+; game_ram/game_ram.qip                                        ;
+; game_ram/game_ram.v                                          ;
+; game_ram/game_ram_inst.v                                     ;
+; hdmi/i2c/I2C_Controller.v                                    ;
+; hdmi/i2c/I2C_HDMI_Config.v                                   ;
+; hdmi/i2c/I2C_WRITE_WDATA.v                                   ;
+; hdmi/pll/pll_25.cmp                                          ;
+; hdmi/pll/pll_25.qip                                          ;
+; hdmi/pll/pll_25.v                                            ;
+; hdmi/pll/pll_25/pll_25_0002.qip                              ;
+; hdmi/pll/pll_25/pll_25_0002.v                                ;
+; hdmi/TopModule.v                                             ;
+; hdmi/vgaHdmi.v                                               ;
+; ls139.v                                                      ;
+; MemController.v                                              ;
+; nbitlatch.v                                                  ;
+; ppu/Verilog/OAM2_RAM.v                                       ;
+; ppu/Verilog/OAM_RAM.v                                        ;
+; ppu/Verilog/PALETTE_RAM.v                                    ;
+; ppu/Verilog/PALETTE_RGB_TABLE.v                              ;
+; ppu/Verilog/RP2C02.v                                         ;
+; russian_core.qpf                                             ;
+; russian_core.qsf                                             ;
+; russian_core.v                                               ;
+; singleportram.v                                              ;
+; timing_generator.v                                           ;
+; Waveform.vwf                                                 ;
++--------------------------------------------------------------+
+
+

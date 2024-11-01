@@ -64,10 +64,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "debug_addressoutput[15]",
-					"strict" : false
-				},
-				{
 					"name" : "debug_dataoutput[0]",
 					"strict" : false
 				},
@@ -105,6 +101,14 @@
 				},
 				{
 					"name" : "rstn",
+					"strict" : false
+				},
+				{
+					"name" : "debug_stopclock",
+					"strict" : false
+				},
+				{
+					"name" : "debug_manualclock",
 					"strict" : false
 				}
 			]

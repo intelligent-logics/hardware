@@ -1,16 +1,16 @@
-Fitter Status : Successful - Mon Oct 14 23:13:03 2024
+Fitter Status : Successful - Tue Oct 29 17:48:15 2024
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : russian_core
 Top-level Entity Name : russian_core
 Family : Cyclone V
 Device : 5CSEBA6U23I7
 Timing Models : Final
-Logic utilization (in ALMs) : 473 / 41,910 ( 1 % )
-Total registers : 670
-Total pins : 27 / 314 ( 9 % )
+Logic utilization (in ALMs) : 566 / 41,910 ( 1 % )
+Total registers : 757
+Total pins : 55 / 314 ( 18 % )
 Total virtual pins : 0
-Total block memory bits : 400 / 5,662,720 ( < 1 % )
-Total RAM Blocks : 2 / 553 ( < 1 % )
+Total block memory bits : 524,688 / 5,662,720 ( 9 % )
+Total RAM Blocks : 66 / 553 ( 12 % )
 Total DSP Blocks : 0 / 112 ( 0 % )
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

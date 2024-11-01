@@ -154,8 +154,12 @@ module emu
 	input   [6:0] USER_IN,
 	output  [6:0] USER_OUT,
 
-	input         OSD_STATUS
+	input         OSD_STATUS,
+	
+	output[7:0] debug_cpu_databus //added by steven miller on octoer 30 2024
 );
+
+wire debug_cpu_datain;
 
 assign ADC_BUS  = 'Z;
 
@@ -812,7 +816,8 @@ NES nes (
 	.bram_dout       (bram_dout),
 	.bram_write      (bram_write),
 	.bram_override   (bram_en),
-	.save_written    (save_written)
+	.save_written    (save_written),
+	.debug_cpu_instruction(debug_cpu_databus)
 );
 
 wire [24:0] cpu_addr;

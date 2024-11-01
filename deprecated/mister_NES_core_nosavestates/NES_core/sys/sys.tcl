@@ -7,10 +7,12 @@ set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 7
 #============================================================
 # ADC
 #============================================================
+
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_CONVST
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_SCK
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_SDI
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_SDO
+
 set_location_assignment PIN_U9 -to ADC_CONVST
 set_location_assignment PIN_V10 -to ADC_SCK
 set_location_assignment PIN_AC4 -to ADC_SDI
@@ -119,9 +121,11 @@ set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to SD_SPI*
 #============================================================
 # CLOCK
 #============================================================
+
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FPGA_CLK1_50
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FPGA_CLK2_50
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FPGA_CLK3_50
+
 set_location_assignment PIN_V11 -to FPGA_CLK1_50
 set_location_assignment PIN_Y13 -to FPGA_CLK2_50
 set_location_assignment PIN_E11 -to FPGA_CLK3_50
@@ -129,12 +133,14 @@ set_location_assignment PIN_E11 -to FPGA_CLK3_50
 #============================================================
 # HDMI
 #============================================================
+
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_I2C_*
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_I2S
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_LRCLK
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_MCLK
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_SCLK
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_*
+
 set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to HDMI_TX_D[*]
 set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to HDMI_TX_DE
 set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to HDMI_TX_HS
@@ -181,12 +187,14 @@ set_location_assignment PIN_V13 -to HDMI_TX_VS
 #============================================================
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[1]
+
 set_location_assignment PIN_AH17 -to KEY[0]
 set_location_assignment PIN_AH16 -to KEY[1]
 
 #============================================================
 # LED
 #============================================================
+
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[2]
@@ -195,6 +203,7 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[4]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[5]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[6]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[7]
+
 set_location_assignment PIN_W15 -to LED[0]
 set_location_assignment PIN_AA24 -to LED[1]
 set_location_assignment PIN_V16 -to LED[2]
@@ -207,14 +216,17 @@ set_location_assignment PIN_AA23 -to LED[7]
 #============================================================
 # SW
 #============================================================
+
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[2]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[3]
+
 set_location_assignment PIN_Y24 -to SW[0]
 set_location_assignment PIN_W24 -to SW[1]
 set_location_assignment PIN_W21 -to SW[2]
 set_location_assignment PIN_W20 -to SW[3]
+
 
 set_instance_assignment -name HPS_LOCATION HPSINTERFACEPERIPHERALSPIMASTER_X52_Y72_N111 -entity sys_top -to spi
 set_instance_assignment -name HPS_LOCATION HPSINTERFACEPERIPHERALUART_X52_Y67_N111 -entity sys_top -to uart
