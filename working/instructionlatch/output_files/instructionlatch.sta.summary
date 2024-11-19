@@ -1,0 +1,53 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 100C Model Setup 'i_capturebyte'
+Slack : -6.268
+TNS   : -57.015
+
+Type  : Slow 1100mV 100C Model Hold 'i_capturebyte'
+Slack : 0.568
+TNS   : 0.000
+
+Type  : Slow 1100mV 100C Model Minimum Pulse Width 'i_capturebyte'
+Slack : -0.554
+TNS   : -15.171
+
+Type  : Slow 1100mV -40C Model Setup 'i_capturebyte'
+Slack : -6.294
+TNS   : -58.709
+
+Type  : Slow 1100mV -40C Model Hold 'i_capturebyte'
+Slack : 0.604
+TNS   : 0.000
+
+Type  : Slow 1100mV -40C Model Minimum Pulse Width 'i_capturebyte'
+Slack : -0.702
+TNS   : -17.056
+
+Type  : Fast 1100mV 100C Model Setup 'i_capturebyte'
+Slack : -2.146
+TNS   : -15.761
+
+Type  : Fast 1100mV 100C Model Hold 'i_capturebyte'
+Slack : 0.214
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Minimum Pulse Width 'i_capturebyte'
+Slack : -0.844
+TNS   : -19.513
+
+Type  : Fast 1100mV -40C Model Setup 'i_capturebyte'
+Slack : -1.874
+TNS   : -13.849
+
+Type  : Fast 1100mV -40C Model Hold 'i_capturebyte'
+Slack : 0.199
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Minimum Pulse Width 'i_capturebyte'
+Slack : -0.826
+TNS   : -20.920
+
+------------------------------------------------------------

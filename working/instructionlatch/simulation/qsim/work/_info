@@ -1,0 +1,103 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/instructionlatch/simulation/qsim
+vinstructionlatch
+Z1 !s110 1731699296
+!i10b 1
+!s100 @I:ETHOBzfJLH6IoV7`=n2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IoiL<oTK]o<;E7W94AmHWR1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1731699295
+Z5 8instructionlatch.vo
+Z6 Finstructionlatch.vo
+!i122 20
+L0 32 504
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1731699296.000000
+Z9 !s107 instructionlatch.vo|
+Z10 !s90 -work|work|instructionlatch.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+vinstructionlatch_toplevel
+Z13 !s110 1731704967
+!i10b 1
+!s100 B?V93:mIUKJIVaN1P9cfT0
+R2
+IHSAWJNHN^9iD4HLfUU3LB0
+R3
+R0
+w1731704966
+R5
+R6
+!i122 34
+L0 32 907
+R7
+r1
+!s85 0
+31
+Z14 !s108 1731704967.000000
+R9
+R10
+!i113 1
+R11
+R12
+vinstructionlatch_toplevel_vlg_vec_tst
+R13
+!i10b 1
+!s100 Me9:5klM1B4<DO<Ljio5W0
+R2
+IfQAIgbjgdYKG@AG_MPbki1
+R3
+R0
+w1731704965
+8Waveform2.vwf.vt
+FWaveform2.vwf.vt
+!i122 35
+L0 30 34
+R7
+r1
+!s85 0
+31
+R14
+!s107 Waveform2.vwf.vt|
+!s90 -work|work|Waveform2.vwf.vt|
+!i113 1
+R11
+R12
+vinstructionlatch_vlg_vec_tst
+R1
+!i10b 1
+!s100 [?;egaLznPOK];[f^zc]K2
+R2
+I52S0:_7[ZIiK6j`cfZgGc2
+R3
+R0
+R4
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+!i122 21
+L0 30 90
+R7
+r1
+!s85 0
+31
+R8
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R11
+R12

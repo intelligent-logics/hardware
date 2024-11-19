@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/working/spi/simulation/qsim
+vspi_toplevel
+Z1 !s110 1731632555
+!i10b 1
+!s100 fGigeEYPg:O=a5MEXiM3Q2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I7`doIojWFGKRLC5YZ:C_H2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1731632554
+8spi.vo
+Fspi.vo
+!i122 112
+L0 32 706
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1731632555.000000
+!s107 spi.vo|
+!s90 -work|work|spi.vo|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+vspi_toplevel_vlg_vec_tst
+R1
+!i10b 1
+!s100 O^:lRVSMo6_6PoJa=EG523
+R2
+IOE[WMbGEn?oJ`UJ1gNHL^0
+R3
+R0
+w1731632553
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+!i122 113
+L0 30 70
+R4
+r1
+!s85 0
+31
+R5
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R6
+R7

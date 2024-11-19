@@ -1,0 +1,47 @@
+|instructionlatch_toplevel
+i_capturebyte => i_capturebyte.IN1
+o_instructionlatch_Q0[0] << instructionlatch:instructionlatch.o_Q
+o_instructionlatch_Q0[1] << instructionlatch:instructionlatch.o_Q
+o_instructionlatch_Q0[2] << instructionlatch:instructionlatch.o_Q
+o_instructionlatch_Q0[3] << instructionlatch:instructionlatch.o_Q
+o_instructionlatch_Q0[4] << instructionlatch:instructionlatch.o_Q
+o_instructionlatch_Q0[5] << instructionlatch:instructionlatch.o_Q
+o_instructionlatch_Q0[6] << instructionlatch:instructionlatch.o_Q
+o_instructionlatch_Q0[7] << instructionlatch:instructionlatch.o_Q
+o_instructionlatch_Q1[0] << instructionlatch:instructionlatch.o_Q
+o_instructionlatch_Q1[1] << instructionlatch:instructionlatch.o_Q
+o_instructionlatch_Q1[2] << instructionlatch:instructionlatch.o_Q
+o_instructionlatch_Q1[3] << instructionlatch:instructionlatch.o_Q
+o_instructionlatch_Q1[4] << instructionlatch:instructionlatch.o_Q
+o_instructionlatch_Q1[5] << instructionlatch:instructionlatch.o_Q
+o_instructionlatch_Q1[6] << instructionlatch:instructionlatch.o_Q
+o_instructionlatch_Q1[7] << instructionlatch:instructionlatch.o_Q
+
+
+|instructionlatch_toplevel|instructionlatch:instructionlatch
+i_data[0] => o_Q[0]$latch.DATAIN
+i_data[1] => o_Q[1]$latch.DATAIN
+i_data[2] => o_Q[2]$latch.DATAIN
+i_data[3] => o_Q[3]$latch.DATAIN
+i_data[4] => o_Q[4]$latch.DATAIN
+i_data[5] => o_Q[5]$latch.DATAIN
+i_data[6] => o_Q[6]$latch.DATAIN
+i_data[7] => o_Q[7]$latch.DATAIN
+i_latch_enable => o_Q[0]$latch.LATCH_ENABLE
+i_latch_enable => o_Q[1]$latch.LATCH_ENABLE
+i_latch_enable => o_Q[2]$latch.LATCH_ENABLE
+i_latch_enable => o_Q[3]$latch.LATCH_ENABLE
+i_latch_enable => o_Q[4]$latch.LATCH_ENABLE
+i_latch_enable => o_Q[5]$latch.LATCH_ENABLE
+i_latch_enable => o_Q[6]$latch.LATCH_ENABLE
+i_latch_enable => o_Q[7]$latch.LATCH_ENABLE
+o_Q[0] <= o_Q[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o_Q[1] <= o_Q[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o_Q[2] <= o_Q[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o_Q[3] <= o_Q[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o_Q[4] <= o_Q[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o_Q[5] <= o_Q[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o_Q[6] <= o_Q[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o_Q[7] <= o_Q[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,149 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 100C Model Setup 'i_spi_clk'
+Slack : -10.653
+TNS   : -33.542
+
+Type  : Slow 1100mV 100C Model Setup 'i_clk'
+Slack : -8.720
+TNS   : -12.206
+
+Type  : Slow 1100mV 100C Model Hold 'i_spi_clk'
+Slack : -8.133
+TNS   : -21.578
+
+Type  : Slow 1100mV 100C Model Hold 'i_clk'
+Slack : 0.061
+TNS   : 0.000
+
+Type  : Slow 1100mV 100C Model Recovery 'i_spi_clk'
+Slack : -10.336
+TNS   : -92.857
+
+Type  : Slow 1100mV 100C Model Removal 'i_spi_clk'
+Slack : -0.661
+TNS   : -5.917
+
+Type  : Slow 1100mV 100C Model Minimum Pulse Width 'i_spi_clk'
+Slack : -0.576
+TNS   : -10.111
+
+Type  : Slow 1100mV 100C Model Minimum Pulse Width 'i_clk'
+Slack : -0.538
+TNS   : -2.482
+
+Type  : Slow 1100mV 100C Model Minimum Pulse Width 'i_csn'
+Slack : -0.538
+TNS   : -0.968
+
+Type  : Slow 1100mV -40C Model Setup 'i_spi_clk'
+Slack : -9.947
+TNS   : -31.497
+
+Type  : Slow 1100mV -40C Model Setup 'i_clk'
+Slack : -8.407
+TNS   : -11.713
+
+Type  : Slow 1100mV -40C Model Hold 'i_spi_clk'
+Slack : -7.768
+TNS   : -21.610
+
+Type  : Slow 1100mV -40C Model Hold 'i_clk'
+Slack : -0.165
+TNS   : -0.165
+
+Type  : Slow 1100mV -40C Model Recovery 'i_spi_clk'
+Slack : -9.648
+TNS   : -86.683
+
+Type  : Slow 1100mV -40C Model Removal 'i_spi_clk'
+Slack : -1.238
+TNS   : -11.099
+
+Type  : Slow 1100mV -40C Model Minimum Pulse Width 'i_spi_clk'
+Slack : -0.594
+TNS   : -10.419
+
+Type  : Slow 1100mV -40C Model Minimum Pulse Width 'i_clk'
+Slack : -0.538
+TNS   : -2.329
+
+Type  : Slow 1100mV -40C Model Minimum Pulse Width 'i_csn'
+Slack : -0.538
+TNS   : -1.005
+
+Type  : Fast 1100mV 100C Model Setup 'i_spi_clk'
+Slack : -7.911
+TNS   : -21.243
+
+Type  : Fast 1100mV 100C Model Setup 'i_clk'
+Slack : -3.579
+TNS   : -5.569
+
+Type  : Fast 1100mV 100C Model Hold 'i_spi_clk'
+Slack : -3.868
+TNS   : -8.940
+
+Type  : Fast 1100mV 100C Model Hold 'i_clk'
+Slack : -0.196
+TNS   : -0.196
+
+Type  : Fast 1100mV 100C Model Recovery 'i_spi_clk'
+Slack : -7.667
+TNS   : -68.958
+
+Type  : Fast 1100mV 100C Model Removal 'i_spi_clk'
+Slack : 0.748
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Minimum Pulse Width 'i_spi_clk'
+Slack : -0.648
+TNS   : -9.520
+
+Type  : Fast 1100mV 100C Model Minimum Pulse Width 'i_csn'
+Slack : -0.522
+TNS   : -0.875
+
+Type  : Fast 1100mV 100C Model Minimum Pulse Width 'i_clk'
+Slack : -0.383
+TNS   : -1.662
+
+Type  : Fast 1100mV -40C Model Setup 'i_spi_clk'
+Slack : -6.354
+TNS   : -17.367
+
+Type  : Fast 1100mV -40C Model Setup 'i_clk'
+Slack : -3.247
+TNS   : -5.158
+
+Type  : Fast 1100mV -40C Model Hold 'i_spi_clk'
+Slack : -3.595
+TNS   : -8.964
+
+Type  : Fast 1100mV -40C Model Hold 'i_clk'
+Slack : -0.311
+TNS   : -0.311
+
+Type  : Fast 1100mV -40C Model Recovery 'i_spi_clk'
+Slack : -6.135
+TNS   : -55.185
+
+Type  : Fast 1100mV -40C Model Removal 'i_spi_clk'
+Slack : 0.104
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Minimum Pulse Width 'i_spi_clk'
+Slack : -0.728
+TNS   : -11.291
+
+Type  : Fast 1100mV -40C Model Minimum Pulse Width 'i_csn'
+Slack : -0.611
+TNS   : -1.120
+
+Type  : Fast 1100mV -40C Model Minimum Pulse Width 'i_clk'
+Slack : -0.445
+TNS   : -2.291
+
+------------------------------------------------------------

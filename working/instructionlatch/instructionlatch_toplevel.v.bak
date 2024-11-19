@@ -1,0 +1,23 @@
+//instructionlatch_toplevel.v
+/*
+Author(s): Steven Miller
+Date created: november 15 2024
+Purpose: basic n bit latch
+log:
+	$ Steven 11/15/2024: initial creation
+*/
+
+module instructionlatch_toplevel
+(
+	input i_latchenable,
+	output[7:0] o_latchoutput
+);
+
+instructionlatch instructionlatch
+(
+	.i_data(8'h1),
+	.i_latch_enable(i_latchenable),
+	//input outputenablen,
+	.o_Q(o_latchoutput)
+);
+endmodule
