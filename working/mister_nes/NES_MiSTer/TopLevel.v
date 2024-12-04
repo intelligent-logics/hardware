@@ -123,13 +123,14 @@ module TopLevel
 //wires
 wire w_databyte;
 wire w_reset;
+/*
 instructionlatch instructionlatch
   (
    .i_data(w_databyte),
 	.i_latch_enable(i_capturebyte),
 	.o_Q(o_instructionlatch_Q)
    );
-
+*/
 sys_top mister_top
 (
 	/////////// CLOCK //////////
@@ -233,7 +234,7 @@ sys_top mister_top
 	///////// USER IO ///////////
 	.USER_IO(USER_IO),
 	
-	.cpu_debug_instruction(w_databyte), //added by steven miller on october 31 2024
+	.cpu_debug_instruction(o_instructionlatch_Q), //added by steven miller on october 31 2024
 	//system_clock //added by steven miller on october 31 2024
 	.o_reset(w_reset)
 );

@@ -1,0 +1,37 @@
+
+
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/ppu/Quartus/PLL.v
+
+Oct 17 03PM:02:05>: Error in CNX file format.
+
+Error messages are listed in file
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/ppu/Quartus/PLL.cnxerr.
+
+Can't create the custom megafunction variation file(s)
+
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/ppu/Quartus/PLL.v
+
+Oct 17 03PM:04:15>: Error in CNX file format.
+
+Error messages are listed in file
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/ppu/Quartus/PLL.cnxerr.
+
+Can't create the custom megafunction variation file(s)
+
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/ppu/Quartus/PLL.v
+
+Oct 17 03PM:04:23>: Error in CNX file format.
+
+Error messages are listed in file
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/ppu/Quartus/PLL.cnxerr.
+
+Can't create the custom megafunction variation file(s)
+
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/ppu/Quartus/PLL.v
+
+Oct 17 03PM:11:50>: Error in CNX file format.
+
+Error messages are listed in file
+C:/Users/steve/git_repos/school/cen3907/NES_fpga_development/hardware_development/russian/ppu/Quartus/PLL.cnxerr.
+
+Can't create the custom megafunction variation file(s)

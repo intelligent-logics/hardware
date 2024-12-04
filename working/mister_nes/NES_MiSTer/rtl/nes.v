@@ -201,7 +201,6 @@ assign apu_ce = cpu_ce;
 wire [7:0] from_data_bus;
 wire [7:0] cpu_dout;
 
-assign debug_cpu_instruction = from_data_bus; //added by steven miller on october 31 2024
 
 // odd or even apu cycle, AKA div_apu or apu_/clk2. This is actually not 50% duty cycle. It is high for 18
 // master cycles and low for 6 master cycles. It is considered active when low or "even".
@@ -395,11 +394,11 @@ wire nmi;
 wire mapper_irq;
 wire apu_irq;
 wire cpu_Instrnew;
-
+wire w_din = cpu_rnw ? from_data_bus : cpu_dout;
 // IRQ only changes once per CPU ce and with our current
 // limited CPU model, NMI is only latched on the falling edge
 // of M2, which corresponds with CPU ce, so no latches needed.
-
+assign debug_cpu_instruction = w_din; //added by steven miller on october 31 2024
 T65 cpu(
 	.mode   (0),
 	.BCD_en (0),
@@ -414,7 +413,7 @@ T65 cpu(
 	.R_W_n  (cpu_rnw),
 
 	.A      (cpu_addr),
-	.DI     (cpu_rnw ? from_data_bus : cpu_dout),
+	.DI     (w_din),
 	.DO     (cpu_dout),
 	
 	.Instrnew (cpu_Instrnew),
